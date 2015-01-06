@@ -7,20 +7,24 @@
 
 /* bootstrap overridden START*/
 .navbar-inverse {
-	background-color: #00335F;
+	background-color: #286090;
 }
 
 .navbar-inverse .navbar-brand {
-	color: #D1EAF9;
+	color: #C8E600;
 }
 
 .navbar-inverse .navbar-nav>li>a {
-	color: #D1EAF9;
+	color: #ECF0F1;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+	color: #C8E600;		
 }
 /* bootstrap overridden END*/
 
 #content {
-	margin-top: 50px;
+	padding: 10px;
 }
 
 .page-splash-message {
@@ -32,16 +36,27 @@
 }
 
 .search-container {
-	width: 160px;	
+	width: 230px;	
 	margin: 5px 0;
 }
 
 .search-container .glyphicon-search {
 	float: left;
-	top: -34px;
+	top: -24px;
+	left: 4px;
 	opacity: 0.2;
 }
 
+.search-container .form-control {
+	padding-left: 20px;
+}
+
+
 .brand-title .fa{
-	font-size: 1.5em;
+	margin-top: -5px;
+	font-size: 1.8em;
+}
+
+.list-group-item a {
+	font-weight: bold;
 }
