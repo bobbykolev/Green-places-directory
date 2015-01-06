@@ -11,7 +11,7 @@
         that.places = [];
         that.towns = [];
         that.town = '';
-        that.homeTxt = 'Vegan Places';
+        that.homeTitle = 'Vegan Places';
 
         //$timeout(function(){activate()}, 2000);//test loading 
         activate();

@@ -9,7 +9,7 @@
     function Admin(common) {
         var that = this;
 
-        that.adminTxt = 'Admin';
+        that.adminTitle = 'Admin';
 
         activate();
 

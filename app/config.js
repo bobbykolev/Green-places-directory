@@ -63,6 +63,18 @@
                     content: '<i class="fa fa-cog"></i> Admin'
                 }
             }
+        }, {
+            url: '/places/:placeId',
+            config: {
+                templateUrl: 'app/modules/place/place.html',
+                controller: 'Place',
+                controllerAs: 'that',
+                title: 'Place',
+                settings: {
+                    nav: null,
+                    content: ''
+                }
+            }
         }];
     }
 

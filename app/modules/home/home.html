@@ -1,6 +1,6 @@
 <div ng-controller="Home as that">
 	<header>
-		<h2 class="page-header">{{ that.homeTxt }}</h2>
+		<h2 class="page-header">{{ that.homeTitle }}</h2>
 	</header>
 	<section>	
 		<div class="btn-group radio-filters">
@@ -12,8 +12,8 @@
 			<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 		</div>
 		<ul class="list-group">
-			<li class="list-group-item" ng-repeat="p in that.places | filter: that.town | filter: search">
-				<span>{{ p.name }}</span>
+			<li class="list-group-item" ng-repeat="p in that.places | orderBy: 'name' | filter: that.town | filter: search ">
+				<a href="#/places/{{p.id}}"><span>{{ p.name }}</span></a>
 			</li>
 		</ul>
 	</section>
