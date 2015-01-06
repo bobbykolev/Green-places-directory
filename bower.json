@@ -1,0 +1,13 @@
+{
+    "name": "angularjs-test",
+    "version": "0.0.1",
+    "dependencies": {
+    	"jquery": "~1.11",
+        "bootstrap": "latest",
+        "angular": "~1.2",
+        "angular-route": "~1.2",
+        "angular-animate": "~1.2",
+        "angular-sanitize": "~1.2",
+        "font-awesome": "latest"
+    }
+}

@@ -1,0 +1,47 @@
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+	*zoom: 1;
+}
+
+/* bootstrap overridden START*/
+.navbar-inverse {
+	background-color: #00335F;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #D1EAF9;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #D1EAF9;
+}
+/* bootstrap overridden END*/
+
+#content {
+	margin-top: 50px;
+}
+
+.page-splash-message {
+	text-align: center;
+}
+
+.radio-filters input[type="radio"] {
+	display: none;
+}
+
+.search-container {
+	width: 160px;	
+	margin: 5px 0;
+}
+
+.search-container .glyphicon-search {
+	float: left;
+	top: -34px;
+	opacity: 0.2;
+}
+
+.brand-title .fa{
+	font-size: 1.5em;
+}
