@@ -4,16 +4,15 @@
     var app = angular.module('app');
 
     app.controller('Home', Home);
-    Home.$inject = ['common', '$timeout', 'places'];
+    Home.$inject = ['common', 'places'];
 
-    function Home(common, $timeout, places) {
+    function Home(common, places) {
         var that = this;
         that.places = [];
         that.towns = [];
         that.town = '';
-        that.homeTitle = 'Vegan Places';
-
-        //$timeout(function(){activate()}, 2000);//test loading 
+        that.homeTitle = 'Places';
+ 
         activate();
 
         function activate() {

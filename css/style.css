@@ -60,3 +60,7 @@
 .list-group-item a {
 	font-weight: bold;
 }
+
+.gmap {
+	height: 300px;
+}

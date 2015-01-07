@@ -9,5 +9,8 @@
 		<li class="list-group-item">
 			<div>{{ that.place.address }}</div>
 		</li>
+		<li class="list-group-item">
+			<div class="gmap" gmaps lat="that.place.latitude" lon="that.place.longitude" id="map{{that.place.id}}" place="that.place"></div>
+		</li>
 	</ul>
 </div>

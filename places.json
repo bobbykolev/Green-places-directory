@@ -24,20 +24,20 @@
       "rating":0,
       "imageUrl":"",
       "description":"",
-      "latitude":"",
-      "longitude":"",
+      "latitude":"42.701085",
+      "longitude":"23.324769",
       "name":"Kring",
       "workingTime":{
-         "mon":"",
-         "tus":"",
-         "wed":"",
-         "thu":"",
-         "fri":"",
-         "sat":"",
+         "mon":"11:00–21:00",
+         "tus":"11:00–21:00",
+         "wed":"11:00–17:00",
+         "thu":"11:00–21:00",
+         "fri":"11:00–21:00",
+         "sat":"12:00–21:00",
          "sun":""
       },
       "city":"Sofia",
-      "address":"str. 'Parchevich' 42"
+      "address":"str. 'Car Simeon' 72"
    },
    {
       "id":2,

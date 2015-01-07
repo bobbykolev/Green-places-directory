@@ -43,8 +43,6 @@
             url: '/',
             config: {
                 templateUrl: 'app/modules/home/home.html',
-                controller: 'Home',
-                controllerAs: 'that',
                 title: 'Home',
                 settings: {
                     nav: 1,
@@ -55,8 +53,6 @@
             url: '/admin',
             config: {
                 templateUrl: 'app/modules/admin/admin.html',
-                controller: 'Admin',
-                controllerAs: 'that',
                 title: 'Admin',
                 settings: {
                     nav: 2,
@@ -67,8 +63,6 @@
             url: '/places/:placeId',
             config: {
                 templateUrl: 'app/modules/place/place.html',
-                controller: 'Place',
-                controllerAs: 'that',
                 title: 'Place',
                 settings: {
                     nav: null,
