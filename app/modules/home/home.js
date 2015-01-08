@@ -4,9 +4,9 @@
     var app = angular.module('app');
 
     app.controller('Home', Home);
-    Home.$inject = ['common', 'places'];
+    Home.$inject = ['common', 'places', '$scope'];
 
-    function Home(common, places) {
+    function Home(common, places, $scope) {
         var that = this;
         that.places = [];
         that.towns = [];
@@ -15,9 +15,20 @@
  
         activate();
 
+        $scope.$watch(
+            "that.town",
+            function(newValue, oldValue) {
+                if (localStorage && (newValue != oldValue)) {
+                    localStorage.setItem('currentVplace', newValue);
+                }
+            }
+        );
+
         function activate() {
             var promises = [getPlaces(), getTowns()];
             common.activateController(promises, 'home');
+
+            setCurentTownFilter();
         }
 
         function getPlaces() {
@@ -42,6 +53,12 @@
             }
 
             return common.getUnique(arr);
+        }
+
+        function setCurentTownFilter(){
+            if (localStorage) {
+                that.town = localStorage.getItem('currentVplace') || '';
+            }
         }
     }
 
