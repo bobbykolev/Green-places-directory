@@ -21,8 +21,10 @@
 				<a href="#/places/{{p.id}}">{{ p.name }}</a>
 			</li>
 		</ul>
-		<div class="alert alert-warning">
+		<div ng-show="that.warningTxt != ''" class="alert alert-warning">
 			<div>{{that.warningTxt}}</div>
+		</div>
+		<div class="alert alert-warning">
 			<div>* note: not all vegan places consider honney as 'vegan'</div>
 		</div>
 	</section>

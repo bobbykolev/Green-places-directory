@@ -46,9 +46,7 @@
         $scope.$watch(
             "search",
             function(newValue, oldValue) {
-                if (newValue !== '') {
-                    checkForActivFiltering();
-                }
+                checkForActivFiltering();
             }
         );
 
