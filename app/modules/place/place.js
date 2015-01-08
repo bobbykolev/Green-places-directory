@@ -8,6 +8,7 @@
 
     function Place($routeParams, common, places) {
         var that = this;
+        that.days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
         that.place = {};
         
         activate();

@@ -5,6 +5,16 @@
 	*zoom: 1;
 }
 
+ul, ul li {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
 /* bootstrap overridden START*/
 .navbar-inverse {
 	background-color: #286090;
@@ -63,4 +73,12 @@
 
 .gmap {
 	height: 300px;
+}
+
+.featured-img-container {
+	text-align: center;
+}
+
+.place-container i {
+	margin-right: 5px;	
 }

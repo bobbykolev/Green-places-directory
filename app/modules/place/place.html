@@ -2,15 +2,31 @@
 <header>
 	<h2 class="page-header">{{ that.place.name }}</h2>
 </header>	
+<section class="place-container">
 	<ul class="list-group">
 		<li class="list-group-item">
-			<div>{{ that.place.city }}</div>
+			<div class="featured-img-container">
+				<img ng-src="{{that.place.imageUrl}}"/>
+			</div>
 		</li>
 		<li class="list-group-item">
-			<div>{{ that.place.address }}</div>
+			<div><i class="fa fa-info-circle"></i>{{that.place.description}}</div>
+		</li>
+		<li class="list-group-item">
+			<div>
+				<i class="fa fa-clock-o"></i>
+				<span ng-repeat="t in that.place.workingTime track by $index">{{that.days[$index]}}: {{t || 'Rest day'}};&nbsp;</span>
+			</div>
+		</li>
+		<li class="list-group-item">
+			<div><i class="fa fa-map-marker"></i>{{ that.place.city }}, {{ that.place.address }}; <span ng-repeat="phone in that.place.phone"><a href="tel:{{phone}}"><i class="fa fa-phone"></i>{{phone}}</a>;&nbsp;</span></div>
 		</li>
 		<li class="list-group-item">
 			<div class="gmap" gmaps lat="that.place.latitude" lon="that.place.longitude" id="map{{that.place.id}}" place="that.place"></div>
 		</li>
+		<li class="list-group-item">
+			<div ng-repeat="l in that.place.links"><a href="{{l}}" target="_blank"><i class="fa fa-external-link"></i>{{l}}</div>
+		</li>
 	</ul>
+</section>
 </div>
