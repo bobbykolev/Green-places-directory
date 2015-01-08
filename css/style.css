@@ -37,6 +37,14 @@ body {
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
 	color: #C8E600;		
 }
+
+.alert {
+	padding: 5px;
+	font-size: 14px;
+}
+.alert-warning {
+	color: #9EACB0;
+}
 /* bootstrap overridden END*/
 
 #content {
@@ -60,7 +68,7 @@ h2 {
 	margin-bottom: 3px;
 }
 
-.search-container {	
+.search-container, .clear-filters {	
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
@@ -109,7 +117,6 @@ h2 {
 
 .rating li {
     padding: 1px;
-    color: #CFCFCF;
     text-align: center;
     font-weight: bold;
     font-size: 14px;
@@ -117,8 +124,11 @@ h2 {
     display: inline-block;
     cursor: pointer;
 }
+.raiting-container .rating li i{
+	color: #CFCFCF;
+}
 
-.rating li.filled {
+.raiting-container .rating li.filled i{
   color: #C8E600; //#21568b
 }
 

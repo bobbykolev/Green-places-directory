@@ -8,6 +8,7 @@
 
     function Home(common, places, $scope) {
         var that = this;
+        var warningFiltersTxt = '* Filters applied, some of the content could be hidden.';
         that.places = [];
 
         that.towns = [];
@@ -17,13 +18,36 @@
         that.vType = '';
 
         that.homeTitle = 'Places';
+        that.warningTxt = '';
         
-        //watch and save last selected town filter 
+        //watch and save last selected filters
         $scope.$watch(
             "that.town",
             function(newValue, oldValue) {
-                if (localStorage && (newValue != oldValue)) {
-                    localStorage.setItem('currentVplace', newValue);
+                if (newValue != oldValue) {
+                    setCurentTownFilterToLS(newValue);
+                }
+
+                checkForActivFiltering();
+            }
+        );
+
+        $scope.$watch(
+            "that.vType",
+            function(newValue, oldValue) {
+                if (newValue != oldValue) {
+                    setCurentTypeFilterToLS(newValue);
+                }
+
+                checkForActivFiltering();
+            }
+        );
+
+        $scope.$watch(
+            "search",
+            function(newValue, oldValue) {
+                if (newValue !== '') {
+                    checkForActivFiltering();
                 }
             }
         );
@@ -34,6 +58,15 @@
             return txt[0].toUpperCase() + txt.slice(1);
         };
 
+        that.clearFilters = function(search) {
+            that.town = '';
+            that.vType = '';
+            setCurentTownFilterToLS('');
+            setCurentTypeFilterToLS('');
+            $scope.search = '';
+            that.warningTxt = '';
+        };
+
         activate();
 
         function activate() {
@@ -41,6 +74,7 @@
             common.activateController(promises, 'home');
 
             getCurentTownFilter();
+            getCurentTypeFilter();
         }
 
         function getPlaces() {
@@ -70,6 +104,34 @@
         function getCurentTownFilter(){
             if (localStorage) {
                 that.town = localStorage.getItem('currentVplace') || '';
+            }
+        }
+
+        function getCurentTypeFilter(){
+            if (localStorage) {
+                that.vType = localStorage.getItem('currentVtype') || '';
+            }
+        }
+
+        function setCurentTownFilterToLS(val){
+            saveValToLS('currentVplace', val);
+        }
+
+        function setCurentTypeFilterToLS(val){
+            saveValToLS('currentVtype', val);
+        }
+
+        function saveValToLS(key, val) {
+            if (localStorage) {
+                localStorage.setItem(key, val);
+            }
+        }
+
+        function checkForActivFiltering() {
+            if(that.town || that.vType || $scope.search) {
+                that.warningTxt = warningFiltersTxt;
+            } else {
+                that.warningTxt = '';   
             }
         }
     }
