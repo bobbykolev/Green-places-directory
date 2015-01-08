@@ -15,6 +15,11 @@ img {
 	max-width: 100%;
 }
 
+body {
+	font-family: 'Play', sans-serif;
+	font-size: 16px;
+}
+
 /* bootstrap overridden START*/
 .navbar-inverse {
 	background-color: #286090;
@@ -26,6 +31,7 @@ img {
 
 .navbar-inverse .navbar-nav>li>a {
 	color: #ECF0F1;
+	font-family: 'Play', sans-serif;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
@@ -35,6 +41,11 @@ img {
 
 #content {
 	padding: 10px;
+}
+
+h2 {
+	font-family: 'Comfortaa', cursive;
+	color: #999; 
 }
 
 .page-splash-message {
@@ -85,11 +96,12 @@ img {
 }
 
 .place-container i {
-	margin-right: 5px;	
+	margin-right: 5px;
+	color: #C8E600;
 }
 
 /* rating START */
-.rating{
+.rating {
   margin: 0;
   padding: 0;
   display: inline-block;
