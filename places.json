@@ -1,6 +1,6 @@
 [{
     "id": 0,
-    "rating": 0,
+    "rating": 5,
     "vType":"-vegan-",
     "phone":[],
     "imageUrl": "",
@@ -22,7 +22,7 @@
     "address": "str. 'Parchevich' 48"
 }, {
     "id": 1,
-    "rating": 0,
+    "rating": 5,
     "vType":"-vegetarian-",
     "phone":["02/9834333","0878 577 597"],
     "imageUrl": "http://the-vegan.org/wp-content/uploads/2014/04/905515_10151550712942446_1020992298_o.jpg",
@@ -44,7 +44,7 @@
     "address": "str. 'Car Simeon' 72"
 }, {
     "id": 2,
-    "rating": 0,
+    "rating": 5,
     "vType":"-vegan-",
     "phone":[],
     "imageUrl": "",
@@ -66,7 +66,7 @@
     "address": "str. 'Car Ivan Shishman' 43"
 }, {
     "id": 3,
-    "rating": 0,
+    "rating": 5,
     "vType":"-vegan-",
     "phone":[],
     "imageUrl": "",
@@ -88,7 +88,7 @@
     "address": "str. 'Car Asen I' 54"
 }, {
     "id": 4,
-    "rating": 0,
+    "rating": 5,
     "vType":"-vegetarian-",
     "phone":[],
     "imageUrl": "",
@@ -110,7 +110,7 @@
     "address": "str. 'Dragoman ' 9"
 }, {
     "id": 5,
-    "rating": 0,
+    "rating": 5,
     "vType":"-vegetarian-",
     "phone":[],
     "imageUrl": "",
@@ -132,7 +132,7 @@
     "address": "str. '6-ti Septemvri' 39"
 }, {
     "id": 6,
-    "rating": 0,
+    "rating": 5,
     "vType":"-vegetarian-",
     "phone":[],
     "imageUrl": "",
@@ -154,7 +154,7 @@
     "address": "str. 'W Gladston' 18"
 }, {
     "id": 7,
-    "rating": 0,
+    "rating": 5,
     "vType":"-vegan-",
     "phone":[],
     "imageUrl": "",
@@ -176,7 +176,7 @@
     "address": "str. 'Kokiche 13' 13"
 }, {
     "id": 8,
-    "rating": 0,
+    "rating": 5,
     "vType":"-vegetarian-",
     "phone":[],
     "imageUrl": "",
@@ -198,7 +198,7 @@
     "address": "str. 'Alabin' 50A (second floor)"
 }, {
     "id": 9,
-    "rating": 0,
+    "rating": 5,
     "vType":"-vegetarian-",
     "phone":[],
     "imageUrl": "",
@@ -220,7 +220,7 @@
     "address": "str. 'Knyaginya Maria Louisa' 58"
 }, {
     "id": 10,
-    "rating": 0,
+    "rating": 5,
     "vType":"-vegan-",
     "phone":[],
     "imageUrl": "",

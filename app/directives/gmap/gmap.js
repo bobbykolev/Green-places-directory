@@ -1,6 +1,6 @@
-(function () {
+(function() {
     'use strict';
-    
+
     var app = angular.module('app');
 
     app.directive('gmaps', gmaps);
@@ -8,7 +8,7 @@
 
     function gmaps($window, common) {
         var $q = common.$q;
-        
+
         var directive = {
             link: link,
             restrict: 'A',
@@ -16,20 +16,19 @@
                 'place': '=',
                 'lat': '=',
                 'lon': '='
-            },
-            replace: true
+            }
         };
 
         return directive;
 
         function link(scope, element, attrs) {
-            if ( $window.google && $window.google.maps ) {
-                    scope.$watch(scope.place, function(collection){
-                        setMap(scope, element, attrs);
-                    });
+            if ($window.google && $window.google.maps) {
+                scope.$watch(scope.place, function(collection) {
+                    setMap(scope, element, attrs);
+                });
             } else {
-                loaded().then(function(){
-                    scope.$watch(scope.place, function(collection){
+                loaded().then(function() {
+                    scope.$watch(scope.place, function(collection) {
                         setMap(scope, element, attrs);
                     });
                 });
@@ -42,7 +41,7 @@
                 var mapOptions = {
                     zoom: 18,
                     center: myLatlng
-                  };
+                };
 
                 var map = new google.maps.Map(document.getElementById(attrs.id), mapOptions);
 
@@ -57,7 +56,7 @@
         function loaded() {
             var deferred = $q.defer();
 
-            $window.initgmap = function () {
+            $window.initgmap = function() {
                 deferred.resolve();
             };
 
