@@ -88,6 +88,7 @@ img {
 	margin-right: 5px;	
 }
 
+/* rating START */
 .rating{
   margin: 0;
   padding: 0;
@@ -96,15 +97,21 @@ img {
 
 .rating li {
     padding: 1px;
-    color: #a9a9a9;
+    color: #CFCFCF;
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 14px;
     list-style-type: none;
     display: inline-block;
     cursor: pointer;
 }
 
 .rating li.filled {
-  color: #fd0; //#21568b
+  color: #C8E600; //#21568b
 }
+
+.raiting-container span {
+	font-size: 12px;
+	color: #CFCFCF;
+}
+/* rating END */

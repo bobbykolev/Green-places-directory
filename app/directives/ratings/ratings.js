@@ -1,6 +1,5 @@
 (function() {
     'use strict';
-    console.log("fu**");
 
     var app = angular.module('app');
 
@@ -10,11 +9,12 @@
         var directive = {
             link: link,
             restrict: 'A',
-            template: "<ul class='rating'>" +
+            transclude: true,
+            template: "<div class='raiting-container'><ul class='rating'>" +
                 "  <li ng-repeat='star in stars' ng-class='star' ng-click='toggle($index)'>" +
                 "    <i class='fa fa-star'></i>" + //&#9733
             "  </li>" +
-                "</ul>",
+                "</ul><span ng-transclude></span></div>",
             scope: {
                 ratingValue: "=",
                 max: "=",
