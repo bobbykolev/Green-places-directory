@@ -2,19 +2,24 @@
 	<header>
 		<h2 class="page-header">{{ that.homeTitle }}</h2>
 	</header>
-	<section>	
+	<section id="home-container">	
 		<div class="btn-group radio-filters">
 			<label for="town-1" class="btn btn-primary" ng-class="{'active': that.town == '' }"><input id="town-1" ng-model="that.town" type="radio" name="towns" value="">All</label>
 			<label for="town{{$index}}" ng-repeat="t in that.towns" class="btn btn-primary" ng-class="{'active': that.town == t }"><input id="town{{$index}}" ng-model="that.town" type="radio" name="towns" value="{{t}}">{{t}}</label>
+		</div>
+		<div class="btn-group radio-filters">
+			<label for="vType-1" class="btn btn-success" ng-class="{'active': that.vType == '' }"><input id="vType-1" ng-model="that.vType" type="radio" name="vTypes" value="">All</label>
+			<label for="vType{{$index}}" ng-repeat="t in that.vTypes" class="btn btn-success" ng-class="{'active': that.vType == t }"><input id="vType{{$index}}" ng-model="that.vType" type="radio" name="vTypes" value="{{t}}">{{that.trimed(t)}}</label>
 		</div>
 		<div class="search-container">
 			<input ng-model="search" value="{{that.town}}" class="form-control" placeholder="Search by keyword...">
 			<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 		</div>
 		<ul class="list-group">
-			<li class="list-group-item" ng-repeat="p in that.places | orderBy: 'name' | filter: that.town | filter: search ">
+			<li class="list-group-item" ng-repeat="p in that.places | orderBy: 'name' | filter: that.town | filter: search | filter: that.vType">
 				<a href="#/places/{{p.id}}">{{ p.name }}</a>
 			</li>
 		</ul>
+		<div class="alert alert-warning">* note: not all vegan places consider honney as 'vegan'</div>
 	</section>
 </div>

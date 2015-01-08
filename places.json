@@ -1,6 +1,7 @@
 [{
     "id": 0,
     "rating": 0,
+    "vType":"-vegan-",
     "phone":[],
     "imageUrl": "",
     "links":[],
@@ -17,11 +18,12 @@
         "",
         ""
     ],
-    "city": "Sofia",
-    "address": "str. 'Parchevich' 42"
+    "town": "Sofia",
+    "address": "str. 'Parchevich' 48"
 }, {
     "id": 1,
     "rating": 0,
+    "vType":"-vegetarian-",
     "phone":["02/9834333","0878 577 597"],
     "imageUrl": "http://the-vegan.org/wp-content/uploads/2014/04/905515_10151550712942446_1020992298_o.jpg",
     "links":["http://kring.bg/","https://www.facebook.com/KringFan"],
@@ -38,18 +40,19 @@
         "12:00–21:00",
         ""
     ],
-    "city": "Sofia",
+    "town": "Sofia",
     "address": "str. 'Car Simeon' 72"
 }, {
     "id": 2,
     "rating": 0,
+    "vType":"-vegan-",
     "phone":[],
     "imageUrl": "",
     "links":[],
     "description": "",
     "latitude": "",
     "longitude": "",
-    "name": "Sladkishnica",
+    "name": "Sladkishnica (Zelen Bio)",
     "workingTime": [
         "",
         "",
@@ -59,11 +62,12 @@
         "",
         ""
     ],
-    "city": "Sofia",
-    "address": "str. 'Parchevich' 42"
+    "town": "Sofia",
+    "address": "str. 'Car Ivan Shishman' 43"
 }, {
     "id": 3,
     "rating": 0,
+    "vType":"-vegan-",
     "phone":[],
     "imageUrl": "",
     "links":[],
@@ -80,11 +84,12 @@
         "",
         ""
     ],
-    "city": "Varna, Plovdiv",
-    "address": "str. 'Parchevich' 42"
+    "town": "Varna, Plovdiv",
+    "address": "str. 'Car Asen I' 54"
 }, {
     "id": 4,
     "rating": 0,
+    "vType":"-vegetarian-",
     "phone":[],
     "imageUrl": "",
     "links":[],
@@ -101,18 +106,19 @@
         "",
         ""
     ],
-    "city": "Varna",
-    "address": "str. 'Car Asen' 53"
+    "town": "Varna",
+    "address": "str. 'Dragoman ' 9"
 }, {
     "id": 5,
     "rating": 0,
+    "vType":"-vegetarian-",
     "phone":[],
     "imageUrl": "",
     "links":[],
     "description": "",
     "latitude": "",
     "longitude": "",
-    "name": "Sun Moon",
+    "name": "Sunmoon",
     "workingTime": [
         "",
         "",
@@ -122,18 +128,19 @@
         "",
         ""
     ],
-    "city": "Sofia",
-    "address": "str. 'Car Asen' 53"
+    "town": "Sofia",
+    "address": "str. '6-ti Septemvri' 39"
 }, {
     "id": 6,
     "rating": 0,
+    "vType":"-vegetarian-",
     "phone":[],
     "imageUrl": "",
     "links":[],
     "description": "",
     "latitude": "",
     "longitude": "",
-    "name": "Sun Moon 2",
+    "name": "Sunmoon 2",
     "workingTime": [
         "",
         "",
@@ -143,11 +150,12 @@
         "",
         ""
     ],
-    "city": "Sofia",
-    "address": "str. 'Car Asen' 53"
+    "town": "Sofia",
+    "address": "str. 'W Gladston' 18"
 }, {
     "id": 7,
     "rating": 0,
+    "vType":"-vegan-",
     "phone":[],
     "imageUrl": "",
     "links":[],
@@ -164,11 +172,12 @@
         "",
         ""
     ],
-    "city": "Sofia",
-    "address": "str. 'Car Asen' 53"
+    "town": "Sofia",
+    "address": "str. 'Kokiche 13' 13"
 }, {
     "id": 8,
     "rating": 0,
+    "vType":"-vegetarian-",
     "phone":[],
     "imageUrl": "",
     "links":[],
@@ -185,6 +194,50 @@
         "",
         ""
     ],
-    "city": "Sofia",
-    "address": "str. 'Alabin'"
+    "town": "Sofia",
+    "address": "str. 'Alabin' 50A (second floor)"
+}, {
+    "id": 9,
+    "rating": 0,
+    "vType":"-vegetarian-",
+    "phone":[],
+    "imageUrl": "",
+    "links":[],
+    "description": "",
+    "latitude": "",
+    "longitude": "",
+    "name": "Soma Vital",
+    "workingTime": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "town": "Sofia",
+    "address": "str. 'Knyaginya Maria Louisa' 58"
+}, {
+    "id": 10,
+    "rating": 0,
+    "vType":"-vegan-",
+    "phone":[],
+    "imageUrl": "",
+    "links":[],
+    "description": "",
+    "latitude": "",
+    "longitude": "",
+    "name": "Vanilla Kitchen",
+    "workingTime": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "town": "Sofia",
+    "address": "str. 'Hristo Kovachev' 30"
 }]

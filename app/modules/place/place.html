@@ -19,7 +19,7 @@
 			</div>
 		</li>
 		<li class="list-group-item">
-			<div><i class="fa fa-map-marker"></i>{{ that.place.city }}, {{ that.place.address }}; <span ng-repeat="phone in that.place.phone"><a href="tel:{{phone}}"><i class="fa fa-phone"></i>{{phone}}</a>;&nbsp;</span></div>
+			<div><i class="fa fa-map-marker"></i>{{ that.place.town }}, {{ that.place.address }}; <span ng-repeat="phone in that.place.phone"><a href="tel:{{phone}}"><i class="fa fa-phone"></i>{{phone}}</a>;&nbsp;</span></div>
 		</li>
 		<li class="list-group-item">
 			<div class="gmap" gmaps lat="that.place.latitude" lon="that.place.longitude" id="map{{that.place.id}}" place="that.place"></div>

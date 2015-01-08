@@ -45,9 +45,14 @@ img {
 	display: none;
 }
 
-.search-container {
-	width: 230px;	
-	margin: 5px 0;
+#home-container .radio-filters {
+	margin-bottom: 3px;
+}
+
+.search-container {	
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
 }
 
 .search-container .glyphicon-search {
