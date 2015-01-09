@@ -56,6 +56,10 @@ body {
 	margin-right: 0;
 	margin-left: 0;
 }
+
+.btn {
+	border-radius: 0;
+}
 /* bootstrap overridden END*/
 
 #content {
@@ -154,16 +158,12 @@ h2 {
 }
 
 #home-container .list-group-item {
-	padding: 0;
-	border: 1px solid #286090;
-	border-top: 3px solid #286090;
-	margin-bottom: 5px; 
+	padding: 5px;
 }
 
-/*#home-container .places-list > div:nth-child(2n){
-	border: 1px solid #337AB7;
-	border-top: 3px solid #337AB7;
-}*/
+#home-container .places-list > div:nth-child(2n){
+	background: #fcfcfc;
+}
 
 .places-list {
 	width: 100%;
@@ -193,4 +193,31 @@ h2 {
 .place-name:hover {
 	color: #999;
 	cursor: pointer;
+}
+
+
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  -webkit-transition:all ease-in-out 0.5s;
+  transition:all ease-in-out 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  transform: translate3d(-400%,0,0);
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  transform: translate3d(0,0,0);
+}
+
+.ng-move-stagger,
+.ng-enter-stagger{
+	-webkit-transition-delay:0.05s;
+ 	transition-delay:0.05s;
 }

@@ -17,7 +17,7 @@
 		</div>
 		<div class="clear-filters"><button ng-click="that.clearFilters()" class="btn btn-default">clear filters</button></div>
 		<div class="places-list list-group row">
-			<div class="animate-repeat list-group-item col-xs-12 .col-sm-6 col-md-4" ng-repeat="p in that.places | orderBy: 'name' | filter: that.town | filter: search | filter: that.vType">
+			<div class="animate-repeat list-group-item col-xs-12 col-sm-6 col-md-4" ng-repeat="p in that.places | orderBy: 'name' | filter: that.town | filter: search | filter: that.vType">
 				<div class="place-name" ng-click="that.toggleInfo($event)">
 					<i class="fa fa-angle-double-down"></i><span>{{ p.name }}</span>
 				</div>
