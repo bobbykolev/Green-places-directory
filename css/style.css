@@ -155,15 +155,15 @@ h2 {
 
 #home-container .list-group-item {
 	padding: 0;
-	border: 1px solid #337AB7;
-	border-top: 3px solid #337AB7;
+	border: 1px solid #286090;
+	border-top: 3px solid #286090;
 	margin-bottom: 5px; 
 }
 
-#home-container .places-list > div:nth-child(2n){
-	border: 1px solid #E6A600;
-	border-top: 3px solid #E6A600;
-}
+/*#home-container .places-list > div:nth-child(2n){
+	border: 1px solid #337AB7;
+	border-top: 3px solid #337AB7;
+}*/
 
 .places-list {
 	width: 100%;
@@ -177,6 +177,7 @@ h2 {
 
 .places-list .additional-info li {
 	display: inline-block;
+	padding: 0 5px;
 }
 
 .place-name {
@@ -190,6 +191,6 @@ h2 {
 }
 
 .place-name:hover {
-	color: #777;
+	color: #999;
 	cursor: pointer;
 }
