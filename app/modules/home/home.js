@@ -65,6 +65,12 @@
             that.warningTxt = '';
         };
 
+        that.toggleInfo = function($event) {
+            var el = $($event.currentTarget);
+            el.find('i').toggleClass('fa-angle-double-down').toggleClass('fa-angle-double-up');
+            el.next().slideToggle();
+        };
+
         activate();
 
         function activate() {
@@ -73,6 +79,8 @@
 
             getCurentTownFilter();
             getCurentTypeFilter();
+
+
         }
 
         function getPlaces() {

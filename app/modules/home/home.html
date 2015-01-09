@@ -16,11 +16,21 @@
 			<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 		</div>
 		<div class="clear-filters"><button ng-click="that.clearFilters()" class="btn btn-default">clear filters</button></div>
-		<ul class="list-group">
-			<li class="list-group-item" ng-repeat="p in that.places | orderBy: 'name' | filter: that.town | filter: search | filter: that.vType">
-				<a href="#/places/{{p.id}}">{{ p.name }}</a>
-			</li>
-		</ul>
+		<div class="places-list list-group row">
+			<div class="animate-repeat list-group-item col-xs-12 .col-sm-6 col-md-4" ng-repeat="p in that.places | orderBy: 'name' | filter: that.town | filter: search | filter: that.vType">
+				<div class="place-name" ng-click="that.toggleInfo($event)">
+					<i class="fa fa-angle-double-down"></i><span>{{ p.name }}</span>
+				</div>
+				<div style="display: none;">
+					<ul class="additional-info">
+						<li><div class="open-close-marker">open</div></li>
+						<li><i class="fa fa-map-marker"></i>{{ p.address }};</li>
+						<li><span ng-repeat="phone in p.phone"><a href="tel:{{phone}}"><i class="fa fa-phone"></i>{{phone}}</a>;</span></li>
+						<li><a class="btn btn-xs btn-default" href="#/places/{{p.id}}">Additional info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<div ng-show="that.warningTxt != ''" class="alert alert-warning">
 			<div>{{that.warningTxt}}</div>
 		</div>
