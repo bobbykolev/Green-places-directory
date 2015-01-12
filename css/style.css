@@ -126,6 +126,8 @@ h2 {
 
 #home-container .radio-filters input[type="radio"] {
   display: none; }
+#home-container ul.additional-info {
+  overflow: hidden; }
 #home-container .radio-filters {
   margin-bottom: 3px; }
 #home-container .search-container, #home-container .clear-filters {
