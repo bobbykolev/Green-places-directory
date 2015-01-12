@@ -30,6 +30,23 @@ body {
 	color: #C8E600;
 }
 
+.navbar-inverse .navbar-toggle {
+	border-color: #286090;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #C8E600;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+	background: #C8E600;
+}
+
+.navbar-inverse .navbar-toggle:hover .icon-bar {
+	background-color: #fff;
+}
+
 .navbar-inverse .navbar-nav>li>a {
 	color: #ECF0F1;
 	font-family: 'Play', sans-serif;
@@ -45,7 +62,7 @@ body {
 	margin-bottom: 5px;
 }
 .alert-warning {
-	color: #9EACB0;
+	color: #bbb;
 }
 
 .list-group {
@@ -59,6 +76,32 @@ body {
 
 .btn {
 	border-radius: 0;
+}
+
+.label-success {
+	background-color: #C8E600;
+}
+
+.label-default {
+	background-color: #E8E8E8;
+	color: #999;
+}
+
+.btn-success {
+	color: #fff;
+	background-color: #9AC82B;
+	border-color: #749621;
+}
+
+.btn-success:hover, 
+.btn-success:focus, 
+.btn-success.focus, 
+.btn-success:active, 
+.btn-success.active, 
+.open>.dropdown-toggle.btn-success {
+	color: #fff;
+	background-color: #89B324;
+	border-color: #749621;
 }
 /* bootstrap overridden END*/
 
@@ -87,6 +130,15 @@ h2 {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
+}
+
+.clear-filters {
+	margin-bottom: 2px;
+}
+
+.clear-filters .btn.btn-default {
+	color: #999;
+	margin-bottom: 2px;
 }
 
 .search-container .glyphicon-search {
@@ -170,37 +222,39 @@ h2 {
 }
 
 .places-list .additional-info {
-	margin: 0 15px;
-	padding: 5px;
-	border-top: 1px dotted #ccc;	
+	margin: 0 5px;
+	height: 65px;
 }
 
 .places-list .additional-info li {
 	display: inline-block;
-	padding: 2px 5px;
+	padding: 5px;
+	color: #999;
 }
 
 .places-list .additional-info li i{
 	margin-right: 5px;	
 }
 
-.place-name {
-	padding: 3px 5px;
-	color: #286090;
+.places-list .additional-info li .label {
+	vertical-align: text-top;
 }
 
-.place-name span {
-	font-weight: bold;
-	margin-left: 5px;
+.places-list .place-name {
+	font-family: 'Comfortaa', cursive;
 }
 
-.place-name:hover {
-	color: #999;
-	cursor: pointer;
+.places-list .place-name a {
+	color: #4CA4D2;
+}
+
+.places-list .place-name a:hover {
+	color: #337ab7;
 }
 
 
 
+/* SLiding animaton of places START */
 .animate-repeat.ng-move,
 .animate-repeat.ng-enter,
 .animate-repeat.ng-leave {
@@ -225,3 +279,4 @@ h2 {
 	-webkit-transition-delay:0.05s;
  	transition-delay:0.05s;
 }
+/* SLiding animaton of places END */

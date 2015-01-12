@@ -66,11 +66,11 @@
             that.warningTxt = '';
         };
 
-        that.toggleInfo = function($event) {
+        /*that.toggleInfo = function($event) {
             var el = $($event.currentTarget);
             el.find('i').toggleClass('fa-angle-double-down').toggleClass('fa-angle-double-up');
             el.next().slideToggle();
-        };
+        };*/
 
         activate();
 
@@ -139,7 +139,7 @@
             if(that.town || that.vType || $scope.search) {
                 that.warningTxt = warningFiltersTxt;
             } else {
-                that.warningTxt = '';   
+                that.warningTxt = '';
             }
         }
 
