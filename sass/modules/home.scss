@@ -1,0 +1,74 @@
+#home-container {
+	.radio-filters input[type="radio"] {
+		display: none;
+	}
+
+	.radio-filters {
+		margin-bottom: 3px;
+	}
+
+	.search-container, .clear-filters {	
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.clear-filters {
+		margin-bottom: 2px;
+	}
+
+	.clear-filters .btn.btn-default {
+		color: #999;
+		margin-bottom: 2px;
+	}
+
+	.search-container .glyphicon-search {
+		float: left;
+		top: -24px;
+		left: 4px;
+		opacity: 0.2;
+	}
+
+	.search-container .form-control {
+		padding-left: 20px;
+	}
+
+	.list-group-item:first-child, #home-container .list-group-item:last-child{
+		border-radius: 0;
+	}
+
+	.list-group-item {
+		padding: 5px;
+	}
+
+	.places-list > div:nth-child(2n){
+		background: #fcfcfc;
+	}
+}
+
+/* SLiding animaton of places START */
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  -webkit-transition:all ease-in-out 0.5s;
+  transition:all ease-in-out 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  transform: translate3d(-400%,0,0);
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  transform: translate3d(0,0,0);
+}
+
+.ng-move-stagger,
+.ng-enter-stagger{
+	-webkit-transition-delay:0.05s;
+ 	transition-delay:0.05s;
+}
+/* SLiding animaton of places END */

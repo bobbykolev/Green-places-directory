@@ -1,0 +1,163 @@
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+	*zoom: 1;
+}
+
+ul, ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+body {
+	font-family: 'Play', sans-serif;
+	font-size: 16px;
+	color: #888;
+}
+
+/* bootstrap overridden START*/
+.navbar-inverse {
+	background-color: #286090;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #C8E600;
+}
+
+.navbar-inverse .navbar-toggle {
+	border-color: #286090;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #C8E600;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+	background: #C8E600;
+}
+
+.navbar-inverse .navbar-toggle:hover .icon-bar {
+	background-color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #ECF0F1;
+	font-family: 'Play', sans-serif;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+	color: #C8E600;		
+}
+
+.alert {
+	padding: 5px;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.alert-warning {
+	color: #bbb;
+}
+
+.list-group {
+	margin-bottom: 10px;
+}
+
+.row {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.btn {
+	border-radius: 0;
+}
+
+.label-success {
+	background-color: #C8E600;
+}
+
+.label-default {
+	background-color: #E8E8E8;
+	color: #999;
+}
+
+.btn-success {
+	color: #fff;
+	background-color: #9AC82B;
+	border-color: #749621;
+}
+
+.btn-success:hover, 
+.btn-success:focus, 
+.btn-success.focus, 
+.btn-success:active, 
+.btn-success.active, 
+.open>.dropdown-toggle.btn-success {
+	color: #fff;
+	background-color: #89B324;
+	border-color: #749621;
+}
+/* bootstrap overridden END*/
+
+#content {
+	padding: 10px;
+}
+
+h2 {
+	font-family: 'Comfortaa', cursive;
+	color: #999; 
+}
+
+.page-splash-message {
+	margin-top: 50px;
+	font-size: 60px;
+	text-align: center;
+}
+.page-splash-message i {
+	color: #C8E600;
+	animation: spin 1.5s linear infinite;
+	-webkit-animation: spin 1.5s linear infinite;
+}
+
+.list-group-item a {
+	font-weight: bold;
+}
+
+.brand-title .fa {
+	margin-top: -5px;
+	font-size: 1.8em;
+}
+
+
+
+//animations
+@-webkit-keyframes spin {
+    0%{
+        -webkit-transform: rotate(0deg) scale(0.8);
+    }
+    50%{
+        -webkit-transform: rotate(180deg) scale(1);
+    }
+    100%{
+        -webkit-transform: rotate(360deg) scale(0.8);
+    }
+}
+
+@keyframes spin {
+     0%{
+        transform: rotate(0deg) scale(0.8);
+    }
+    50%{
+        transform: rotate(180deg) scale(1);
+    }
+    100%{
+        transform: rotate(360deg) scale(0.8);
+    }
+}
