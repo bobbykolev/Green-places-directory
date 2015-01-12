@@ -49,17 +49,7 @@
                     content: '<i class="fa fa-home"></i> Vegan Places'
                 }
             }
-        }, {
-            url: '/admin',
-            config: {
-                templateUrl: 'app/modules/admin/admin.html',
-                title: 'Admin',
-                settings: {
-                    nav: 2,
-                    content: '<i class="fa fa-cog"></i> Admin'
-                }
-            }
-        }, {
+        },{
             url: '/places/:placeId',
             config: {
                 templateUrl: 'app/modules/place/place.html',
@@ -69,7 +59,27 @@
                     content: ''
                 }
             }
-        }];
+        },{
+            url: '/blogs',
+            config: {
+                templateUrl: 'app/modules/blogs/blogs.html',
+                title: 'Blogs',
+                settings: {
+                    nav: 2,
+                    content: '<i class="fa fa-pencil"></i> Blogs'
+                }
+            }
+        },{
+            url: '/contact',
+            config: {
+                templateUrl: 'app/modules/contact/contact.html',
+                title: 'Contact',
+                settings: {
+                    nav: 3,
+                    content: '<i class="fa fa-envelope"></i> Contact'
+                }
+            }
+        },];
     }
 
 })();

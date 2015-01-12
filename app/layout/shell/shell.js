@@ -11,7 +11,7 @@
         var that = this,
             events = config.events;
         that.isBusy = true;
-        that.busyMessage = 'Loading...';
+        that.busyMessage = '';//Loading...';
 
         activate();
 

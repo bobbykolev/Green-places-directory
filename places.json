@@ -2,20 +2,20 @@
     "id": 0,
     "rating": 5,
     "vType":"-vegan-",
-    "phone":[],
-    "imageUrl": "",
-    "links":[],
-    "description": "",
-    "latitude": "",
-    "longitude": "",
+    "phone":["+359878878342"],
+    "imageUrl": "http://vegankitsch.com/images/vegankitschn_site_2.jpg",
+    "links":["http://vegankitsch.com/en/","https://www.facebook.com/VeganKitsch"],
+    "description": "'Vegan Kitsch - burgers & raw sweet' offers fresh homemade vegan food - fast food in a new light. Small modern bakery, cafe and known as Kurabiynitsa.",
+    "latitude": "42.690588",
+    "longitude": "23.320846",
     "name": "Vegan Kitsch",
     "workingTime": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
+        "09:00–19:00",
+        "09:00–19:00",
+        "09:00–19:00",
+        "09:00–19:00",
+        "09:00–19:00",
+        "09:00–19:00",
         ""
     ],
     "town": "Sofia",
@@ -173,7 +173,7 @@
         ""
     ],
     "town": "Sofia",
-    "address": "str. 'Kokiche 13' 13"
+    "address": "str. 'Kokiche' 13"
 }, {
     "id": 8,
     "rating": 5,

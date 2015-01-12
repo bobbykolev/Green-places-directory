@@ -18,7 +18,9 @@
         that.vTypes = ["-vegan-", "-vegetarian-", "-other-"];
         that.vType = '';
 
-        that.homeTitle = 'Places';
+        that.mealTypes = ["-pastryShop-", "-restaurant-", "-store-", "-fastFood-"];
+
+        that.homeTitle = 'Vegan Places In Bulgaria';
         that.warningTxt = '';
         
         //watch and save last selected filters
@@ -80,8 +82,6 @@
 
             getCurentTownFilter();
             getCurentTypeFilter();
-
-
         }
 
         function getPlaces() {
