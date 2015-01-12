@@ -10,6 +10,7 @@
         var that = this;
 
         that.contactTitle = 'Contact';
+        that.email = 'admin@the-vegan.org';
 
         activate();
 

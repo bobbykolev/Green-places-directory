@@ -1,0 +1,22 @@
+{
+  "name": "vegan-places-app",
+  "version": "0.0.1",
+  "title": "Vegan Places",
+  "description": "List of all vegan places in Bulgaria.",
+  "copyright": "the-vegan.org",
+  "author": {
+    "name": "bobbykolev",
+    "email": "",
+    "url": "http://www.cayetanogaming.com"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "~3.8.10",
+    "gulp-jsonminify": "~0.0.2",
+    "gulp-rename": "~1.2.0"
+  }
+}

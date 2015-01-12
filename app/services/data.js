@@ -22,7 +22,7 @@
         function getPlaces() {
             var def = $q.defer();
 
-            $http.get('./places.json').success(function(places) {
+            $http.get('./placesMin.json').success(function(places) {
                 def.resolve(places);
             });
 
@@ -32,7 +32,7 @@
         function getPlace(id) {
             var def = $q.defer();
 
-            $http.get('./places.json').success(function(places) {
+            $http.get('./placesMin.json').success(function(places) {
                 for (var i = 0; i < places.length; i++) {
                     if(places[i].id == id) {
                         def.resolve(places[i]);
