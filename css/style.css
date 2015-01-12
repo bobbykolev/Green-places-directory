@@ -177,7 +177,11 @@ h2 {
 
 .places-list .additional-info li {
 	display: inline-block;
-	padding: 0 5px;
+	padding: 2px 5px;
+}
+
+.places-list .additional-info li i{
+	margin-right: 5px;	
 }
 
 .place-name {

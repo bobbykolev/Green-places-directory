@@ -7,8 +7,9 @@
     Home.$inject = ['common', 'places', '$scope'];
 
     function Home(common, places, $scope) {
-        var that = this;
-        var warningFiltersTxt = '* Filters applied, some of the content could be hidden.';
+        var that = this,
+            warningFiltersTxt = '* Filters applied, some of the content could be hidden.';
+
         that.places = [];
 
         that.towns = [];
@@ -85,6 +86,7 @@
 
         function getPlaces() {
             return places.getPlaces().then(function(data) {
+                setOpenCloseMarker(data);
                 return that.places = data;
             });
         }
@@ -138,6 +140,44 @@
                 that.warningTxt = warningFiltersTxt;
             } else {
                 that.warningTxt = '';   
+            }
+        }
+
+        function setOpenCloseMarker(data) {
+            var arr = [],
+                startEndTimeArr = [],
+                today = new Date(),
+                currentDay = today.getDay(),
+                currentHour = today.getUTCHours(),
+                currentMinutes = today.getMinutes(),
+                startTime,
+                endTime;
+
+                if (currentDay == 0) {
+                    currentDay = 7;
+                }
+
+            for (var i = 0; i < data.length; i++) {
+                //–   8211    2013    &ndash; EN DASH
+               startEndTimeArr = data[i].workingTime[currentDay-1].split('–');
+
+                if (startEndTimeArr[0]) {
+                    startTime = startEndTimeArr[0].split(':');
+                    endTime = startEndTimeArr[1].split(':');
+
+                    //houers '-2': data is with GMT -2 (Sofia...)
+                    if ((currentHour > parseInt(startTime[0]) - 2) && (currentHour < parseInt(endTime[0]) - 2)) {
+                        data[i].isOpen = true;
+                    } else if ((currentHour == parseInt(startTime[0]) - 2)  && (currentMinutes > parseInt(startTime[1]))) {
+                        data[i].isOpen = true;
+                    }  else if ((currentHour == parseInt(endTime[0]) - 2)  && (currentMinutes < parseInt(endTime[1]))) {
+                        data[i].isOpen = true;
+                    } else {
+                        data[i].isOpen = false;
+                    }
+                } else {
+                    data[i].isOpen = false;
+                }
             }
         }
     }

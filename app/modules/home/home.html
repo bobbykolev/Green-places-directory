@@ -23,7 +23,9 @@
 				</div>
 				<div style="display: none;">
 					<ul class="additional-info">
-						<li><div class="open-close-marker">open</div></li>
+						<li>
+							<div class="open-close-marker"><span class="label" ng-class="p.isOpen ? 'label-success' : 'label-warning'"><i class="fa fa-clock-o"></i>{{p.isOpen ? 'Open' : 'Closed'}}</span>
+							</div></li>
 						<li><i class="fa fa-map-marker"></i>{{ p.address }};</li>
 						<li><span ng-repeat="phone in p.phone"><a href="tel:{{phone}}"><i class="fa fa-phone"></i>{{phone}}</a>;&nbsp;&nbsp;</span></li>
 						<li style="width:100%;"><a class="btn btn-xs btn-default" href="#/places/{{p.id}}">Additional info</a></li>
