@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     //gp_concat = require('gulp-concat'),
     gp_rename = require('gulp-rename'),
     jsonminify = require('gulp-jsonminify'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    livereload = require('gulp-livereload');
 
 gulp.task('minifyPlaces', function(){
     return gulp.src('places.json')
@@ -18,8 +19,17 @@ gulp.task('compileSass', function(){
         .pipe(gulp.dest('./css'));
 });
 
+gulp.task('live', function() {
+    gulp.src('./')
+    .pipe(livereload());
+});
+
 gulp.task('watch', function() {
-  	gulp.watch('./sass/**/*.scss', ['compileSass']);
+    gulp.watch('./sass/**/*.scss', ['compileSass']);
+    gulp.watch('./places.json', ['minifyPlaces']);
+
+    livereload.listen();
+    gulp.watch('./**/*.*', ['live']);
 });
 
 gulp.task('default', ['minifyPlaces', 'compileSass', 'watch'], function(){});
