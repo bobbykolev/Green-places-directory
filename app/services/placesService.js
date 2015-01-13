@@ -11,13 +11,10 @@
 
         var service = {
             getPlaces: getPlaces,
-            getPlace: getPlace,
-            getMessageCount: getMessageCount
+            getPlace: getPlace
         };
 
         return service;
-
-        function getMessageCount() { return $q.when(72); }
 
         function getPlaces() {
             var def = $q.defer();

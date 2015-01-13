@@ -9,7 +9,8 @@
     };
 
     var config = {
-        events: events
+        events: events,
+        lang: (window.navigator.language || 'en-US').substring(0,2)
     };
 
     app.value('config', config);

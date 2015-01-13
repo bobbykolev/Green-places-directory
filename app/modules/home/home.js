@@ -4,9 +4,9 @@
     var app = angular.module('app');
 
     app.controller('Home', Home);
-    Home.$inject = ['common', 'places', '$scope'];
+    Home.$inject = ['common', 'places', '$scope', '$timeout'];
 
-    function Home(common, places, $scope) {
+    function Home(common, places, $scope, $timeout) {
         var that = this,
             warningFiltersTxt = '* Filters applied, some of the content could be hidden.';
 
@@ -82,6 +82,12 @@
 
             getCurentTownFilter();
             getCurentTypeFilter();
+
+            console.log((new Date()).toString());
+            $timeout(function(){
+                setOpenCloseMarker(that.places);
+                console.log((new Date()).toString());
+            }, 1800000);
         }
 
         function getPlaces() {
