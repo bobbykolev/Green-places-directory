@@ -23,12 +23,12 @@
 
         function link(scope, element, attrs) {
             if ($window.google && $window.google.maps) {
-                scope.$watch(scope.place, function(collection) {
+                scope.$watch('place', function(collection) {
                     setMap(scope, element, attrs);
                 });
             } else {
                 loaded().then(function() {
-                    scope.$watch(scope.place, function(collection) {
+                    scope.$watch('place', function(collection) {
                         setMap(scope, element, attrs);
                     });
                 });

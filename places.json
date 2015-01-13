@@ -87,7 +87,7 @@
     "town": "Varna",
     "address": "str. 'Car Asen I' 54"
 }, {
-    "id": 3,
+    "id": 4,
     "rating": 5,
     "vType":"-vegan-",
     "phone":["+359879588988"],
@@ -109,7 +109,7 @@
     "town": "Plovdiv",
     "address": "str. 'Grozdov Pazar' 1A"
 }, {
-    "id": 4,
+    "id": 5,
     "rating": 5,
     "vType":"-vegetarian-",
     "phone":["+35952636131"],
@@ -131,7 +131,7 @@
     "town": "Varna",
     "address": "str. 'Dragoman ' 9"
 }, {
-    "id": 5,
+    "id": 6,
     "rating": 5,
     "vType":"-vegetarian-",
     "phone":["+359899138411"],
@@ -153,7 +153,7 @@
     "town": "Sofia",
     "address": "str. '6-ti Septemvri' 39"
 }, {
-    "id": 6,
+    "id": 7,
     "rating": 5,
     "vType":"-vegetarian-",
     "phone":["+359 897 094139"],
@@ -175,7 +175,7 @@
     "town": "Sofia",
     "address": "str. 'W Gladston' 18B"
 }, {
-    "id": 7,
+    "id": 8,
     "rating": 5,
     "vType":"-vegan-",
     "phone":["+359876440003"],
@@ -197,12 +197,12 @@
     "town": "Sofia",
     "address": "str. 'Kokiche' 13"
 }, {
-    "id": 8,
+    "id": 9,
     "rating": 5,
     "vType":"-vegetarian-",
     "phone":["+35929808163"],
-    "imageUrl": "",
-    "links":[],
+    "imageUrl": "https://scontent-b.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/549447_342744842439648_1286050609_n.jpg?oh=e69606075c6f9182a4d6a528281a0117&oe=556DDD86",
+    "links":["https://www.facebook.com/pages/DreamHouse/148103941903740"],
     "description": "",
     "latitude": "42.694763",
     "longitude": "23.321235",
@@ -219,7 +219,7 @@
     "town": "Sofia",
     "address": "str. 'Alabin' 50A (second floor)"
 }, {
-    "id": 9,
+    "id": 10,
     "rating": 5,
     "vType":"-vegetarian-",
     "phone":["+359894488809"],
@@ -241,7 +241,7 @@
     "town": "Sofia",
     "address": "str. 'Knyaginya Maria Louisa' 58"
 }, {
-    "id": 10,
+    "id": 11,
     "rating": 5,
     "vType":"-vegan-",
     "phone":["+359878464514"],
@@ -263,11 +263,11 @@
     "town": "Sofia",
     "address": "str. 'Hristo Kovachev' 30"
 }, {
-    "id": 10,
+    "id": 12,
     "rating": 5,
     "vType":"-vegetarian-",
     "phone":["+359882108108"],
-    "imageUrl": "http://www.vedahouse.bg/images/stories/Veda_Sofia4/P1200558.JPG",
+    "imageUrl": "http://www.vedahouse.bg/images/stories/Veda_Sofia4/P1210069.JPG",
     "links":["http://www.vedahouse.bg"],
     "description": "",
     "latitude": "42.692310",
