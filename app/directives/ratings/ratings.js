@@ -1,24 +1,19 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app');
-
-    app.directive("starRatings", starRatings);
+    angular.module('app.directives')
+        .directive("starRatings", starRatings);
 
     function starRatings() {
         var directive = {
             link: link,
             restrict: 'A',
             transclude: true,
-            template: "<div class='raiting-container'><ul class='rating'>" +
-                "  <li ng-repeat='star in stars' ng-class='star' ng-click='toggle($index)'>" +
-                "    <i class='fa fa-star'></i>" + //&#9733
-            "  </li>" +
-                "</ul><span ng-transclude></span></div>",
+            templateUrl: 'app/directives/ratings/ratings.html',
             scope: {
                 ratingValue: "=",
                 max: "=",
-                onRatingSelected : "&"
+                onRatingSelected: "&"
             }
         };
 
@@ -34,7 +29,7 @@
             scope.toggle = function(index) {
                 scope.ratingValue = index + 1;
                 scope.onRatingSelected({
-                  rating : index + 1
+                    rating: index + 1
                 });
             };
 

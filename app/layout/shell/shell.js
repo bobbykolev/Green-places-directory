@@ -1,15 +1,15 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app');
-
-    app.controller('Shell', Shell);
+    angular.module('app')
+        .controller('Shell', Shell);
 
     Shell.$inject = ['$rootScope', 'common', 'config'];
 
     function Shell($rootScope, common, config) {
         var that = this,
             events = config.events;
+            
         that.isBusy = true;
         that.busyMessage = '';//Loading...';
 

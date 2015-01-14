@@ -1,27 +1,32 @@
-.rating {
+.raiting-container {
+  .rating {
   margin: 0;
   padding: 0;
   display: inline-block;
-}
 
-.rating li {
-    padding: 1px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 14px;
-    list-style-type: none;
-    display: inline-block;
-    cursor: pointer;
-}
-.raiting-container .rating li i{
-	color: #CFCFCF;
-}
+    li {
+      padding: 1px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+      list-style-type: none;
+      display: inline-block;
+      cursor: pointer;
 
-.raiting-container .rating li.filled i{
-  color: #C8E600; //#21568b
-}
+      i{
+        color: #CFCFCF;
+      }
 
-.raiting-container span {
-	font-size: 12px;
-	color: #CFCFCF;
+      &.filled {
+        i {
+        color: #C8E600; //#21568b
+        }
+      }
+    }
+  }
+
+  span {
+    font-size: 12px;
+    color: #CFCFCF;
+  }
 }

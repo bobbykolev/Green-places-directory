@@ -4,10 +4,13 @@
   clear: both;
   *zoom: 1; }
 
-ul, ul li {
+ul {
   margin: 0;
   padding: 0;
   list-style: none; }
+  ul li {
+    margin: 0;
+    padding: 0; }
 
 img {
   height: auto;
@@ -16,7 +19,8 @@ img {
 body {
   font-family: 'Play', sans-serif;
   font-size: 16px;
-  color: #888; }
+  color: #888;
+  background: url('http://subtlepatterns.com/patterns/debut_light.png'); }
 
 /* bootstrap overridden START*/
 .navbar-inverse {
@@ -124,21 +128,21 @@ h2 {
   100% {
     transform: rotate(360deg) scale(0.8); } }
 
-#home-container .radio-filters input[type="radio"] {
-  display: none; }
-#home-container ul.additional-info {
-  overflow: hidden; }
 #home-container .radio-filters {
   margin-bottom: 3px; }
+  #home-container .radio-filters input[type="radio"] {
+    display: none; }
+#home-container .additional-info {
+  overflow: hidden; }
+#home-container .clear-filters {
+  margin-bottom: 2px; }
+  #home-container .clear-filters .btn.btn-default {
+    color: #999;
+    margin-bottom: 2px; }
 #home-container .search-container, #home-container .clear-filters {
   position: relative;
   display: inline-block;
   vertical-align: top; }
-#home-container .clear-filters {
-  margin-bottom: 2px; }
-#home-container .clear-filters .btn.btn-default {
-  color: #999;
-  margin-bottom: 2px; }
 #home-container .search-container .glyphicon-search {
   float: left;
   top: -24px;
@@ -146,12 +150,32 @@ h2 {
   opacity: 0.2; }
 #home-container .search-container .form-control {
   padding-left: 20px; }
-#home-container .list-group-item:first-child, #home-container #home-container .list-group-item:last-child {
-  border-radius: 0; }
 #home-container .list-group-item {
-  padding: 5px; }
-#home-container .places-list > div:nth-child(2n) {
-  background: #fcfcfc; }
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.8); }
+#home-container .list-group-item:first-child, #home-container .list-group-item:last-child {
+  border-radius: 0; }
+#home-container .places-list {
+  width: 100%; }
+  #home-container .places-list > div:nth-child(2n) {
+    background: rgba(255, 255, 255, 0.3); }
+  #home-container .places-list .additional-info {
+    margin: 0 5px;
+    height: 65px; }
+    #home-container .places-list .additional-info li {
+      display: inline-block;
+      padding: 5px;
+      color: #999; }
+      #home-container .places-list .additional-info li i {
+        margin-right: 5px; }
+  #home-container .places-list .label {
+    vertical-align: text-top; }
+  #home-container .places-list .place-name {
+    font-family: 'Comfortaa', cursive; }
+    #home-container .places-list .place-name a {
+      color: #4CA4D2; }
+      #home-container .places-list .place-name a:hover {
+        color: #337ab7; }
 
 /* SLiding animaton of places START */
 .animate-repeat.ng-move, .animate-repeat.ng-enter, .animate-repeat.ng-leave {
@@ -169,63 +193,31 @@ h2 {
   transition-delay: 0.05s; }
 
 /* SLiding animaton of places END */
-.featured-img-container {
-  text-align: center; }
-
 .place-container i {
   margin-right: 5px;
   color: #C8E600; }
-
-.places-list {
-  width: 100%; }
-
-.places-list .additional-info {
-  margin: 0 5px;
-  height: 65px; }
-
-.places-list .additional-info li {
-  display: inline-block;
-  padding: 5px;
-  color: #999; }
-
-.places-list .additional-info li i {
-  margin-right: 5px; }
-
-.places-list .additional-info li .label {
-  vertical-align: text-top; }
-
-.places-list .place-name {
-  font-family: 'Comfortaa', cursive; }
-
-.places-list .place-name a {
-  color: #4CA4D2; }
-
-.places-list .place-name a:hover {
-  color: #337ab7; }
+.place-container .featured-img-container {
+  text-align: center; }
 
 .gmap {
   height: 300px; }
 
-.rating {
+.raiting-container .rating {
   margin: 0;
   padding: 0;
   display: inline-block; }
-
-.rating li {
-  padding: 1px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px;
-  list-style-type: none;
-  display: inline-block;
-  cursor: pointer; }
-
-.raiting-container .rating li i {
-  color: #CFCFCF; }
-
-.raiting-container .rating li.filled i {
-  color: #C8E600; }
-
+  .raiting-container .rating li {
+    padding: 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer; }
+    .raiting-container .rating li i {
+      color: #CFCFCF; }
+    .raiting-container .rating li.filled i {
+      color: #C8E600; }
 .raiting-container span {
   font-size: 12px;
   color: #CFCFCF; }

@@ -1,12 +1,13 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app');
+    var app = angular.module('app.place', []);
 
     app.controller('Place', Place);
-    Place.$inject = ['$routeParams', '$scope', 'common', 'places'];
 
-    function Place($routeParams, $scope, common, places) {
+    Place.$inject = ['$routeParams', '$scope', 'common', 'placesService'];
+
+    function Place($routeParams, $scope, common, placesService) {
         var that = this;
         that.days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
         that.place = {};
@@ -32,13 +33,13 @@
         }
 
         function getPlace() {
-            places.getPlace($routeParams.placeId).then(function(data){
+            placesService.getPlace($routeParams.placeId).then(function(data){
                 that.place = data;
             });
         }
 
         function getInitRating() {
-            places.getPlace($routeParams.placeId).then(function(data){
+            placesService.getPlace($routeParams.placeId).then(function(data){
                 that.initRating = that.rating = data.rating;
             });
         }

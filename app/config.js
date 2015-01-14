@@ -80,7 +80,7 @@
                     content: '<i class="fa fa-envelope"></i> Contact'
                 }
             }
-        },];
+        }];
     }
 
 })();

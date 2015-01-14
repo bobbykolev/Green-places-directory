@@ -1,7 +1,9 @@
 (function () {
     'use strict';
 
-    angular.module('app').factory('places', places);
+    angular.module('app')
+        .factory('placesService', places);
+
     places.$inject = ['$http', 'common'];
 
     function places($http, common) {

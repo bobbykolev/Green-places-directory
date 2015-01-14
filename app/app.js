@@ -6,11 +6,20 @@
         'ngAnimate',
         'ngRoute',
         'ngSanitize',
-        'common'
+        'common',
+
+        //app modules
+        'app.home',
+        'app.place',
+        'app.blogs',
+        'app.contact',
+
+        'app.directives'
     ]);
 
-    app.run(['$route',
-        function($route) {
+    angular.module('app.directives', []);
+
+    app.run(['$route', function($route) {
             // Include $route to kick start the router.
         }
     ]);

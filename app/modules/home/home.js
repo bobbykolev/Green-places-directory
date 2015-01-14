@@ -1,14 +1,18 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app');
+    var app = angular.module('app.home', []);
 
     app.controller('Home', Home);
-    Home.$inject = ['common', 'places', '$scope', '$timeout'];
 
-    function Home(common, places, $scope, $timeout) {
+    Home.$inject = ['common', 'placesService', '$scope', '$timeout'];
+
+    function Home(common, placesService, $scope, $timeout) {
         var that = this,
             warningFiltersTxt = '* Filters applied, some of the content could be hidden.';
+
+        that.homeTitle = 'Vegan Places In Bulgaria';
+        that.warningTxt = '';
 
         that.places = [];
 
@@ -20,9 +24,8 @@
 
         that.mealTypes = ["-pastryShop-", "-restaurant-", "-store-", "-fastFood-"];
 
-        that.homeTitle = 'Vegan Places In Bulgaria';
-        that.warningTxt = '';
-        
+        activate();
+
         //watch and save last selected filters
         $scope.$watch(
             "that.town",
@@ -74,8 +77,6 @@
             el.next().slideToggle();
         };*/
 
-        activate();
-
         function activate() {
             var promises = [getPlaces(), getTowns()];
             common.activateController(promises, 'home');
@@ -83,23 +84,21 @@
             getCurentTownFilter();
             getCurentTypeFilter();
 
-            console.log((new Date()).toString());
+            //30min open/closed check
             $timeout(function(){
                 setOpenCloseMarker(that.places);
-                console.log((new Date()).toString());
             }, 1800000);
         }
 
         function getPlaces() {
-            return places.getPlaces().then(function(data) {
-                setOpenCloseMarker(data);
-                return that.places = data;
+            return placesService.getPlaces().then(function(data) {
+                return that.places = setOpenCloseMarker(data);
             });
         }
 
         function getTowns() {
-            places.getPlaces().then(function(data) {
-                that.towns = getUniqueTowns(data);
+            return placesService.getPlaces().then(function(data) {
+                return that.towns = getUniqueTowns(data);
             });
         }
 
@@ -185,6 +184,8 @@
                     data[i].isOpen = false;
                 }
             }
+
+            return data;
         }
     }
 

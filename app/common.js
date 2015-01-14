@@ -20,6 +20,7 @@
     });
 
     commonModule.factory('common', common);
+    
     common.$inject = ['$q', '$rootScope', 'commonConfig' ];
 
     function common($q, $rootScope, commonConfig) {

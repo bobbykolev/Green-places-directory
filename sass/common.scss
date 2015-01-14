@@ -1,14 +1,21 @@
-.clearfix:after {
-	content: " ";
-	display: block;
-	clear: both;
-	*zoom: 1;
+.clearfix {
+		&:after {
+		content: " ";
+		display: block;
+		clear: both;
+		*zoom: 1;
+	}
 }
 
-ul, ul li {
+ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	
+	li {
+		margin: 0;
+		padding: 0;
+	}
 }
 
 img {
@@ -20,6 +27,7 @@ body {
 	font-family: 'Play', sans-serif;
 	font-size: 16px;
 	color: #888;
+	background: url('http://subtlepatterns.com/patterns/debut_light.png');
 }
 
 /* bootstrap overridden START*/

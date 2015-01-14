@@ -1,9 +1,9 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app');
+    angular.module('app.directives')
+        .directive('gmaps', gmaps);
 
-    app.directive('gmaps', gmaps);
     gmaps.$inject = ['$window', 'common'];
 
     function gmaps($window, common) {

@@ -1,14 +1,23 @@
 #home-container {
-	.radio-filters input[type="radio"] {
-		display: none;
+	.radio-filters {
+		margin-bottom: 3px;
+
+		input[type="radio"] {
+			display: none;
+		}
 	}
 
-	ul.additional-info {
+	.additional-info {
 		overflow: hidden;
 	}
 
-	.radio-filters {
-		margin-bottom: 3px;
+	.clear-filters {
+		margin-bottom: 2px;
+
+		.btn.btn-default {
+			color: #999;
+			margin-bottom: 2px;
+		}
 	}
 
 	.search-container, .clear-filters {	
@@ -17,37 +26,66 @@
 		vertical-align: top;
 	}
 
-	.clear-filters {
-		margin-bottom: 2px;
-	}
+	.search-container {
+		.glyphicon-search {
+			float: left;
+			top: -24px;
+			left: 4px;
+			opacity: 0.2;
+		}
 
-	.clear-filters .btn.btn-default {
-		color: #999;
-		margin-bottom: 2px;
-	}
-
-	.search-container .glyphicon-search {
-		float: left;
-		top: -24px;
-		left: 4px;
-		opacity: 0.2;
-	}
-
-	.search-container .form-control {
-		padding-left: 20px;
-	}
-
-	.list-group-item:first-child, #home-container .list-group-item:last-child{
-		border-radius: 0;
+		.form-control {
+			padding-left: 20px;
+		}
 	}
 
 	.list-group-item {
 		padding: 5px;
+		background: rgba(255,255,255,.8);
 	}
 
-	.places-list > div:nth-child(2n){
-		background: #fcfcfc;
+	.list-group-item:first-child, .list-group-item:last-child {
+		border-radius: 0;
 	}
+
+	.places-list {
+		width: 100%;
+
+		> div:nth-child(2n){
+			background: rgba(255,255,255,.3);
+		}
+
+		.additional-info {
+			margin: 0 5px;
+			height: 65px;
+
+			li {
+				display: inline-block;
+				padding: 5px;
+				color: #999;
+
+				i{
+					margin-right: 5px;	
+				}
+			}
+		}
+
+		.label {
+			vertical-align: text-top;
+		}
+
+		.place-name {
+			font-family: 'Comfortaa', cursive;
+
+			a {
+				color: #4CA4D2;
+
+				&:hover {
+					color: #337ab7;
+				}
+			}
+		}
+	} 
 }
 
 /* SLiding animaton of places START */

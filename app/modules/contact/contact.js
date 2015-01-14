@@ -1,9 +1,10 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app');
+    var app = angular.module('app.contact', []);
 
     app.controller('Contact', Contact);
+    
     Contact.$inject = ['common'];
 
     function Contact(common) {
