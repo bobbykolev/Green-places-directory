@@ -143,6 +143,40 @@ h2 {
 	font-size: 1.8em;
 }
 
+/* nav */
+#lang-choice {
+	margin-top: 50px;
+	float: right;
+
+	ul {
+		li {
+			display: inline-block;
+			padding: 0 5px;
+			line-height: 12px;
+			border-left: 1px dotted #ccc;
+			
+			&:first-child {
+				border-left: none;
+			}
+
+			&:hover {
+				cursor: pointer;
+				color: #C8E600;
+			}
+
+			&.active {
+				color: #ddd;
+
+				&:hover {
+					color: #ddd;
+					cursor: auto;
+				}
+			}
+		}
+	}
+}
+/* nav */
+
 
 
 //animations

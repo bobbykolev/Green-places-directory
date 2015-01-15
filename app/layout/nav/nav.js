@@ -4,17 +4,30 @@
 	angular.module('app')
         .controller('Nav', Nav);
 
-	Nav.$inject = ['$route', 'config', 'routes'];
+	Nav.$inject = ['$route', '$window', 'config', 'routes'];
 
-	function Nav($route, config, routes) {
+	function Nav($route, $window, config, routes) {
 		var that = this;
 
+        that.langs = ['en','bg'];//todo:config
+        that.activeLang = config.lang;
+
         that.isCurrent = isCurrent;
+        that.chooseLang = chooseLang;
 
         activate();
 
         function activate() {
             getNavRoutes();
+        }
+
+        function chooseLang(lang) {
+            if (lang == that.activeLang) {
+                return;
+            } else {
+                config.setLang(lang);
+                $window.location.reload();
+            }
         }
         
         function getNavRoutes() {

@@ -10,7 +10,10 @@
 
     var config = {
         events: events,
-        lang: (window.navigator.language || 'en-US').substring(0,2)
+        appErrorPrefix: '[VP Error]',
+        lang: locale(),
+        setLang: setlocale,
+        supportedLangs: ['bg','en']
     };
 
     app.value('config', config);
@@ -22,7 +25,36 @@
         commonConfigProvider.config.spinnerToggleEvent = config.events.spinnerToggle;
     }
 
+    function locale() {
+        if ((localStorage.getItem('vp_locale') || window.navigator.language).toLowerCase().substring(0,2) == 'bg') {
+            return 'bg';
+        }
+
+        return 'en';
+    }
+
+    function setlocale(lang) {
+        if (localStorage) {
+            localStorage.setItem('vp_locale', lang);
+        }
+    }
+
     //Routes
+    var routeTxts = {
+        bg: {
+            home:"Веагн Заведения",
+            place:"Заведение",
+            blogs:"Блогове",
+            contact:"Контакти"
+        },
+        en: {
+            home:"Vegan Places",
+            place:"Place",
+            blogs:"Blogs",
+            contact:"Contact"
+        }
+    };
+
     app.constant('routes', getRoutes());
 
     // Configure the routes and route resolvers
@@ -44,17 +76,17 @@
             url: '/',
             config: {
                 templateUrl: 'app/modules/home/home.html',
-                title: 'Home',
+                title: routeTxts[config.lang].home,
                 settings: {
                     nav: 1,
-                    content: '<i class="fa fa-home"></i> Vegan Places'
+                    content: '<i class="fa fa-home"></i> ' + routeTxts[config.lang].home
                 }
             }
         },{
             url: '/places/:placeId',
             config: {
                 templateUrl: 'app/modules/place/place.html',
-                title: 'Place',
+                title: routeTxts[config.lang].place,
                 settings: {
                     nav: null,
                     content: ''
@@ -64,23 +96,41 @@
             url: '/blogs',
             config: {
                 templateUrl: 'app/modules/blogs/blogs.html',
-                title: 'Blogs',
+                title: routeTxts[config.lang].blogs,
                 settings: {
                     nav: 2,
-                    content: '<i class="fa fa-pencil"></i> Blogs'
+                    content: '<i class="fa fa-pencil"></i> ' + routeTxts[config.lang].blogs
                 }
             }
         },{
             url: '/contact',
             config: {
                 templateUrl: 'app/modules/contact/contact.html',
-                title: 'Contact',
+                title: routeTxts[config.lang].contact,
                 settings: {
                     nav: 3,
-                    content: '<i class="fa fa-envelope"></i> Contact'
+                    content: '<i class="fa fa-envelope"></i> ' + routeTxts[config.lang].contact
                 }
             }
         }];
+    }
+
+    app.config(['$provide', function ($provide) {
+        $provide.decorator('$exceptionHandler',
+            ['$delegate', 'config', extendExceptionHandler]);
+    }]);
+    
+    function extendExceptionHandler($delegate, config) {
+        var appErrorPrefix = config.appErrorPrefix;
+
+        return function (exception, cause) {
+            $delegate(exception, cause);
+            if (appErrorPrefix && exception.message.indexOf(appErrorPrefix) === 0) { return; }
+
+            var errorData = { exception: exception, cause: cause };
+            var msg = appErrorPrefix + exception.message;
+            console.error(msg, errorData);
+        };
     }
 
 })();

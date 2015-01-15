@@ -12,6 +12,20 @@ gulp.task('minifyPlaces', function(){
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('minifyPlacesBg', function(){
+    return gulp.src('places_bg.json')
+        .pipe(jsonminify())
+        .pipe(gp_rename('places_min_bg.json'))
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('minifyPlacesEn', function(){
+    return gulp.src('places_en.json')
+        .pipe(jsonminify())
+        .pipe(gp_rename('places_min_en.json'))
+        .pipe(gulp.dest('./'));
+});
+
 gulp.task('compileSass', function(){
     return gulp.src('./sass/style.scss')
         .pipe(sass())
@@ -26,7 +40,9 @@ gulp.task('live', function() {
 
 gulp.task('watch', function() {
     gulp.watch('./sass/**/*.scss', ['compileSass']);
-    gulp.watch('./places.json', ['minifyPlaces']);
+    //gulp.watch('./places.json', ['minifyPlaces']);
+    gulp.watch('./places_bg.json', ['minifyPlacesBg']);
+    gulp.watch('./places_en.json', ['minifyPlacesEn']);
 
     livereload.listen();
     gulp.watch('./**/*.*', ['live']);

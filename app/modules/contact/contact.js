@@ -5,12 +5,20 @@
 
     app.controller('Contact', Contact);
     
-    Contact.$inject = ['common'];
+    Contact.$inject = ['common', 'config'];
 
-    function Contact(common) {
-        var that = this;
+    function Contact(common, config) {
+        var that = this,
+            transTxts = {
+                bg: {
+                    title:"Контакт"
+                },
+                en: {
+                    title:"Contact"
+                }
+            };
 
-        that.contactTitle = 'Contact';
+        that.title = transTxts[config.lang].title;
         that.email = 'admin@the-vegan.org';
 
         activate();

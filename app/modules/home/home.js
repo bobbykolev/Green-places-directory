@@ -5,24 +5,51 @@
 
     app.controller('Home', Home);
 
-    Home.$inject = ['common', 'placesService', '$scope', '$timeout'];
+    Home.$inject = ['$scope', '$interval', 'config', 'common', 'placesService'];
 
-    function Home(common, placesService, $scope, $timeout) {
+    function Home($scope, $interval, config, common, placesService) {
         var that = this,
-            warningFiltersTxt = '* Filters applied, some of the content could be hidden.';
+            transTxts = {
+                bg: {
+                    title:"Веагн Заведения в България",
+                    warningFiltersTxt:"* Активирани филтри, възможно е част от съдържанието да е скрито.",
+                    warningTxt2: "* забележка: не всички заведения приемат пчелният мед за 'веган'",
+                    allTxt:"Всички",
+                    clearFiltersTxt: "изчисти филтрите",
+                    searchTxt: "Търси по дума...",
+                    openTxt:"Отворено",
+                    closedTxt:"Затворено"
+                },
+                en: {
+                    title:"Vegan Places In Bulgaria",
+                    warningFiltersTxt:"* Filters applied, some of the content could be hidden.",
+                    warningTxt2: "* note: not all vegan places consider honney as 'vegan'",
+                    allTxt:"All",
+                    clearFiltersTxt: "clear filters",
+                    searchTxt: "Search by keyword...",
+                    openTxt:"Open",
+                    closedTxt:"Closed"
+                }
+            };
 
-        that.homeTitle = 'Vegan Places In Bulgaria';
+        that.title = transTxts[config.lang].title;
         that.warningTxt = '';
+        that.warningTxt2 = transTxts[config.lang].warningTxt2;
+        that.allTxt = transTxts[config.lang].allTxt;
+        that.clearFiltersTxt = transTxts[config.lang].clearFiltersTxt;
+        that.searchTxt = transTxts[config.lang].searchTxt;
+        this.openTxt = transTxts[config.lang].openTxt;
+        this.closedTxt = transTxts[config.lang].closedTxt;
 
         that.places = [];
 
         that.towns = [];
         that.town = '';
 
-        that.vTypes = ["-vegan-", "-vegetarian-", "-other-"];
+        that.vTypes = [];
         that.vType = '';
 
-        that.mealTypes = ["-pastryShop-", "-restaurant-", "-store-", "-fastFood-"];
+        that.mealTypes = ["-sweetShop-", "-restaurant-", "-store-", "-fastFood-"];
 
         activate();
 
@@ -71,21 +98,16 @@
             that.warningTxt = '';
         };
 
-        /*that.toggleInfo = function($event) {
-            var el = $($event.currentTarget);
-            el.find('i').toggleClass('fa-angle-double-down').toggleClass('fa-angle-double-up');
-            el.next().slideToggle();
-        };*/
-
         function activate() {
-            var promises = [getPlaces(), getTowns()];
+            var promises = [getPlaces(), getTowns(), getVtypes()];
             common.activateController(promises, 'home');
 
             getCurentTownFilter();
             getCurentTypeFilter();
 
             //30min open/closed check
-            $timeout(function(){
+            $interval(function(){
+                console.log("[VP] open/close marker refresh", new Date());
                 setOpenCloseMarker(that.places);
             }, 1800000);
         }
@@ -98,14 +120,20 @@
 
         function getTowns() {
             return placesService.getPlaces().then(function(data) {
-                return that.towns = getUniqueTowns(data);
+                return that.towns = getUniqueProp('town', data);
             });
         }
 
-        function getUniqueTowns(data) {
+        function getVtypes() {
+            return placesService.getPlaces().then(function(data) {
+                return that.vTypes = getUniqueProp('vType', data);
+            });
+        }
+
+        function getUniqueProp(prop, data) {
             var arr = [];
             for (var i = 0; i < data.length; i++) {
-                var t = data[i].town.split(',');
+                var t = data[i][prop].split(',');
                 for (var j = 0; j < t.length; j++) {
                     arr.push(t[j]);
                 }
@@ -114,24 +142,26 @@
             return common.getUnique(arr);
         }
 
+
+        //todo: different filters on different lang - fix it 
         function getCurentTownFilter(){
             if (localStorage) {
-                that.town = localStorage.getItem('currentVplace') || '';
+                that.town = localStorage.getItem('currentVplace_' + config.lang) || '';
             }
         }
 
         function getCurentTypeFilter(){
             if (localStorage) {
-                that.vType = localStorage.getItem('currentVtype') || '';
+                that.vType = localStorage.getItem('currentVtype_' + config.lang) || '';
             }
         }
 
         function setCurentTownFilterToLS(val){
-            saveValToLS('currentVplace', val);
+            saveValToLS('currentVplace_' + config.lang, val);
         }
 
         function setCurentTypeFilterToLS(val){
-            saveValToLS('currentVtype', val);
+            saveValToLS('currentVtype_' + config.lang, val);
         }
 
         function saveValToLS(key, val) {
@@ -142,7 +172,7 @@
 
         function checkForActivFiltering() {
             if(that.town || that.vType || $scope.search) {
-                that.warningTxt = warningFiltersTxt;
+                that.warningTxt = transTxts[config.lang].warningFiltersTxt;
             } else {
                 that.warningTxt = '';
             }
@@ -163,14 +193,14 @@
                 }
 
             for (var i = 0; i < data.length; i++) {
-                //–   8211    2013    &ndash; EN DASH
+                //the dash: (– 8211  2013 &ndash; EN DASH)
                startEndTimeArr = data[i].workingTime[currentDay-1].split('–');
 
                 if (startEndTimeArr[0]) {
                     startTime = startEndTimeArr[0].split(':');
                     endTime = startEndTimeArr[1].split(':');
 
-                    //houers '-2': data is with GMT -2 (Sofia...)
+                    //hours '-2': data is with GMT -2 (Sofia...)
                     if ((currentHour > parseInt(startTime[0]) - 2) && (currentHour < parseInt(endTime[0]) - 2)) {
                         data[i].isOpen = true;
                     } else if ((currentHour == parseInt(startTime[0]) - 2)  && (currentMinutes > parseInt(startTime[1]))) {

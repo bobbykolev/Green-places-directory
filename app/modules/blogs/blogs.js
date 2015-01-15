@@ -5,12 +5,20 @@
 
     app.controller('Blogs', Blogs);
     
-    Blogs.$inject = ['common'];
+    Blogs.$inject = ['common', 'config'];
 
-    function Blogs(common) {
-        var that = this;
+    function Blogs(common, config) {
+        var that = this,
+            transTxts = {
+                bg: {
+                    title:"Блогове"
+                },
+                en: {
+                    title:"Blogs"
+                }
+            };
 
-        that.blogTitle = 'Blogs';
+        that.title = transTxts[config.lang].title;
 
         activate();
 

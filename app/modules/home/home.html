@@ -1,21 +1,21 @@
 <div ng-controller="Home as that">
 	<header>
-		<h2 class="page-header">{{ that.homeTitle }}</h2>
+		<h2 class="page-header">{{ that.title }}</h2>
 	</header>
 	<section id="home-container">	
 		<div class="btn-group radio-filters">
-			<label for="town-1" class="btn btn-primary" ng-class="{'active': that.town == '' }"><input id="town-1" ng-model="that.town" type="radio" name="towns" value="">All</label>
+			<label for="town-1" class="btn btn-primary" ng-class="{'active': that.town == '' }"><input id="town-1" ng-model="that.town" type="radio" name="towns" value="">{{that.allTxt}}</label>
 			<label for="town{{$index}}" ng-repeat="t in that.towns" class="btn btn-primary" ng-class="{'active': that.town == t }"><input id="town{{$index}}" ng-model="that.town" type="radio" name="towns" value="{{t}}">{{t}}</label>
 		</div>
 		<div class="btn-group radio-filters">
-			<label for="vType-1" class="btn btn-success" ng-class="{'active': that.vType == '' }"><input id="vType-1" ng-model="that.vType" type="radio" name="vTypes" value="">All</label>
+			<label for="vType-1" class="btn btn-success" ng-class="{'active': that.vType == '' }"><input id="vType-1" ng-model="that.vType" type="radio" name="vTypes" value="">{{that.allTxt}}</label>
 			<label for="vType{{$index}}" ng-repeat="t in that.vTypes" class="btn btn-success" ng-class="{'active': that.vType == t }"><input id="vType{{$index}}" ng-model="that.vType" type="radio" name="vTypes" value="{{t}}">{{that.trimed(t)}}</label>
 		</div>
 		<div class="search-container">
-			<input ng-model-options="{ updateOn: 'default blur' }" ng-model="search" value="{{that.town}}" class="form-control" placeholder="Search by keyword...">
+			<input ng-model-options="{ updateOn: 'default blur' }" ng-model="search" value="{{that.town}}" class="form-control" placeholder="{{that.searchTxt}}">
 			<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 		</div>
-		<div class="clear-filters"><button ng-click="that.clearFilters()" class="btn btn-default">clear filters</button></div>
+		<div class="clear-filters"><button ng-click="that.clearFilters()" class="btn btn-default">{{that.clearFiltersTxt}}</button></div>
 		<div class="places-list list-group row">
 			<div class="animate-repeat list-group-item col-xs-12 col-sm-6 col-md-4" ng-repeat="p in that.places | orderBy: 'name' | filter: that.town | filter: search | filter: that.vType">
 				<ul class="additional-info">
@@ -23,7 +23,7 @@
 					{{ p.name }}
 					</a></div></li>
 					<li>
-						<div class="open-close-marker"><span class="label" ng-class="p.isOpen ? 'label-success' : 'label-default'"><i class="fa fa-clock-o"></i>{{p.isOpen ? 'Open' : 'Closed'}}</span>
+						<div class="open-close-marker"><span class="label" ng-class="p.isOpen ? 'label-success' : 'label-default'"><i class="fa fa-clock-o"></i>{{p.isOpen ? that.openTxt : that.closedTxt}}</span>
 						</div></li>
 					<li><i class="fa fa-map-marker"></i>{{ p.address }};</li>
 					<li><span ng-repeat="phone in p.phone"><a href="tel:{{phone}}"><i class="fa fa-phone"></i>{{phone}}</a>;&nbsp;&nbsp;</span></li>
@@ -34,7 +34,7 @@
 			<div>{{that.warningTxt}}</div>
 		</div>
 		<div class="alert alert-warning">
-			<div>* note: not all vegan places consider honney as 'vegan'</div>
+			<div>{{that.warningTxt2}}</div>
 		</div>
 	</section>
 </div>
