@@ -42,7 +42,7 @@
     //Routes
     var routeTxts = {
         bg: {
-            home:"Веагн Заведения",
+            home:"Веган Заведения",
             place:"Заведение",
             blogs:"Блогове",
             contact:"Контакти"
@@ -92,7 +92,8 @@
                     content: ''
                 }
             }
-        },{
+        },
+        /*{
             url: '/blogs',
             config: {
                 templateUrl: 'app/modules/blogs/blogs.html',
@@ -102,7 +103,8 @@
                     content: '<i class="fa fa-pencil"></i> ' + routeTxts[config.lang].blogs
                 }
             }
-        },{
+        },*/
+        {
             url: '/contact',
             config: {
                 templateUrl: 'app/modules/contact/contact.html',

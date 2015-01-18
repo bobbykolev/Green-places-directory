@@ -8,6 +8,8 @@
 
 	function Nav($route, $window, config, routes) {
 		var that = this;
+        
+        that.collapsed = false;
 
         that.langs = ['en','bg'];//todo:config
         that.activeLang = config.lang;
