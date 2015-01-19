@@ -13,7 +13,7 @@
                 <ul class="nav navbar-nav pull-right">
                     <li class="fade-selection-animation" ng-class="that.isCurrent(r)"
                     ng-repeat="r in that.navRoutes">
-                    	<a href="#{{r.url}}" ng-bind-html="r.config.settings.content"></a>
+                    	<a href="#{{r.url}}" ng-click="that.collapsed=false" ng-bind-html="r.config.settings.content"></a>
                 	</li>
                 </ul>
             </div>
