@@ -8,7 +8,7 @@
 
 	function Nav($route, $window, config, routes) {
 		var that = this;
-        
+
         that.collapsed = false;
 
         that.langs = ['en','bg'];//todo:config
@@ -16,6 +16,8 @@
 
         that.isCurrent = isCurrent;
         that.chooseLang = chooseLang;
+
+        that.logoTitle = config.lang == 'en' ? 'Home':'Начало';
 
         activate();
 

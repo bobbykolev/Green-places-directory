@@ -26,7 +26,7 @@
     }
 
     function locale() {
-        if ((localStorage.getItem('vp_locale') || window.navigator.language).toLowerCase().substring(0,2) == 'bg') {
+        if ((localStorage.getItem('vp_locale') || window.navigator.language || window.navigator.userLanguage).toLowerCase().substring(0,2) == 'bg') {
             return 'bg';
         }
 

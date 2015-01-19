@@ -176,6 +176,27 @@ h2 {
 		}
 	}
 }
+
+.home-logo {
+	background: url('../img/vp_logo.png');
+	width:25px;
+	height:34px;
+	margin-top: -8px;
+	transition: transform 0.2s linear;
+	-webkit-transition: -webkit-transform 0.2s linear;
+
+	&:hover {
+		-ms-transform: rotate(30deg) scale(1.1); /* IE 9 */
+    	-webkit-transform: rotate(30deg) scale(1.1); /* Chrome, Safari, Opera */
+    	transform: rotate(30deg) scale(1.1);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse.ng-hide {
+		display:block!important;
+	}
+}
 /* nav */
 
 
