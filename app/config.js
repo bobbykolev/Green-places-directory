@@ -58,9 +58,9 @@
     app.constant('routes', getRoutes());
 
     // Configure the routes and route resolvers
-    app.config(['$routeProvider', 'routes', routeConfigurator]);
+    app.config(['$routeProvider', 'routes', '$locationProvider', routeConfigurator]);
 
-    function routeConfigurator($routeProvider, routes) {
+    function routeConfigurator($routeProvider, routes, $locationProvider) {
 
         routes.forEach(function(r) {
             $routeProvider.when(r.url, r.config);
@@ -68,6 +68,8 @@
         $routeProvider.otherwise({
             redirectTo: '/'
         });
+
+        $locationProvider.hashPrefix('!');
     }
 
     // Define the routes 

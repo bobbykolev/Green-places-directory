@@ -1,7 +1,7 @@
 <div ng-controller="Nav as that">
 	﻿<nav class="navbar navbar-fixed-top navbar-inverse">
         <div class="navbar-header">
-            <a href="#/" class="navbar-brand"><div title="{{that.logoTitle}}" class="home-logo"></div></a>
+            <a href="#!/" class="navbar-brand"><div title="{{that.logoTitle}}" class="home-logo"></div></a>
             <a class="btn navbar-btn navbar-toggle" ng-model="that.collapsed" ng-click="that.collapsed=!that.collapsed">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -13,7 +13,7 @@
                 <ul class="nav navbar-nav pull-right">
                     <li class="fade-selection-animation" ng-class="that.isCurrent(r)"
                     ng-repeat="r in that.navRoutes">
-                    	<a href="#{{r.url}}" ng-click="that.collapsed=false" ng-bind-html="r.config.settings.content"></a>
+                    	<a href="#!{{r.url}}" ng-click="that.collapsed=false" ng-bind-html="r.config.settings.content"></a>
                 	</li>
                 </ul>
             </div>
