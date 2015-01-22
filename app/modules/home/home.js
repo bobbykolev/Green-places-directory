@@ -99,7 +99,7 @@
         };
 
         function activate() {
-            var promises = [getPlaces(), getTowns(), getVtypes()];
+            var promises = [getInitalPlacesData()];
             common.activateController(promises, 'home');
 
             getCurentTownFilter();
@@ -109,24 +109,22 @@
             $interval(function(){
                 console.log("[VP] open/close marker refresh", new Date());
                 setOpenCloseMarker(that.places);
-            }, 1800000);
+            }, 600000);
         }
 
-        function getPlaces() {
-            return placesService.getPlaces().then(function(data) {
-                return that.places = setOpenCloseMarker(data);
-            });
+        function getTowns(data) {
+            that.towns = getUniqueProp('town', data);
         }
 
-        function getTowns() {
-            return placesService.getPlaces().then(function(data) {
-                return that.towns = getUniqueProp('town', data);
-            });
+        function getVtypes(data) {
+            that.vTypes = getUniqueProp('vType', data);
         }
 
-        function getVtypes() {
+        function getInitalPlacesData() {
             return placesService.getPlaces().then(function(data) {
-                return that.vTypes = getUniqueProp('vType', data);
+                that.places = setOpenCloseMarker(data);
+                getTowns(data);
+                getVtypes(data);
             });
         }
 
