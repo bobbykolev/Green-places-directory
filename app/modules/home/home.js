@@ -11,9 +11,9 @@
         var that = this,
             transTxts = {
                 bg: {
-                    title:"Веагн Заведения в България",
+                    title:"Веган Заведения в България",
                     warningFiltersTxt:"* Активирани филтри, възможно е част от съдържанието да е скрито.",
-                    warningTxt2: "* забележка: не всички заведения приемат пчелният мед за 'веган'",
+                    warningTxt2: "* забележка: не всички заведения приемат пчелния мед за 'веган'",
                     allTxt:"Всички",
                     clearFiltersTxt: "изчисти филтрите",
                     searchTxt: "Търси по дума...",
@@ -30,7 +30,8 @@
                     openTxt:"Open",
                     closedTxt:"Closed"
                 }
-            };
+            },
+            markerCheck;
 
         that.title = transTxts[config.lang].title;
         that.warningTxt = '';
@@ -105,11 +106,15 @@
             getCurentTownFilter();
             getCurentTypeFilter();
 
-            //30min open/closed check
-            $interval(function(){
+            setOpenCloseUpdater();
+        }
+
+        function setOpenCloseUpdater () {
+            markerCheck && $interval.cancel(markerCheck);
+            markerCheck = $interval(function(){
                 console.log("[VP] open/close marker refresh", new Date());
                 setOpenCloseMarker(that.places);
-            }, 600000);
+            }, 600000);//10min
         }
 
         function getTowns(data) {

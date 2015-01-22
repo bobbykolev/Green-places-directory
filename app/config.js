@@ -26,7 +26,7 @@
     }
 
     function locale() {
-        if ((localStorage.getItem('vp_locale') || window.navigator.language).toLowerCase().substring(0,2) == 'bg') {
+        if ((localStorage.getItem('vp_locale') || window.navigator.language || window.navigator.userLanguage).toLowerCase().substring(0,2) == 'bg') {
             return 'bg';
         }
 
@@ -42,7 +42,7 @@
     //Routes
     var routeTxts = {
         bg: {
-            home:"Веагн Заведения",
+            home:"Веган Заведения",
             place:"Заведение",
             blogs:"Блогове",
             contact:"Контакти"
@@ -58,9 +58,9 @@
     app.constant('routes', getRoutes());
 
     // Configure the routes and route resolvers
-    app.config(['$routeProvider', 'routes', routeConfigurator]);
+    app.config(['$routeProvider', 'routes', '$locationProvider', routeConfigurator]);
 
-    function routeConfigurator($routeProvider, routes) {
+    function routeConfigurator($routeProvider, routes, $locationProvider) {
 
         routes.forEach(function(r) {
             $routeProvider.when(r.url, r.config);
@@ -68,6 +68,8 @@
         $routeProvider.otherwise({
             redirectTo: '/'
         });
+
+        $locationProvider.hashPrefix('!');
     }
 
     // Define the routes 
@@ -92,7 +94,8 @@
                     content: ''
                 }
             }
-        },{
+        },
+        /*{
             url: '/blogs',
             config: {
                 templateUrl: 'app/modules/blogs/blogs.html',
@@ -102,7 +105,8 @@
                     content: '<i class="fa fa-pencil"></i> ' + routeTxts[config.lang].blogs
                 }
             }
-        },{
+        },*/
+        {
             url: '/contact',
             config: {
                 templateUrl: 'app/modules/contact/contact.html',
