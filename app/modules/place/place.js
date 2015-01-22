@@ -37,18 +37,19 @@
         activate();
 
         function activate() {
-            var promises = [getInitalPlaceData()];
+            var promises = [getPlace(), getInitRating()];
             common.activateController(promises, 'home');
         }
 
-        function getInitRating(data) {
-            that.initRating = that.rating = data.rating;
+        function getPlace() {
+            placesService.getPlace($routeParams.placeId).then(function(data){
+                that.place = data;
+            });
         }
 
-        function getInitalPlaceData() {
-            return placesService.getPlace($routeParams.placeId).then(function(data){
-                that.place = data;
-                getInitRating(data);
+        function getInitRating() {
+            placesService.getPlace($routeParams.placeId).then(function(data){
+                that.initRating = that.rating = data.rating;
             });
         }
     }
