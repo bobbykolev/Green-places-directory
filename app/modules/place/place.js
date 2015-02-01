@@ -20,11 +20,15 @@
 
         that.days = transTxts[config.lang].days;
         that.place = {};
-        that.initRating = 5;
         that.rating = 5;
+        that.warning = [''];
 
         $scope.rateFunction = function(rating) {
             alert("Rating selected - " + rating);
+        };
+
+        that.userFriendlyUrl = function(url) {
+            return url.replace(/http:\/\//gi, '').replace(/https:\/\//gi, '');
         };
         
         $scope.$watch(
@@ -41,14 +45,11 @@
             common.activateController(promises, 'home');
         }
 
-        function getInitRating(data) {
-            that.initRating = that.rating = data.rating;
-        }
-
         function getInitalPlaceData() {
             return placesService.getPlace($routeParams.placeId).then(function(data){
-                that.place = data;
-                getInitRating(data);
+                that.place = data || {};
+                that.rating = data.rating || 5;
+                that.warning = data.warning || [''];
             });
         }
     }

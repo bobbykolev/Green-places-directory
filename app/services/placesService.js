@@ -26,7 +26,7 @@
             if (cache.get('places_' + config.lang)) {
                 def.resolve(cache.get('places_' + config.lang));
             } else {
-                $http.get('./places_min_' + config.lang + '.json').success(function(places) {
+                $http.get('./places_min_' + config.lang + '.json?v='+(new Date()).getTime()).success(function(places) {
                     cache.put('places_' + config.lang, places);
                     startResetCacheTimeout();
                     def.resolve(places);
@@ -42,7 +42,7 @@
             if (cache.get('places_' + config.lang)) {
                 def.resolve(getPlaceById(cache.get('places_' + config.lang), id));
             } else {
-                $http.get('./places_min_' + config.lang + '.json').success(function(places) {
+                $http.get('./places_min_' + config.lang + '.json?v='+(new Date()).getTime()).success(function(places) {
                     cache.put('places_' + config.lang, places);
                     startResetCacheTimeout();
                     def.resolve(getPlaceById(places, id));

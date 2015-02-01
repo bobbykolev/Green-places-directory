@@ -19,7 +19,7 @@
             };
 
         that.title = transTxts[config.lang].title;
-        that.email = 'admin@the-vegan.org';
+        that.email = 'veganplaces@the-vegan.org';
 
         activate();
 

@@ -23,7 +23,7 @@
                 en: {
                     title:"Vegan Places In Bulgaria",
                     warningFiltersTxt:"* Filters applied, some of the content could be hidden.",
-                    warningTxt2: "* note: not all vegan places consider honney as 'vegan'",
+                    warningTxt2: "* note: not all vegan places consider honey as 'vegan'",
                     allTxt:"All",
                     clearFiltersTxt: "clear filters",
                     searchTxt: "Search by keyword...",

@@ -6,6 +6,7 @@
         'ngAnimate',
         'ngRoute',
         'ngSanitize',
+        'ngTouch',
         'common',
 
         //app modules

@@ -261,7 +261,8 @@
         "10:00–16:00"
     ],
     "town": "Sofia",
-    "address": "str. 'Hristo Kovachev' 30"
+    "address": "str. 'Hristo Kovachev' 30",
+    "warning":"Vanilla Kitchen is moving. For more details please follow its facebook page."
 }, {
     "id": 12,
     "rating": 5,

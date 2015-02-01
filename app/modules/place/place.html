@@ -4,6 +4,11 @@
 </header>	
 <section class="place-container">
 	<ul class="list-group">
+		<li ng-hide="that.warning[0] === ''" class="list-group-item">
+			<div class="alert alert-warning">
+				<div>{{that.warning}}</div>
+			</div>	
+		</li>
 		<li class="list-group-item">
 			<div class="featured-img-container">
 				<img ng-src="{{that.place.imageUrl}}"/>
@@ -28,7 +33,7 @@
 			<div class="gmap" gmaps lat="that.place.latitude" lon="that.place.longitude" id="map{{that.place.id}}" place="that.place"></div>
 		</li>
 		<li class="list-group-item">
-			<div ng-repeat="l in that.place.links"><a href="{{l}}" target="_blank"><i class="fa fa-external-link"></i>{{l}}</div>
+			<div ng-repeat="l in that.place.links"><a href="{{l}}" target="_blank"><i class="fa fa-external-link"></i>{{that.userFriendlyUrl(l)}}</div>
 		</li>
 	</ul>
 </section>

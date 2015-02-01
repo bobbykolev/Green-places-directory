@@ -52,7 +52,8 @@ body {
 .alert {
   padding: 5px;
   font-size: 14px;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  border-radius: 0; }
 
 .alert-warning {
   color: #bbb; }
@@ -83,6 +84,12 @@ body {
   color: #fff;
   background-color: #89B324;
   border-color: #749621; }
+
+.form-control {
+  border-radius: 0; }
+
+.list-group-item:first-child, .list-group-item:last-child {
+  border-radius: 0; }
 
 /* bootstrap overridden END*/
 #content {
@@ -137,11 +144,11 @@ h2 {
   transition: transform 0.2s linear;
   -webkit-transition: -webkit-transform 0.2s linear; }
   .home-logo:hover {
-    -ms-transform: rotate(30deg) scale(1.1);
+    -ms-transform: rotate(30deg) scale(0.9);
     /* IE 9 */
-    -webkit-transform: rotate(30deg) scale(1.1);
+    -webkit-transform: rotate(30deg) scale(0.9);
     /* Chrome, Safari, Opera */
-    transform: rotate(30deg) scale(1.1); }
+    transform: rotate(30deg) scale(0.9); }
 
 @media screen and (min-width: 768px) {
   .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse.ng-hide {
@@ -194,8 +201,6 @@ h2 {
 #home-container .list-group-item {
   padding: 5px;
   background: rgba(255, 255, 255, 0.8); }
-#home-container .list-group-item:first-child, #home-container .list-group-item:last-child {
-  border-radius: 0; }
 #home-container .places-list {
   width: 100%; }
   #home-container .places-list > div:nth-child(2n) {
