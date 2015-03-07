@@ -48,7 +48,7 @@
     "vType":"-vegan-",
     "phone":["+359888061111"],
     "imageUrl": "http://i.imgur.com/G6zUTal.jpg?1",
-    "links":[],
+    "links":["https://www.facebook.com/pages/%D0%9C%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%97%D0%B5%D0%BB%D0%B5%D0%BD-%D0%91%D0%B8%D0%BE/227666677317614", "http://vegettoria.com"],
     "description": "A cosy little sweet shop in the heart of the big city - this is Sladkishnicata. Satisfy your sweet cravings without worrying if there is anything non-vegan in the ingredients. Delicious chocolate cakes, cheescakes, muffins and tartelettes, vegetable based tarts and quiches - everything is made with style and the prices are very reasonable.",
     "latitude": "42.689386", 
     "longitude": "23.327623",
@@ -59,8 +59,8 @@
         "10:00–20:00",
         "10:00–20:00",
         "10:00–20:00",
-        "11:00–19:00",
-        "12:00–18:00"
+        "11:00–20:00",
+        "11:00–20:00"
     ],
     "town": "Sofia",
     "address": "str. 'Car Ivan Shishman' 43"
@@ -243,7 +243,7 @@
 }, {
     "id": 11,
     "rating": 5,
-    "vType":"-vegan-",
+    "vType":"-vegetarian-",
     "phone":["+359878464514"],
     "imageUrl": "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/1488119_715266178492856_708505432_n.jpg?oh=3f7c14f1a7a14f21c259459a7ef626d6&oe=55333662&__gda__=1433251089_fe3cd7f47b1e4ee45ce7c60c25e90019",
     "links":["http://vanillka.com","https://www.facebook.com/vanillakitchenbg"],
@@ -252,13 +252,13 @@
     "longitude": "23.335527",
     "name": "Vanilla Kitchen",
     "workingTime": [
-        "11:00–19:00",
-        "11:00–19:00",
-        "11:00–19:00",
-        "11:00–19:00",
-        "11:00–19:00",
-        "10:00–18:00",
-        "10:00–16:00"
+        "00:00–00:00",
+        "00:00–00:00",
+        "00:00–00:00",
+        "00:00–00:00",
+        "00:00–00:00",
+        "00:00–00:00",
+        "00:00–00:00"
     ],
     "town": "Sofia",
     "address": "str. 'Hristo Kovachev' 30",
