@@ -69,7 +69,7 @@
             redirectTo: '/'
         });
 
-        $locationProvider.hashPrefix('!');
+        //$locationProvider.hashPrefix('!');
     }
 
     // Define the routes 
