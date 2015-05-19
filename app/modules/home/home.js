@@ -14,6 +14,7 @@
                     title:"Веган Заведения в България",
                     warningFiltersTxt:"* Активирани филтри, възможно е част от съдържанието да е скрито.",
                     warningTxt2: "* забележка: не всички заведения приемат пчелния мед за 'веган'",
+                    warningTxt3: "* забележка: във всички изброени вегетариански заведения има веган ястия. Някои от заведенията са 99% веган.",
                     allTxt:"Всички",
                     clearFiltersTxt: "изчисти филтрите",
                     searchTxt: "Търси по дума...",
@@ -24,6 +25,7 @@
                     title:"Vegan Places In Bulgaria",
                     warningFiltersTxt:"* Filters applied, some of the content could be hidden.",
                     warningTxt2: "* note: not all vegan places consider honey as 'vegan'",
+                    warningTxt3: "* note: There's vegan food in all vegetarian places, some of them are 98% vegan.",
                     allTxt:"All",
                     clearFiltersTxt: "clear filters",
                     searchTxt: "Search by keyword...",
@@ -36,6 +38,7 @@
         that.title = transTxts[config.lang].title;
         that.warningTxt = '';
         that.warningTxt2 = transTxts[config.lang].warningTxt2;
+        that.warningTxt3 = transTxts[config.lang].warningTxt3;
         that.allTxt = transTxts[config.lang].allTxt;
         that.clearFiltersTxt = transTxts[config.lang].clearFiltersTxt;
         that.searchTxt = transTxts[config.lang].searchTxt;
