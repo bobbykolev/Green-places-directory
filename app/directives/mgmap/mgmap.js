@@ -110,7 +110,7 @@
 
         function resizeMap(element) {
             var windowHeight = window.innerHeight,
-                headHeight = 220;
+                headHeight = 160;
 
             element[0].style.height = (windowHeight-headHeight) + 'px';
         }
