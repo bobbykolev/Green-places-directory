@@ -42,7 +42,7 @@
 
         function activate() {
             var promises = [getInitalPlaceData()];
-            common.activateController(promises, 'home');
+            common.activateController(promises, 'place');
         }
 
         function getInitalPlaceData() {

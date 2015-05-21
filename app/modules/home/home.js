@@ -9,6 +9,7 @@
 
     function Home($scope, $interval, config, common, placesService) {
         var that = this,
+            timeZoneGap = config.timeZoneGap,
             transTxts = {
                 bg: {
                     title:"Веган Заведения в България",
@@ -207,11 +208,11 @@
                     endTime = startEndTimeArr[1].split(':');
 
                     //hours '-2': data is with GMT -2 (Sofia...)
-                    if ((currentHour > parseInt(startTime[0]) - 2) && (currentHour < parseInt(endTime[0]) - 2)) {
+                    if ((currentHour > parseInt(startTime[0]) - timeZoneGap) && (currentHour < parseInt(endTime[0]) - timeZoneGap)) {
                         data[i].isOpen = true;
-                    } else if ((currentHour == parseInt(startTime[0]) - 2)  && (currentMinutes > parseInt(startTime[1]))) {
+                    } else if ((currentHour == parseInt(startTime[0]) - timeZoneGap)  && (currentMinutes > parseInt(startTime[1]))) {
                         data[i].isOpen = true;
-                    }  else if ((currentHour == parseInt(endTime[0]) - 2)  && (currentMinutes < parseInt(endTime[1]))) {
+                    }  else if ((currentHour == parseInt(endTime[0]) - timeZoneGap)  && (currentMinutes < parseInt(endTime[1]))) {
                         data[i].isOpen = true;
                     } else {
                         data[i].isOpen = false;

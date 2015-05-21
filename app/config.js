@@ -13,7 +13,8 @@
         appErrorPrefix: '[VP Error]',
         lang: locale(),
         setLang: setlocale,
-        supportedLangs: ['bg','en']
+        supportedLangs: ['bg','en'],
+        timeZoneGap: 3
     };
 
     app.value('config', config);

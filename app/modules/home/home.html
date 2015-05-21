@@ -25,8 +25,9 @@
 					<li>
 						<div class="open-close-marker"><span class="label" ng-class="p.isOpen ? 'label-success' : 'label-default'"><i class="fa fa-clock-o"></i>{{p.isOpen ? that.openTxt : that.closedTxt}}</span>
 						</div></li>
-					<li><i class="fa fa-map-marker"></i>{{ p.address }};</li>
+					
 					<li><span ng-repeat="phone in p.phone"><a href="tel:{{phone}}"><i class="fa fa-phone"></i>{{phone}}</a>;&nbsp;&nbsp;</span></li>
+					<li><i class="fa fa-map-marker"></i>{{ p.address }};</li>
 				</ul>
 			</div>
 		</div>
