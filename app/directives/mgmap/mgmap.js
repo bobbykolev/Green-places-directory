@@ -67,7 +67,8 @@
                 var myLatlng = new google.maps.LatLng(lat, lon);
                 var mapOptions = {
                     zoom: zoomLevel,
-                    center: myLatlng
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
 
                 mgMap = new google.maps.Map(document.getElementById(attrs.id), mapOptions);
@@ -80,13 +81,31 @@
 
                 for (var i = 0; i < scope.places.length; i++) {
                     var latLng = new google.maps.LatLng(scope.places[i].latitude, scope.places[i].longitude);
-                    var marker = new google.maps.Marker({ 
-                        position: latLng, 
-                        map: mgMap, 
+                    var marker = new google.maps.Marker({
+                        position: latLng,
+                        map: mgMap,
                         title: scope.places[i].name,
                         icon: './img/vp_logo.png' });
+
+                    addMapEventListeners(mgMap, marker, scope.places[i]);
                 }
             }
+        }
+
+        function addMapEventListeners(map, marker, place) {
+            var infowindow = new google.maps.InfoWindow({
+                content: '<div>'
+                            +'<div>'
+                                +'<a style="font-weight:bold;" href="#/places/'+place.id+'">'+place.name+'</a>'
+                            +'</div>'
+                            +'<div></div>'
+                        + '</div>'
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+                map.panTo(marker.getPosition());
+            });
         }
 
         function resizeMap(element) {

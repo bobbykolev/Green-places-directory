@@ -75,6 +75,13 @@ body {
     background-color: #255A88;
 }
 
+//gmaps fix
+img[src*="gstatic.com/"],
+img[src*="googleapis.com/"] {
+    max-width: none !important;
+    max-height: none !important;
+}
+
 .alert {
     padding: 5px;
     font-size: 14px;
