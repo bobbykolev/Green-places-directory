@@ -31,13 +31,13 @@
             if ($window.google && $window.google.maps) {
                 scope.$watch('places', function(collection) {
                     setMap(scope, element, attrs);
-                    setUserPosition(scope);
+                    //setUserPosition(scope);
                 });
             } else {
                 loaded(scope).then(function() {
                     scope.$watch('places', function(collection) {
                         setMap(scope, element, attrs);
-                        setUserPosition(scope);
+                        //setUserPosition(scope);
                     });
                 });
             }
@@ -110,7 +110,7 @@
 
         function resizeMap(element) {
             var windowHeight = window.innerHeight,
-                headHeight = 160;
+                headHeight = 85;
 
             element[0].style.height = (windowHeight-headHeight) + 'px';
         }

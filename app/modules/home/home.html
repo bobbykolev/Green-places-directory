@@ -1,8 +1,8 @@
 <div ng-controller="Home as that">
 	<header>
-		<h2 class="page-header">{{ that.title }}</h2>
+		<!-- <h2 class="page-header">{{ that.title }}</h2> -->
 	</header>
-	<section id="home-container">	
+	<section class="section-no-header" id="home-container">	
 		<div class="btn-group radio-filters">
 			<label for="town-1" class="btn btn-primary" ng-class="{'active': that.town == '' }"><input id="town-1" ng-model="that.town" type="radio" name="towns" value="">{{that.allTxt}}</label>
 			<label for="town{{$index}}" ng-repeat="t in that.towns" class="btn btn-primary" ng-class="{'active': that.town == t }"><input id="town{{$index}}" ng-model="that.town" type="radio" name="towns" value="{{t}}">{{t}}</label>

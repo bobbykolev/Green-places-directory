@@ -107,6 +107,9 @@ h2 {
   font-family: 'Comfortaa', cursive;
   color: #999; }
 
+.section-no-header {
+  padding-top: 40px; }
+
 .page-splash-message {
   margin-top: 50px;
   font-size: 60px;
