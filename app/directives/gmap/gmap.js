@@ -14,6 +14,7 @@
             restrict: 'A',
             scope: {
                 'place': '=',
+                'lang': '=',
                 'lat': '=',
                 'lon': '='
             }
@@ -27,7 +28,7 @@
                     setMap(scope, element, attrs);
                 });
             } else {
-                loaded().then(function() {
+                loaded(scope).then(function() {
                     scope.$watch('place', function(collection) {
                         setMap(scope, element, attrs);
                     });
@@ -48,12 +49,13 @@
                 var marker = new google.maps.Marker({
                     position: myLatlng,
                     map: map,
-                    title: scope.place.name
+                    title: scope.place.name,
+                    icon: './img/vp_logo.png'
                 });
             }
         }
 
-        function loaded() {
+        function loaded(scope) {
             var deferred = $q.defer();
 
             $window.initgmap = function() {
@@ -61,7 +63,7 @@
             };
 
             var scr = document.createElement('script');
-            scr.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBLcswVGL0abhNN_vCnOH14LG7buvp-0VA&v=3.exp&callback=initgmap';
+            scr.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBLcswVGL0abhNN_vCnOH14LG7buvp-0VA&v=3.exp&callback=initgmap&language=' + scope.lang;
             document.body.appendChild(scr);
 
             return deferred.promise;

@@ -19,6 +19,7 @@
             };
 
         that.days = transTxts[config.lang].days;
+        that.lang = config.lang;
         that.place = {};
         that.rating = 5;
         that.warning = [''];

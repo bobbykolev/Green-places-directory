@@ -5,25 +5,36 @@
 
     app.controller('Map', Map);
     
-    Map.$inject = ['common', 'config'];
+    Map.$inject = ['common', 'config', 'placesService'];
 
-    function Map(common, config) {
+    function Map(common, config, placesService) {
         var that = this,
             transTxts = {
                 bg: {
-                    title:"Карта"
+                    title:"Карта",
+                    userMarkerTxt: "Вие се намирате тук"
                 },
                 en: {
-                    title:"Map"
+                    title:"Map",
+                    userMarkerTxt: "You are here"
                 }
             };
 
         that.title = transTxts[config.lang].title;
+        that.places = [];
+        that.markertxt = transTxts[config.lang].userMarkerTxt;
+        that.lang = config.lang;
 
         activate();
 
         function activate() {
-            common.activateController([], 'map');
+            common.activateController([getInitalPlacesData()], 'map');
+        }
+
+        function getInitalPlacesData() {
+            return placesService.getPlaces().then(function(data) {
+                that.places = data;
+            });
         }
     }
 

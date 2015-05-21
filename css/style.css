@@ -249,6 +249,9 @@ h2 {
 .place-container .featured-img-container {
   text-align: center; }
 
+.mgmap {
+  min-height: 300px; }
+
 .gmap {
   height: 300px; }
 

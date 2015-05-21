@@ -72,8 +72,8 @@
     "imageUrl": "http://vegan-places.com/img/veganica.jpg",
     "links":["https://www.facebook.com/Veganika"],
     "description": "",
-    "latitude": "",
-    "longitude": "",
+    "latitude": "43.212092",
+    "longitude": "27.920102",
     "name": "ВегАника",
     "workingTime": [
         "10:00–21:00",

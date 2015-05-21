@@ -30,7 +30,7 @@
 			<div><i class="fa fa-map-marker"></i>{{ that.place.town }}, {{ that.place.address }}; <span ng-repeat="phone in that.place.phone"><a href="tel:{{phone}}"><i class="fa fa-phone"></i>{{phone}}</a>;&nbsp;</span></div>
 		</li>
 		<li class="list-group-item">
-			<div class="gmap" gmaps lat="that.place.latitude" lon="that.place.longitude" id="map{{that.place.id}}" place="that.place"></div>
+			<div class="gmap" gmaps lang="that.lang" lat="that.place.latitude" lon="that.place.longitude" id="map{{that.place.id}}" place="that.place"></div>
 		</li>
 		<li class="list-group-item">
 			<div ng-repeat="l in that.place.links"><a href="{{l}}" target="_blank"><i class="fa fa-external-link"></i>{{that.userFriendlyUrl(l)}}</div>
