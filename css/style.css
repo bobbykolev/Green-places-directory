@@ -21,7 +21,7 @@ body {
   font-family: 'Play', sans-serif;
   font-size: 16px;
   color: #888;
-  background: url('http://subtlepatterns.com/patterns/debut_light.png'); }
+  background: url("http://subtlepatterns.com/patterns/debut_light.png"); }
 
 /* bootstrap overridden START*/
 .navbar-inverse {
@@ -46,8 +46,12 @@ body {
   color: #ECF0F1;
   font-family: 'Play', sans-serif; }
 
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a.active {
   color: #C8E600; }
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+  color: #C8E600;
+  background-color: #255A88; }
 
 .alert {
   padding: 5px;
@@ -137,7 +141,7 @@ h2 {
         cursor: auto; }
 
 .home-logo {
-  background: url('../img/vp_logo.png');
+  background: url("../img/vp_logo.png");
   width: 25px;
   height: 34px;
   margin-top: -8px;

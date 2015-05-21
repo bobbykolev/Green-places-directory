@@ -44,13 +44,13 @@
         bg: {
             home:"Веган Заведения",
             place:"Заведение",
-            blogs:"Блогове",
+            map:"Карта",
             contact:"Контакти"
         },
         en: {
             home:"Vegan Places",
             place:"Place",
-            blogs:"Blogs",
+            map:"Map",
             contact:"Contact"
         }
     };
@@ -95,17 +95,17 @@
                 }
             }
         },
-        /*{
-            url: '/blogs',
+        {
+            url: '/map',
             config: {
-                templateUrl: 'app/modules/blogs/blogs.html',
-                title: routeTxts[config.lang].blogs,
+                templateUrl: 'app/modules/map/map.html',
+                title: routeTxts[config.lang].map,
                 settings: {
                     nav: 2,
-                    content: '<i class="fa fa-pencil"></i> ' + routeTxts[config.lang].blogs
+                    content: '<i class="fa fa-map-marker"></i> ' + routeTxts[config.lang].map
                 }
             }
-        },*/
+        },
         {
             url: '/contact',
             config: {

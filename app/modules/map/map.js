@@ -1,20 +1,20 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app.blogs', []);
+    var app = angular.module('app.map', []);
 
-    app.controller('Blogs', Blogs);
+    app.controller('Map', Map);
     
-    Blogs.$inject = ['common', 'config'];
+    Map.$inject = ['common', 'config'];
 
-    function Blogs(common, config) {
+    function Map(common, config) {
         var that = this,
             transTxts = {
                 bg: {
-                    title:"Блогове"
+                    title:"Карта"
                 },
                 en: {
-                    title:"Blogs"
+                    title:"Map"
                 }
             };
 
@@ -23,7 +23,7 @@
         activate();
 
         function activate() {
-            common.activateController([], 'blogs');
+            common.activateController([], 'map');
         }
     }
 

@@ -12,7 +12,7 @@
         //app modules
         'app.home',
         'app.place',
-        'app.blogs',
+        'app.map',
         'app.contact',
 
         'app.directives'
