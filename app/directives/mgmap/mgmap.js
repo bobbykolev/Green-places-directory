@@ -55,6 +55,8 @@
                             map: mgMap,
                             title: scope.markertxt
                         });
+
+                        mgMap.panTo(marker.getPosition());
                     }
                 });
             }
