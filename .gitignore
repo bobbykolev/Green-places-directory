@@ -1,5 +1,9 @@
 libs/
 node_modules/
+sass-cache/
+dist/
+data/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

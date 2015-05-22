@@ -8,7 +8,8 @@
 		<address>
    			<a href="mailto:{{that.email}}">{{that.email}}</a>
 		</address>
-		<article>	
+		<article>
+			<h3>{{that.subTitle}}</h3>
 			<div class="qa-container" ng-repeat="qa in that.qAndA">
 				<h4 ng-click="showDetails = !showDetails"><i class="fa fa-angle-double-down"></i>{{qa.question}}</h4>
 				<div class="answer" ng-show="showDetails">{{qa.answer}}</div>
