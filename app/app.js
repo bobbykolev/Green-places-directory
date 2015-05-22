@@ -7,6 +7,8 @@
         'ngRoute',
         'ngTouch',
         'common',
+        'angulartics',
+        'angulartics.google.analytics',
 
         //app modules
         'app.home',

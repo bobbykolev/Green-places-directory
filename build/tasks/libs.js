@@ -13,7 +13,7 @@ gulp.task('libs', ['jsLibs', 'cssLibs'], function(){
 });
 
 gulp.task('jsLibs', function(){
-    var condition = /animate.min.js|angular.min.js|angular-route.min.js|angular-touch.min.js|jquery.min.|angular-sanitize.min.js/;
+    var condition = /animate.min.js|angular.min.js|angular-route.min.js|angular-touch.min.js|jquery.min.|angular-sanitize.min.js|angulartics.min.js|angulartics-ga.min.js/;
 
     return gulp.src(paths.libs)
         .pipe(gulpIgnore.include(condition))

@@ -1,8 +1,9 @@
 libs/
 node_modules/
-sass-cache/
+.sass-cache/
 dist/
 data/
+ftp.js
 
 # Windows image file caches
 Thumbs.db
