@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    //'use strict';
 
     angular.module('app.directives')
         .directive('mgmaps', mgmaps);
@@ -16,6 +16,8 @@
         var directive = {
             link: link,
             restrict: 'A',
+            transclude: true,
+            templateUrl: 'app/directives/mgmap/mgmap.html',
             scope: {
                 'places': '=',
                 'lang':'=',
@@ -32,21 +34,25 @@
                 scope.$watch('places', function(collection) {
                     setMap(scope, element, attrs);
                     //setUserPosition(scope);
+                    addBtnListeners(element, scope);
                 });
             } else {
                 loaded(scope).then(function() {
                     scope.$watch('places', function(collection) {
                         setMap(scope, element, attrs);
                         //setUserPosition(scope);
+                        addBtnListeners(element, scope);
                     });
                 });
             }
         }
 
-        function setUserPosition(scope) {
+        function setUserPosition(scope, element) {
             if(navigator && navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position){
                     if (position) {
+                        disableGetLocationBtn(element);
+
                         lat = position.coords.latitude;
                         lon = position.coords.longitude;
 
@@ -71,7 +77,7 @@
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
 
-                mgMap = new google.maps.Map(document.getElementById(attrs.id), mapOptions);
+                mgMap = new google.maps.Map(element[0].childNodes[0], mapOptions);
 
                 /*var marker = new google.maps.Marker({
                     position: myLatlng,
@@ -108,11 +114,28 @@
             });
         }
 
+        function addBtnListeners(element, scope) {
+            var btn = element[0].childNodes[2];
+
+            function cleanSetUserPosition(e) {
+                //use for one time click only
+                //e.currentTarget.removeEventListener(e.type, arguments.callee);
+                setUserPosition(scope, element);
+            }
+            
+            btn.removeEventListener('click',cleanSetUserPosition);
+            btn.addEventListener('click', cleanSetUserPosition);
+        }
+
+        function disableGetLocationBtn(element) {
+            element[0].childNodes[2].className = element[0].childNodes[2].className.replace(/\bactive\b/, '');  
+        }
+
         function resizeMap(element) {
             var windowHeight = window.innerHeight,
                 headHeight = 85;
 
-            element[0].style.height = (windowHeight-headHeight) + 'px';
+            element[0].childNodes[0].style.height = (windowHeight-headHeight) + 'px';
         }
 
         function setZoom() {
