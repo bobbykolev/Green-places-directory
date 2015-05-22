@@ -60,6 +60,10 @@
 				padding: 5px;
 				color: #999;
 
+				&:first-of-type {
+					padding: 5px 0;	
+				}
+
 				i{
 					margin-right: 5px;	
 				}

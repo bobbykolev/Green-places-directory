@@ -1,6 +1,7 @@
 [{
     "id": 0,
     "rating": 5,
+    "priority":"2",
     "vType":"-vegan-",
     "phone":["+359878878342"],
     "imageUrl": "http://vegankitsch.com/images/vegankitschn_site_2.jpg",
@@ -23,6 +24,7 @@
 }, {
     "id": 1,
     "rating": 5,
+    "priority":"3",
     "vType":"-vegetarian-",
     "phone":["+35929834333","+359878577597"],
     "imageUrl": "http://the-vegan.org/wp-content/uploads/2014/04/905515_10151550712942446_1020992298_o.jpg",
@@ -45,6 +47,7 @@
 }, {
     "id": 2,
     "rating": 5,
+    "priority":"1",
     "vType":"-vegan-",
     "phone":["+359888061111"],
     "imageUrl": "http://i.imgur.com/G6zUTal.jpg?1",
@@ -67,6 +70,7 @@
 }, {
     "id": 3,
     "rating": 5,
+    "priority":"1",
     "vType":"-vegan-",
     "phone":["+359893397561"],
     "imageUrl": "http://vegan-places.com/img/veganica.jpg",
@@ -89,6 +93,7 @@
 }, {
     "id": 4,
     "rating": 5,
+    "priority":"1",
     "vType":"-vegan-",
     "phone":["+359879588988"],
     "imageUrl": "https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-ash2/v/t1.0-9/s720x720/582491_463037830434279_205941932_n.jpg?oh=1845306b9180cd54c90d023acb3a398b&oe=556D99A3&__gda__=1432231665_d9539a37bbbd81a04533d12772cc689e",
@@ -111,6 +116,7 @@
 }, {
     "id": 5,
     "rating": 5,
+    "priority":"2",
     "vType":"-vegetarian-",
     "phone":["+35952636131"],
     "imageUrl": "https://scontent.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/11066135_713700292074032_4908571559885240017_n.jpg?oh=e5bf9d2264c9ebca163b0d49a542959d&oe=55CCB2C1",
@@ -133,6 +139,7 @@
 }, {
     "id": 6,
     "rating": 5,
+    "priority":"4",
     "vType":"-vegetarian-",
     "phone":["+359899138411"],
     "imageUrl": "http://sunmoon.bg/i/content/39/51_1_restaurant_silde_1.png",
@@ -155,6 +162,7 @@
 }, {
     "id": 7,
     "rating": 5,
+    "priority":"4",
     "vType":"-vegetarian-",
     "phone":["+359 897 094139"],
     "imageUrl": "http://vegan-places.com/img/sunmoon2.jpg",
@@ -177,6 +185,7 @@
 }, {
     "id": 8,
     "rating": 5,
+    "priority":"1",
     "vType":"-vegan-",
     "phone":["+359876440003"],
     "imageUrl": "http://vegan-places.com/img/soul_kitchen.jpg",
@@ -199,6 +208,7 @@
 }, {
     "id": 9,
     "rating": 5,
+    "priority":"4",
     "vType":"-vegetarian-",
     "phone":["+35929808163"],
     "imageUrl": "https://scontent-b.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/549447_342744842439648_1286050609_n.jpg?oh=e69606075c6f9182a4d6a528281a0117&oe=556DDD86",
@@ -221,6 +231,7 @@
 }, {
     "id": 10,
     "rating": 5,
+    "priority":"4",
     "vType":"-vegetarian-",
     "phone":["+359894488809"],
     "imageUrl": "http://vegan-places.com/img/soma_vital.jpg",
@@ -243,6 +254,7 @@
 }, {
     "id": 12,
     "rating": 5,
+    "priority":"4",
     "vType":"-vegetarian-",
     "phone":["+359882108108"],
     "imageUrl": "http://www.vedahouse.bg/images/stories/Veda_Sofia4/P1210069.JPG",
@@ -265,6 +277,7 @@
 }, {
     "id": 13,
     "rating": 5,
+    "priority":"1",
     "vType":"-vegan-",
     "phone":["+359884583555"],
     "imageUrl": "https://scontent-fra.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10409326_383591228513480_981598784856797999_n.png?oh=f7a50547a5d4e7a485d46281f6a5ee25&oe=5603391E",

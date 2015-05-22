@@ -10,7 +10,7 @@ module.exports = {
   output: output,
   app: 'app/**/*',
   sassMain: appRoot + 'sass/style.scss',
-  sass: appRoot + 'css/**/*.scss',
+  sass: appRoot + 'sass/**/*.scss',
   img: appRoot + 'img/**',
   html: appRoot + 'index.html',
   libs: vendors + '**/*',

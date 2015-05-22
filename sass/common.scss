@@ -226,6 +226,28 @@ h2 {
     }
 }
 
+.veg-icon {
+    background: url($sprite);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: $spriteSize;
+}
+
+.veg-icon-1 {
+    background-position: 0 0;
+}
+.veg-icon-2 {
+    background-position: -16px 0;
+}
+.veg-icon-3 {
+    background-position: -32px 0;
+}
+.veg-icon-4 {
+    background-position: -48px 0;
+}
+
 @media screen and (min-width: 768px) {
     .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse.ng-hide {
         display: block !important;
