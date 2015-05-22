@@ -1,5 +1,5 @@
 (function() {
-    //'use strict';
+    'use strict';
 
     angular.module('app.directives')
         .directive('mgmaps', mgmaps);
@@ -33,14 +33,12 @@
             if ($window.google && $window.google.maps) {
                 scope.$watch('places', function(collection) {
                     setMap(scope, element, attrs);
-                    //setUserPosition(scope);
                     addBtnListeners(element, scope);
                 });
             } else {
                 loaded(scope).then(function() {
                     scope.$watch('places', function(collection) {
                         setMap(scope, element, attrs);
-                        //setUserPosition(scope);
                         addBtnListeners(element, scope);
                     });
                 });
@@ -79,19 +77,14 @@
 
                 mgMap = new google.maps.Map(element[0].childNodes[0], mapOptions);
 
-                /*var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map,
-                    title: 'center'
-                });*/
-
                 for (var i = 0; i < scope.places.length; i++) {
                     var latLng = new google.maps.LatLng(scope.places[i].latitude, scope.places[i].longitude);
                     var marker = new google.maps.Marker({
                         position: latLng,
                         map: mgMap,
                         title: scope.places[i].name,
-                        icon: './img/vp_logo.png' });
+                        icon: './img/vp_logo.png' }
+                    );
 
                     addMapEventListeners(mgMap, marker, scope.places[i]);
                 }
@@ -122,7 +115,7 @@
                 //e.currentTarget.removeEventListener(e.type, arguments.callee);
                 setUserPosition(scope, element);
             }
-            
+
             btn.removeEventListener('click',cleanSetUserPosition);
             btn.addEventListener('click', cleanSetUserPosition);
         }
@@ -139,7 +132,7 @@
         }
 
         function setZoom() {
-            var w = window.innerWidth; 
+            var w = window.innerWidth;
             return w < 500 ? w < 375 ? 13 : 14 : 15;
         }
 
