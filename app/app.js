@@ -5,7 +5,6 @@
         // Angular modules 
         'ngAnimate',
         'ngRoute',
-        'ngSanitize',
         'ngTouch',
         'common',
 
@@ -13,7 +12,7 @@
         'app.home',
         'app.place',
         'app.map',
-        'app.contact',
+        'app.about',
 
         'app.directives'
     ]);

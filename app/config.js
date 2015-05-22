@@ -46,13 +46,13 @@
             home:"Веган Заведения",
             place:"Заведение",
             map:"Карта",
-            contact:"Контакти"
+            about:"За Нас"
         },
         en: {
             home:"Vegan Places",
             place:"Place",
             map:"Map",
-            contact:"Contact"
+            about:"About"
         }
     };
 
@@ -108,13 +108,13 @@
             }
         },
         {
-            url: '/contact',
+            url: '/about',
             config: {
-                templateUrl: 'app/modules/contact/contact.html',
-                title: routeTxts[config.lang].contact,
+                templateUrl: 'app/modules/about/about.html',
+                title: routeTxts[config.lang].about,
                 settings: {
                     nav: 3,
-                    content: '<i class="fa fa-envelope"></i> ' + routeTxts[config.lang].contact
+                    content: '<i class="fa fa-envelope"></i> ' + routeTxts[config.lang].about
                 }
             }
         }];

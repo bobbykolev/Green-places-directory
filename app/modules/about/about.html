@@ -1,0 +1,21 @@
+<div ng-controller="About as that">
+	<header class="page-header">
+		<h2>{{that.title}}</h2>
+	</header>
+	<section>
+		<article ng-bind-html="that.infoTxt">	
+		</article>
+		<address>
+   			<a href="mailto:{{that.email}}">{{that.email}}</a>
+		</address>
+		<article>	
+			<div class="qa-container" ng-repeat="qa in that.qAndA">
+				<h4 ng-click="showDetails = !showDetails"><i class="fa fa-angle-double-down"></i>{{qa.question}}</h4>
+				<div class="answer" ng-show="showDetails">{{qa.answer}}</div>
+			</div>
+		</article>
+		<footer>
+			<h2 style="text-align: center;">Go Vegan</h2>
+		</footer>
+	</section>
+</div>

@@ -256,6 +256,23 @@ h2 {
 .place-container .featured-img-container {
   text-align: center; }
 
+.qa-container h4 {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 5px;
+  margin: 0 0 3px; }
+  .qa-container h4:nth-of-type(2n) {
+    background: rgba(255, 255, 255, 0.3); }
+  .qa-container h4:hover {
+    color: #286090; }
+  .qa-container h4 i {
+    margin-right: 5px; }
+.qa-container .answer {
+  padding: 5px 10px 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd; }
+
 .get-position-btn {
   position: absolute;
   bottom: 20px;
