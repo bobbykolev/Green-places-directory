@@ -261,7 +261,8 @@ h2 {
   border: 1px solid #ddd;
   width: 100%;
   padding: 5px;
-  margin: 0 0 3px; }
+  margin: 0 0 3px;
+  cursor: pointer; }
   .qa-container h4:nth-of-type(2n) {
     background: rgba(255, 255, 255, 0.3); }
   .qa-container h4:hover {

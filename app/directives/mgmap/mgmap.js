@@ -51,11 +51,8 @@
                     if (position) {
                         disableGetLocationBtn(element);
 
-                        lat = position.coords.latitude;
-                        lon = position.coords.longitude;
-
                         var marker = new google.maps.Marker({
-                            position: new google.maps.LatLng(lat, lon),
+                            position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
                             map: mgMap,
                             title: scope.markertxt
                         });

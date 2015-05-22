@@ -114,7 +114,7 @@
                 title: routeTxts[config.lang].about,
                 settings: {
                     nav: 3,
-                    content: '<i class="fa fa-envelope"></i> ' + routeTxts[config.lang].about
+                    content: '<i class="fa fa-info-circle"></i> ' + routeTxts[config.lang].about
                 }
             }
         }];
