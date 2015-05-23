@@ -80,7 +80,7 @@
                         position: latLng,
                         map: mgMap,
                         title: scope.places[i].name,
-                        icon: './img/vp_logo.png' }
+                        icon: './img/vp_logo'+scope.places[i].priority+'.png' }
                     );
 
                     addMapEventListeners(mgMap, marker, scope.places[i]);
