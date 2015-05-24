@@ -94,10 +94,12 @@
                             +'<div>'
                                 +'<a style="font-weight:bold;" href="#/places/'+place.id+'">'+place.name+'</a>'
                             +'</div>'
-                            +'<div></div>'
-                        + '</div>'
+                            +'<div>Vegan rating: <strong>'+ (5 - place.priority) + ' <span style="font-size:10px;font-weight:normal;">(1-4)</span></strong></div>'
+                        + '</div>',
+                disableAutoPan: true,
+                zIndex: (5 - place.priority)
             });
-
+            
             google.maps.event.addListener(marker, 'click', function () {
                 infowindow.open(map, marker);
                 map.panTo(marker.getPosition());
@@ -130,7 +132,7 @@
 
         function setZoom() {
             var w = window.innerWidth;
-            return w < 500 ? w < 375 ? 13 : 14 : 15;
+            return w < 500 ? 14 : 15;
         }
 
         function loaded(scope) {
