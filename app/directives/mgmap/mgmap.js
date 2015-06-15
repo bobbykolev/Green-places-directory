@@ -4,14 +4,18 @@
     angular.module('app.directives')
         .directive('mgmaps', mgmaps);
 
-    mgmaps.$inject = ['$window', 'common'];
+    mgmaps.$inject = ['$window', 'common', 'config'];
 
-    function mgmaps($window, common) {
+    function mgmaps($window, common, config) {
         var $q = common.$q,
             lat = '42.694600',
             lon = '23.322000',
             zoomLevel = setZoom(),
-            mgMap;
+            mgMap,
+            text = {
+                bg: "--Избери--",
+                en: "--Choose--"
+            };
 
         var directive = {
             link: link,
@@ -29,6 +33,11 @@
 
         function link(scope, element, attrs) {
             resizeMap(element);
+
+            scope.selectTxt = text[config.lang];
+            scope.$watch('mgmaps', function(data) {
+                setPlacePosition(data);
+            });
 
             if ($window.google && $window.google.maps) {
                 scope.$watch('places', function(collection) {
@@ -60,6 +69,12 @@
                         mgMap.panTo(marker.getPosition());
                     }
                 });
+            }
+        }
+
+        function setPlacePosition(place) {
+            if (place && place.latitude) {
+                mgMap.panTo(new google.maps.LatLng(place.latitude, place.longitude));
             }
         }
 
@@ -107,7 +122,7 @@
         }
 
         function addBtnListeners(element, scope) {
-            var btn = element[0].childNodes[2];
+            var btn = element[0].childNodes[4];
 
             function cleanSetUserPosition(e) {
                 //use for one time click only
@@ -120,12 +135,12 @@
         }
 
         function disableGetLocationBtn(element) {
-            element[0].childNodes[2].className = element[0].childNodes[2].className.replace(/\bactive\b/, '');  
+            element[0].childNodes[4].className = element[0].childNodes[4].className.replace(/\bactive\b/, '');  
         }
 
         function resizeMap(element) {
             var windowHeight = window.innerHeight,
-                headHeight = 85;
+                headHeight = 50 + 55;
 
             element[0].childNodes[0].style.height = (windowHeight-headHeight) + 'px';
         }

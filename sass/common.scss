@@ -152,7 +152,7 @@ h2 {
 }
 
 .section-no-header {
-    padding-top:40px;
+    padding-top: 60px;
 }
 
 .page-splash-message {
@@ -238,12 +238,15 @@ h2 {
 .veg-icon-1 {
     background-position: 0 0;
 }
+
 .veg-icon-2 {
     background-position: -16px 0;
 }
+
 .veg-icon-3 {
     background-position: -32px 0;
 }
+
 .veg-icon-4 {
     background-position: -48px 0;
 }
@@ -285,6 +288,7 @@ h2 {
         transform: rotate(360deg) scale(0.8);
     }
 }
+
 
 @media screen and (max-width: 380px) {
     #home-container .places-list .place-name {

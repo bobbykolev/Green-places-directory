@@ -19,7 +19,7 @@
                     qAndA: [{
                             question:"Защо включвате вегетариански заведения?",
                             answer:"Включените вегетариански заведения са одобрени и са добър избор за вегани. Голям % от предлаганото в тях е веган. "
-                            +"Концептуално отделени от веганизма или подвели по един или друг начин последователите си няма да бъдат включвани или съответно ще бъдат изключени (пример Ванила Китчън).</div>"
+                            +"Концептуално отделени от веганизма или подвели по един или друг начин последователите си няма да бъдат включвани или съответно ще бъдат изключени (пример Ванила Китчън)."
                         },
                         {
                             question:"Включвате ли заведения в които се сервира месо дори и да предлагат веган храна?",
@@ -34,13 +34,13 @@
                         + "<p>Send us your feedback or information about new or existing vegan places on our email.</p>"
                         + "<p>You can check our Q&A section below.</p>",
                         qAndA: [{
-                            question:"Защо включвате вегетариански заведения?",
-                            answer:"Включените вегетариански заведения са одобрени и са добър избор за вегани. Голям % от предлаганото в тях е веган. "
-                            +"Концептуално отделени от веганизма или подвели по един или друг начин последователите си няма да бъдат включвани или съответно ще бъдат изключени (пример Ванила Китчън).</div>"
+                            question:"There are vegetarian places listed, why?",
+                            answer:"The vegetarian restaurants included have been approved and are a good choice for vegans. Big percentage of the meals they offer are vegan. "
+                                + "Conceptually separated from veganism or misleading in one way or another their followers will not be included or will consequently be excluded (eg. Vanilla Kitchen)."
                         },
                         {
-                            question:"Включвате ли заведения в които се сервира месо дори и да предлагат веган храна?",
-                            answer:"Не!"
+                            question:"Are you going to include places that offer meat even if they offer vegan meals?",
+                            answer:"No!"
                         }
                     ]
                 }

@@ -1,4 +1,9 @@
-<div id="mgmap" class="mgmap" ng-transclude>	
+<div id="mgmap" class="mgmap" ng-transclude>
+</div>
+<div id="map-places-select">
+	<select ng-options="place.name for place in places | orderBy: 'priority'" ng-model="mgmaps">
+		<option value="">{{selectTxt}}</option>
+	</select>
 </div>
 <button class="get-position-btn active" title="get your location">
 	<i class="fa fa-bullseye"></i>

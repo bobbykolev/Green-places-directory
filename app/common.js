@@ -30,7 +30,8 @@
             $q: $q,
             getUnique: getUnique,
             // generic
-            activateController: activateController
+            activateController: activateController,
+            getUniqueProps: getUniqueProps
         };
 
         return service;
@@ -60,5 +61,17 @@
 
 			return uniqueArray;
 		}
+
+        function getUniqueProps(prop, data) {
+            var arr = [];
+            for (var i = 0; i < data.length; i++) {
+                var t = data[i][prop].split(',');
+                for (var j = 0; j < t.length; j++) {
+                    arr.push(t[j]);
+                }
+            }
+
+            return getUnique(arr);
+        }
 	}
 })();

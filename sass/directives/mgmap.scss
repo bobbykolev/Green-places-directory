@@ -24,6 +24,22 @@
     min-height: 300px;
 }
 
+#map-places-select {
+    position: absolute;
+    top: 58px;
+    left: 10px;
+
+    select {
+        padding: 5px;
+
+        option {
+            &:nth-child(2n) {
+                color: #666;
+            }
+        }
+    }
+}
+
 //animations
 @-webkit-keyframes pulse {
     0% {

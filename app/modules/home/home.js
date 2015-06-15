@@ -122,11 +122,11 @@
         }
 
         function getTowns(data) {
-            that.towns = getUniqueProp('town', data);
+            that.towns = common.getUniqueProps('town', data);
         }
 
         function getVtypes(data) {
-            that.vTypes = getUniqueProp('vType', data);
+            that.vTypes = common.getUniqueProps('vType', data);
         }
 
         function getInitalPlacesData() {
@@ -135,18 +135,6 @@
                 getTowns(data);
                 getVtypes(data);
             });
-        }
-
-        function getUniqueProp(prop, data) {
-            var arr = [];
-            for (var i = 0; i < data.length; i++) {
-                var t = data[i][prop].split(',');
-                for (var j = 0; j < t.length; j++) {
-                    arr.push(t[j]);
-                }
-            }
-
-            return common.getUnique(arr);
         }
 
 
