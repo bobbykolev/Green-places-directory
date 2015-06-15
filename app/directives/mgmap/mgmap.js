@@ -38,6 +38,17 @@
             scope.$watch('mgmaps', function(data) {
                 setPlacePosition(data);
             });
+            scope.trimName = function (name) {
+                var trimmed = name;
+
+                if (name.length > 30) {
+                    trimmed = name.split(' ');
+                    trimmed.splice(-1, 1);
+                    trimmed = trimmed.join(' ');
+                }
+
+                return trimmed;  
+            };
 
             if ($window.google && $window.google.maps) {
                 scope.$watch('places', function(collection) {

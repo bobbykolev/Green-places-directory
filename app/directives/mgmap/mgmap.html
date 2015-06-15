@@ -1,7 +1,7 @@
 <div id="mgmap" class="mgmap" ng-transclude>
 </div>
 <div id="map-places-select">
-	<select ng-options="place.name for place in places | orderBy: 'priority'" ng-model="mgmaps">
+	<select ng-options="p as trimName(p.name) group by p.town for p in places | orderBy: 'priority'" ng-model="mgmaps">
 		<option value="">{{selectTxt}}</option>
 	</select>
 </div>
