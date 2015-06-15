@@ -7,7 +7,7 @@ gulp.task('server', ['build'], function(done) {
     open: false,
     port: 9876,
     server: {
-      baseDir: ['./dist/'],
+      baseDir: ['./prod/'],
       middleware: function (req, res, next) {
         res.setHeader('Access-Control-Allow-Origin', '*');
         next();

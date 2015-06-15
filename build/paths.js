@@ -2,7 +2,7 @@ var path = require('path');
 
 var appRoot = './';
 var vendors = './libs/';
-var output = './dist/';
+var output = './prod/';
 
 module.exports = {
   appRoot: appRoot,

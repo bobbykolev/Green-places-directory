@@ -18,6 +18,7 @@
         that.chooseLang = chooseLang;
 
         that.logoTitle = config.lang == 'en' ? 'Home':'Начало';
+        that.veganBlogTxt = config.lang == 'en' ? 'Blog':'Блог';
 
         activate();
 

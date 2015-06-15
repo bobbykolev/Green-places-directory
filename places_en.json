@@ -1,27 +1,4 @@
 [{
-    "id": 0,
-    "rating": 5,
-    "priority":"2",
-    "vType":"-vegan-",
-    "phone":["+359878878342"],
-    "imageUrl": "http://vegankitsch.com/images/vegankitschn_site_2.jpg",
-    "links":["http://vegankitsch.com/en/","https://www.facebook.com/VeganKitsch"],
-    "description": "'Vegan Kitsch - burgers & raw sweets' offers fresh homemade vegan food - fast food in a new light. Small modern bakery, cafe and known as Kurabiynitsa. The Vegan Kitsch food is prepared daily from fresh ingredients , seasonal vegetables and certified organic products - choose from burgers, soups, salads and 'banitsa' - traditional bulgarian bake, sauces, cakes and raw cakes, energy balls and superfood bars. The menu is 100% plant-based, the desserts with no added sugar and there are countless gluten-free options.",
-    "latitude": "42.690588",
-    "longitude": "23.320846",
-    "name": "Vegan Kitsch",
-    "workingTime": [
-        "09:00–19:00",
-        "09:00–19:00",
-        "09:00–19:00",
-        "09:00–19:00",
-        "09:00–19:00",
-        "09:00–19:00",
-        ""
-    ],
-    "town": "Sofia",
-    "address": "str. 'Parchevich' 48"
-}, {
     "id": 1,
     "rating": 5,
     "priority":"3",
@@ -67,29 +44,6 @@
     ],
     "town": "Sofia",
     "address": "str. 'Car Ivan Shishman' 43"
-}, {
-    "id": 3,
-    "rating": 5,
-    "priority":"1",
-    "vType":"-vegan-",
-    "phone":["+359893397561"],
-    "imageUrl": "http://vegan-places.com/img/veganica.jpg",
-    "links":["https://www.facebook.com/Veganika"],
-    "description": "",
-    "latitude": "43.212092",
-    "longitude": "27.920102",
-    "name": "VegAnica",
-    "workingTime": [
-        "10:00–21:00",
-        "10:00–21:00",
-        "10:00–21:00",
-        "10:00–21:00",
-        "10:00–21:00",
-        "10:00–21:00",
-        ""
-    ],
-    "town": "Varna",
-    "address": "str. 'Car Asen I' 54"
 }, {
     "id": 4,
     "rating": 5,
@@ -297,4 +251,27 @@
     ],
     "town": "Sofia",
     "address": "str. 'G. Rakovski' 113"
+}, {
+    "id": 16,
+    "rating": 5,
+    "priority":"4",
+    "vType":"-vegetarian-",
+    "phone":["+359885722761"],
+    "imageUrl": "http://vegan-places.com/img/v-v-c.jpg",
+    "links":["http://veganvarna.eu/", "https://www.facebook.com/veganvarna"],
+    "description": "Vegan and vegetarian food made entirely of plant products. Most of the meals are consistent with the requirements of vegans which exclude from their diet not only meat but also fish, seafood, eggs and dairy, even honey...",
+    "latitude": "43.220076",
+    "longitude": "27.889558",
+    "name": "Vegan & Vegetarian Culinary",
+    "workingTime": [
+        "10:00–21:00",
+        "10:00–21:00",
+        "10:00–21:00",
+        "10:00–21:00",
+        "10:00–21:00",
+        "10:00–21:00",
+        "10:00–21:00"
+    ],
+    "town": "Varna",
+    "address": "'Mall Varna', fl. minus 2, str. 'Vladislav Varnenchik' 186"
 }]

@@ -285,3 +285,12 @@ h2 {
         transform: rotate(360deg) scale(0.8);
     }
 }
+
+@media screen and (max-width: 380px) {
+    #home-container .places-list .place-name {
+        max-width: 235px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

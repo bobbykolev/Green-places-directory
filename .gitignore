@@ -2,6 +2,7 @@ libs/
 node_modules/
 .sass-cache/
 dist/
+prod/
 data/
 ftp.js
 
