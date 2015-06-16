@@ -31,7 +31,8 @@
             getUnique: getUnique,
             // generic
             activateController: activateController,
-            getUniqueProps: getUniqueProps
+            getUniqueProps: getUniqueProps,
+            trimName: trimName
         };
 
         return service;
@@ -73,5 +74,15 @@
 
             return getUnique(arr);
         }
+
+        function trimName(name, len) {
+            if (name.length > (len || 30)) {
+                name = name.split(' ');
+                name.pop();
+                name = name.join(' ');
+            }
+
+            return name;
+        };
 	}
 })();

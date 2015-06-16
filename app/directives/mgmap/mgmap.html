@@ -2,7 +2,7 @@
 </div>
 <div id="map-places-select">
 	<select ng-options="p as trimName(p.name) group by p.town for p in places | orderBy: 'priority'" ng-model="mgmaps">
-		<option value="">{{selectTxt}}</option>
+		<option value="">{{chooseTxt}}</option>
 	</select>
 </div>
 <button class="get-position-btn active" title="get your location">

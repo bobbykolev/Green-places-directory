@@ -13,8 +13,8 @@
             zoomLevel = setZoom(),
             mgMap,
             text = {
-                bg: "--Избери--",
-                en: "--Choose--"
+                bg: "- избери -",
+                en: "- choose -"
             };
 
         var directive = {
@@ -34,22 +34,16 @@
         function link(scope, element, attrs) {
             resizeMap(element);
 
-            scope.selectTxt = text[config.lang];
+            scope.chooseTxt = text[config.lang];
+
+            //select onchange
             scope.$watch('mgmaps', function(data) {
                 setPlacePosition(data);
             });
-            scope.trimName = function (name) {
-                var trimmed = name;
 
-                if (name.length > 30) {
-                    trimmed = name.split(' ');
-                    trimmed.splice(-1, 1);
-                    trimmed = trimmed.join(' ');
-                }
+            scope.trimName = common.trimName;
 
-                return trimmed;  
-            };
-
+            //setUp map
             if ($window.google && $window.google.maps) {
                 scope.$watch('places', function(collection) {
                     setMap(scope, element, attrs);
