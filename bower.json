@@ -4,11 +4,11 @@
     "dependencies": {
     	"jquery": "~1.11",
         "bootstrap": "latest",
-        "angular": "~1.2",
-        "angular-route": "~1.2",
-        "angular-animate": "~1.2",
-        "angular-sanitize": "~1.2",
-        "angular-touch": "~1.2",
+        "angular": "~1.4",
+        "angular-route": "~1.4",
+        "angular-animate": "~1.4",
+        "angular-sanitize": "~1.4",
+        "angular-touch": "~1.4",
         "font-awesome": "latest",
         "angulartics":"*"
     }
