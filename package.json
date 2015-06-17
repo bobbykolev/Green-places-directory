@@ -1,6 +1,6 @@
 {
   "name": "vegan-places-app",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "title": "Vegan Places",
   "description": "List of all vegan places in Bulgaria.",
   "copyright": "the-vegan.org",
@@ -34,6 +34,7 @@
       "run-sequence":"~1.1.0",
       "browser-sync":"~2.6.11",
       "gulp-ignore":"~1.2.1",
-      "gulp-ftp":"~1.0.3"
+      "gulp-ftp":"~1.0.3",
+      "gulp-version-append":"~0.0.3"
   }
 }
