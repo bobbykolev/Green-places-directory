@@ -76,6 +76,7 @@
     // Define the routes 
     function getRoutes() {
         return [{
+            id:1,
             url: '/',
             config: {
                 templateUrl: 'app/modules/home/home.html',
@@ -86,6 +87,7 @@
                 }
             }
         },{
+            id:2,
             url: '/places/:placeId',
             config: {
                 templateUrl: 'app/modules/place/place.html',
@@ -97,6 +99,7 @@
             }
         },
         {
+            id:3,
             url: '/map',
             config: {
                 templateUrl: 'app/modules/map/map.html',
@@ -108,6 +111,7 @@
             }
         },
         {
+            id:4,
             url: '/about',
             config: {
                 templateUrl: 'app/modules/about/about.html',

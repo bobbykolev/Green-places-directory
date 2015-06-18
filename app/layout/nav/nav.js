@@ -4,12 +4,16 @@
 	angular.module('app')
         .controller('Nav', Nav);
 
-	Nav.$inject = ['$route', '$window', 'config', 'routes'];
+	Nav.$inject = ['$route', '$location', '$window', 'config', 'routes'];
 
-	function Nav($route, $window, config, routes) {
+	function Nav($route, $location, $window, config, routes) {
 		var that = this;
 
         that.collapsed = false;
+        that.navClick = function (path) {
+            $location.path(path);
+            that.collapsed = false;
+        };
 
         that.langs = ['en','bg'];//todo:config
         that.activeLang = config.lang;
