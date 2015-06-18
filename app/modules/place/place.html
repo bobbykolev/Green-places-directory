@@ -23,7 +23,7 @@
 		<li class="list-group-item">
 			<div>
 				<i class="fa fa-clock-o"></i>
-				<span ng-repeat="t in that.place.workingTime track by $index">{{that.days[$index]}}: {{t || 'Rest day'}};&nbsp;</span>
+				<div class="place-w-time" ng-repeat="t in that.place.workingTime track by $index" ng-bind-html="that.getTime(that.days[$index], t)"> &nbsp;</div>
 			</div>
 		</li>
 		<li class="list-group-item">

@@ -280,7 +280,7 @@
     "priority":"4",
     "vType":"-vegetarian-",
     "phone":["+359885722761"],
-    "imageUrl": "",
+    "imageUrl": "https://scontent.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/11218522_1584127108532253_2809231389095565741_n.jpg?oh=ef895e8fcb882f248d8c315438d5d233&oe=5634D54A",
     "links":["https://www.facebook.com/pages/Country-Life/1584102191868078"],
     "description": "Vegetarian and vegan food.",
     "latitude": "42.150320",
@@ -292,7 +292,7 @@
         "08:00–20:00",
         "08:00–20:00",
         "08:00–18:00",
-        "10:00–20:00",
+        "",
         ""
     ],
     "town": "Plovdiv",

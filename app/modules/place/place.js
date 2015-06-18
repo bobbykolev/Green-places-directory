@@ -11,10 +11,12 @@
         var that = this,
             transTxts = {
                 bg: {
-                    days:["Понеделник", "Вторник", "Сряда", "Четвъртък", "Петък", "Събота", "Неделя"]
+                    days:["Понеделник", "Вторник", "Сряда", "Четвъртък", "Петък", "Събота", "Неделя"],
+                    rest: "Почивен ден;"
                 },
                 en: {
-                    days:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+                    days:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                    rest: "Rest day;"
                 }
             };
 
@@ -30,6 +32,10 @@
 
         that.userFriendlyUrl = function(url) {
             return url.replace(/http:\/\//gi, '').replace(/https:\/\//gi, '');
+        };
+
+        that.getTime = function(day, time) {
+            return '<strong>'+day +'</strong>: ' + (time ? time + ';' : transTxts[config.lang].rest);
         };
         
         $scope.$watch(
