@@ -111,6 +111,8 @@
             getCurentTypeFilter();
 
             setOpenCloseUpdater();
+
+            common.scrollTop();
         }
 
         function setOpenCloseUpdater () {

@@ -44,6 +44,7 @@
         function activate() {
             var promises = [getInitalPlaceData()];
             common.activateController(promises, 'place');
+            common.scrollTop();
         }
 
         function getInitalPlaceData() {

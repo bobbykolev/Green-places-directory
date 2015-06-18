@@ -32,7 +32,8 @@
             // generic
             activateController: activateController,
             getUniqueProps: getUniqueProps,
-            trimName: trimName
+            trimName: trimName,
+            scrollTop:scrollTop
         };
 
         return service;
@@ -83,6 +84,10 @@
             }
 
             return name;
-        };
+        }
+
+        function scrollTop(val) {
+            document.getElementsByTagName('body')[0].scrollTop = (val || 0);
+        }
 	}
 })();
