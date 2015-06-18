@@ -274,4 +274,27 @@
     ],
     "town": "Varna",
     "address": "'Mall Varna', fl. minus 2, str. 'Vladislav Varnenchik' 186"
+}, {
+    "id": 17,
+    "rating": 5,
+    "priority":"4",
+    "vType":"-vegetarian-",
+    "phone":["+359885722761"],
+    "imageUrl": "",
+    "links":["https://www.facebook.com/pages/Country-Life/1584102191868078"],
+    "description": "Vegetarian and vegan food.",
+    "latitude": "42.150320",
+    "longitude": "24.744450",
+    "name": "Country Life",
+    "workingTime": [
+        "08:00–20:00",
+        "08:00–20:00",
+        "08:00–20:00",
+        "08:00–20:00",
+        "08:00–18:00",
+        "10:00–20:00",
+        ""
+    ],
+    "town": "Plovdiv",
+    "address": "str. 'Opulchenska' 24"
 }]
