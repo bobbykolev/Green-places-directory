@@ -5,11 +5,10 @@
 
     app.controller('Home', Home);
 
-    Home.$inject = ['$scope', '$interval', 'config', 'common', 'placesService'];
+    Home.$inject = ['$scope', 'config', 'common', 'placesService'];
 
-    function Home($scope, $interval, config, common, placesService) {
+    function Home($scope, config, common, placesService) {
         var that = this,
-            timeZoneGap = config.timeZoneGap,
             transTxts = {
                 bg: {
                     title:"Веган Заведения в България",
@@ -33,8 +32,7 @@
                     openTxt:"Open",
                     closedTxt:"Closed"
                 }
-            },
-            markerCheck;
+            };
 
         that.title = transTxts[config.lang].title;
         that.warningTxt = '';
@@ -110,18 +108,10 @@
             getCurentTownFilter();
             getCurentTypeFilter();
 
-            setOpenCloseUpdater();
+            //setOpenCloseUpdater();
 
             common.scrollTop();
-        }
-
-        function setOpenCloseUpdater () {
-            markerCheck && $interval.cancel(markerCheck);
-            markerCheck = $interval(function(){
-                console.log("[VP] open/close marker refresh", new Date());
-                setOpenCloseMarker(that.places);
-            }, 600000);//10min
-        }
+        }   
 
         function getTowns(data) {
             that.towns = common.getUniqueProps('town', data);
@@ -133,7 +123,9 @@
 
         function getInitalPlacesData() {
             return placesService.getPlaces().then(function(data) {
-                that.places = setOpenCloseMarker(data);
+                that.places = data;
+                common.setOpenCloseUpdater(that.places);
+
                 getTowns(data);
                 getVtypes(data);
             });
@@ -174,46 +166,5 @@
                 that.warningTxt = '';
             }
         }
-
-        function setOpenCloseMarker(data) {
-            var arr = [],
-                startEndTimeArr = [],
-                today = new Date(),
-                currentDay = today.getDay(),
-                currentHour = today.getUTCHours(),
-                currentMinutes = today.getMinutes(),
-                startTime,
-                endTime;
-
-                if (currentDay == 0) {
-                    currentDay = 7;
-                }
-
-            for (var i = 0; i < data.length; i++) {
-                //the dash: (– 8211  2013 &ndash; EN DASH)
-               startEndTimeArr = data[i].workingTime[currentDay-1].split('–');
-
-                if (startEndTimeArr[0]) {
-                    startTime = startEndTimeArr[0].split(':');
-                    endTime = startEndTimeArr[1].split(':');
-
-                    //hours '-2': data is with GMT -2 (Sofia...)
-                    if ((currentHour > parseInt(startTime[0]) - timeZoneGap) && (currentHour < parseInt(endTime[0]) - timeZoneGap)) {
-                        data[i].isOpen = true;
-                    } else if ((currentHour == parseInt(startTime[0]) - timeZoneGap)  && (currentMinutes > parseInt(startTime[1]))) {
-                        data[i].isOpen = true;
-                    }  else if ((currentHour == parseInt(endTime[0]) - timeZoneGap)  && (currentMinutes < parseInt(endTime[1]))) {
-                        data[i].isOpen = true;
-                    } else {
-                        data[i].isOpen = false;
-                    }
-                } else {
-                    data[i].isOpen = false;
-                }
-            }
-
-            return data;
-        }
     }
-
 })();

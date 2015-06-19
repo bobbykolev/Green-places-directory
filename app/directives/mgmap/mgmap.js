@@ -12,9 +12,19 @@
             lon = '23.322000',
             zoomLevel = setZoom(),
             mgMap,
-            text = {
-                bg: "- избери -",
-                en: "- choose -"
+            transText = {
+                bg: {
+                    choose: "- избери -",
+                    rating: "Веган рейтинг: ",
+                    openTxt:"Отворено",
+                    closedTxt:"Зарворено"
+                },
+                en: {
+                    choose:"- choose -",
+                    rating: "Vegan rating: ",
+                    openTxt:"Open",
+                    closedTxt:"Closed"
+                }
             };
 
         var directive = {
@@ -34,7 +44,7 @@
         function link(scope, element, attrs) {
             resizeMap(element);
 
-            scope.chooseTxt = text[config.lang];
+            scope.chooseTxt = transText[config.lang].choose;
 
             //select onchange
             scope.$watch('mgmaps', function(data) {
@@ -114,7 +124,12 @@
                             +'<div>'
                                 +'<a style="font-weight:bold;" href="#/places/'+place.id+'">'+place.name+'</a>'
                             +'</div>'
-                            +'<div>Vegan rating: <strong>'+ (5 - place.priority) + ' <span style="font-size:10px;font-weight:normal;">(1-4)</span></strong></div>'
+                            +'<div class="open-close-marker">'
+                                +'<span class="label" style="background-color:'+(place.isOpen ? '#C8E600' : '#E8E8E8')+';color:'+(place.isOpen ? '#fff' : '#999')+';">'
+                                    +'<i class="fa fa-clock-o"></i>&nbsp;'+(place.isOpen ? transText[config.lang].openTxt : transText[config.lang].closedTxt)
+                                +'</span>'
+                            + '</div>'
+                            +'<div>'+transText[config.lang].rating+'<strong>'+ (5 - place.priority) + ' <span style="font-size:10px;font-weight:normal;">(1-4)</span></strong></div>'
                         + '</div>',
                 disableAutoPan: true,
                 zIndex: (5 - place.priority)
