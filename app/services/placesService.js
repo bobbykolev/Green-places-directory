@@ -15,7 +15,9 @@
 
         var service = {
             getPlaces: getPlaces,
-            getPlace: getPlace
+            getPlace: getPlace,
+            getNext:getNext,
+            getPrev:getPrev
         };
 
         return service;
@@ -29,6 +31,7 @@
                 $http.get('./places_min_' + config.lang + '.json?v='+(new Date()).getTime()).success(function(places) {
                     getTags().then(function(tags){
                         getTypes().then(function(types){
+                            places = common.sortByProp(places, 'priority');
                             places = common.setOpenCloseMarker(places);
                             setPlacesTags(places, tags);
                             setPlacesTypes(places, types);
@@ -96,6 +99,44 @@
             }
 
             return null;
+        }
+
+        function getNext(id) {
+            var def = $q.defer();
+
+            getPlaces().then(function(places){
+                for (var i = 0; i < places.length; i++) {
+                    if(places[i].id == id) {
+                        if (places[i+1]) {
+                            def.resolve(places[i+1]);
+                        } else {
+                            def.resolve(places[0]);
+                        }
+                        break;
+                    }
+                }
+            });
+
+            return def.promise;
+        }
+
+        function getPrev(id) {
+            var def = $q.defer();
+
+            getPlaces().then(function(places){
+                for (var i = 0; i < places.length; i++) {
+                    if(places[i].id == id) {
+                        if (places[i-1]) {
+                            def.resolve(places[i-1]);
+                        } else {
+                            def.resolve(places[places.length-1]);
+                        }
+                        break;
+                    }
+                }
+            });
+
+            return def.promise;
         }
 
         function startResetCacheTimeout() {

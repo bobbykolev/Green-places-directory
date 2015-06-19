@@ -17,7 +17,7 @@
 		</div>
 		<div class="clear-filters"><button ng-click="that.clearFilters()" class="btn btn-default">{{that.clearFiltersTxt}}</button></div>
 		<div class="places-list list-group row">
-			<div class="animate-repeat list-group-item col-xs-12 col-sm-6 col-md-4" ng-repeat="p in that.places | orderBy: 'priority' | filter: that.town | filter: search | filter: that.vType">
+			<div class="animate-repeat list-group-item col-xs-12 col-sm-6 col-md-4" ng-repeat="p in that.places | filter: that.town | filter: search | filter: that.vType">
 				<ul class="additional-info">
 					<li><div class="veg-icon veg-icon-{{p.priority}}"></div></li>
 					<li><div class="place-name"><a href="#/places/{{p.id}}">

@@ -56,6 +56,7 @@
 
         function activate() {
             common.activateController([], 'about');
+            common.hideLoading();
             common.scrollTop();
         }
     }

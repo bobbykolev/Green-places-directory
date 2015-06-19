@@ -5,9 +5,9 @@
 
     app.controller('Place', Place);
 
-    Place.$inject = ['$routeParams', '$scope', 'config', 'common', 'placesService'];
+    Place.$inject = ['$routeParams', '$scope', 'config', 'common', 'placesService', '$location'];
 
-    function Place($routeParams, $scope, config, common, placesService) {
+    function Place($routeParams, $scope, config, common, placesService, $location) {
         var that = this,
             transTxts = {
                 bg: {
@@ -40,6 +40,16 @@
         that.getTime = function(day, time) {
             return '<strong>'+day +'</strong>: ' + (time ? time + ';' : transTxts[config.lang].rest);
         };
+
+        that.swipeLeft = function(e) {
+            common.showLoading();
+            getNextPlace(that.place.id);
+        };
+
+        that.swipeRight = function(e) {
+            common.showLoading();
+            getPreviusPlace(that.place.id);
+        };
         
         $scope.$watch(
             "that.rating",
@@ -57,11 +67,27 @@
         }
 
         function getInitalPlaceData() {
+            common.hideLoading();
+
             return placesService.getPlace($routeParams.placeId).then(function(data){
                 that.place = data || {};
                 that.rating = 5 - that.place.priority;
                 that.warning = data.warning || [''];
             });
+        }
+
+        function getNextPlace(id) {
+            placesService.getNext(id).then(function(place){
+                $location.path('/places/'+ place.id);
+            });
+            //todo: get next id and load its page  
+        }
+
+        function getPreviusPlace(id) {
+            placesService.getPrev(id).then(function(place){
+                $location.path('/places/'+ place.id);
+            });
+            //todo: get previous id and load its page      
         }
     }
 

@@ -35,7 +35,10 @@
             trimName: trimName,
             scrollTop:scrollTop,
             setOpenCloseMarker:setOpenCloseMarker,
-            setOpenCloseUpdater:setOpenCloseUpdater
+            setOpenCloseUpdater:setOpenCloseUpdater,
+            showLoading:showLoading,
+            hideLoading:hideLoading,
+            sortByProp:sortByProp
         },
         timeZoneGap = config.timeZoneGap,
         markerCheck,
@@ -141,6 +144,28 @@
                 console.log("[VP] open/close marker refresh", new Date());
                 setOpenCloseMarker(places);
             }, openCloseUpdateTime);
+        }
+
+        function showLoading() {
+            $('.page-splash').addClass('active');
+        }
+
+        function hideLoading() {
+            $('.page-splash').removeClass('active');
+        }
+
+        function sortByProp(array, prop) {
+            array.sort(function (a, b) {
+                if (a[prop] > b[prop]) {
+                return 1;
+                }
+                if (a[prop] < b[prop]) {
+                return -1;
+                }
+                return 0;
+            });
+
+            return array;
         }
 	}
 })();

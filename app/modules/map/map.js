@@ -32,6 +32,8 @@
         }
 
         function getInitalPlacesData() {
+            common.hideLoading();
+            
             return placesService.getPlaces().then(function(data) {
                 that.places = data;
             });
