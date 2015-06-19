@@ -25,7 +25,7 @@ gulp.task('minifyPlacesEn', function(){
 gulp.task('minifyTagsEn', function(){
     return gulp.src('places_tags_en.json')
         .pipe(jsonminify())
-        .pipe(gp_rename('places_tags_min_bg.json'))
+        .pipe(gp_rename('places_tags_min_en.json'))
         .pipe(gulp.dest('./data'));
 });
 
@@ -39,7 +39,7 @@ gulp.task('minifyTagsBg', function(){
 gulp.task('minifyTypesEn', function(){
     return gulp.src('places_types_en.json')
         .pipe(jsonminify())
-        .pipe(gp_rename('places_types_min_bg.json'))
+        .pipe(gp_rename('places_types_min_en.json'))
         .pipe(gulp.dest('./data'));
 });
 

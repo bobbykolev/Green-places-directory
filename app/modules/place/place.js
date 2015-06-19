@@ -12,18 +12,21 @@
             transTxts = {
                 bg: {
                     days:["Понеделник", "Вторник", "Сряда", "Четвъртък", "Петък", "Събота", "Неделя"],
-                    rest: "Почивен ден;"
+                    rest: "Почивен ден;",
+                    rating: "Веган рейтинг: ",
                 },
                 en: {
                     days:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                    rest: "Rest day;"
+                    rest: "Rest day;",
+                    rating: "Vegan rating: ",
                 }
             };
 
         that.days = transTxts[config.lang].days;
+        that.veganRatingTxt = transTxts[config.lang].rating;
         that.lang = config.lang;
         that.place = {};
-        that.rating = 5;
+        that.rating = 4;
         that.warning = [''];
 
         $scope.rateFunction = function(rating) {
@@ -56,7 +59,7 @@
         function getInitalPlaceData() {
             return placesService.getPlace($routeParams.placeId).then(function(data){
                 that.place = data || {};
-                that.rating = data.rating || 5;
+                that.rating = 5 - that.place.priority;
                 that.warning = data.warning || [''];
             });
         }
