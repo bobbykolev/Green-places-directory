@@ -3,7 +3,7 @@
 		<div ng-click="that.swipeRight()"><i class="fa fa-chevron-left"></i></div>
 		<div ng-click="that.swipeLeft()"><i class="fa fa-chevron-right"></i></div>
 	</div>
-	<div ng-swipe-left="that.swipeLeft()" ng-swipe-right="that.swipeRight()">
+	<div ng-swipe-left="that.swipeLeft($event)" ng-swipe-right="that.swipeRight($event)">
 		<header>
 			<h2 class="page-header">{{ that.place.name }}</h2>
 		</header>	

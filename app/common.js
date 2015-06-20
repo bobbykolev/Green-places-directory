@@ -161,7 +161,6 @@
 	}
 
     function setLoading(on) {
-        console.log('show: ',on);
         on ? $('.page-splash').show() : $('.page-splash').hide();
     }
 })();

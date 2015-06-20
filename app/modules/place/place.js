@@ -42,13 +42,21 @@
         };
 
         that.swipeLeft = function(e) {
-            common.setLoading(true);
-            getNextPlace(that.place.id);
+            if (e && ($(e.target).hasClass('gmap') || $(e.target).parents().hasClass('gmap'))) {
+                return true;
+            } else {
+                common.setLoading(true);
+                getNextPlace(that.place.id);
+            }
         };
 
         that.swipeRight = function(e) {
-            common.setLoading(true);
-            getPreviusPlace(that.place.id);
+            if (e && ($(e.target).hasClass('gmap') || $(e.target).parents().hasClass('gmap'))) {
+                return true;
+            } else {
+                common.setLoading(true);
+                getPreviusPlace(that.place.id);
+            }
         };
         
         $scope.$watch(
