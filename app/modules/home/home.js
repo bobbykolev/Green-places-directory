@@ -102,14 +102,13 @@
         };
 
         function activate() {
-            var promises = [getInitalPlacesData()];
-            common.activateController(promises, 'home');
+            common.activateController([getInitalPlacesData()], 'home');
 
             getCurentTownFilter();
             getCurentTypeFilter();
 
             common.scrollTop();
-        } 
+        }
 
         function getTowns(data) {
             that.towns = common.getUniqueProps('town', data);
@@ -120,8 +119,6 @@
         }
 
         function getInitalPlacesData() {
-            common.hideLoading();
-
             return placesService.getPlaces().then(function(data) {
                 that.places = data;
                 common.setOpenCloseUpdater(that.places);

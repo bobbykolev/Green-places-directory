@@ -1,48 +1,54 @@
 <div ng-controller="Place as that">
-<header>
-	<h2 class="page-header">{{ that.place.name }}</h2>
-</header>	
-<section class="place-container" ng-swipe-left="that.swipeLeft()" ng-swipe-right="that.swipeRight()">
-	<ul class="list-group">
-		<li ng-hide="that.warning[0] === ''" class="list-group-item">
-			<div class="alert alert-warning">
-				<div>{{that.warning}}</div>
-			</div>	
-		</li>
-		<li class="list-group-item">
-			<div class="featured-img-container">
-				<img ng-src="{{that.place.imageUrl}}"/>
-			</div>
-		</li>
-		<li class="list-group-item">
-			<span>{{that.veganRatingTxt}}</span>
-			<div star-ratings rating-value="that.rating" max="4" on-rating-selected="that.rateFunction(that.rating)">{{that.rating}}</div>
-		</li>
-		<li class="list-group-item">
-			<div>Type:</div>
-			<div ng-repeat="p in that.place.pType track by $index"><strong>{{p}}</strong>&nbsp;</div>
-		</li>
-		<li class="list-group-item clearfix">
-			<span style="margin:2px; float:left;" ng-repeat="g in that.place.tags track by $index" class="label label-info">{{g}}</span>
-		</li>
-		<li class="list-group-item">
-			<div><i class="fa fa-info-circle"></i>{{that.place.description}}</div>
-		</li>
-		<li class="list-group-item">
-			<div>
-				<i class="fa fa-clock-o"></i>
-				<div class="place-w-time" ng-repeat="t in that.place.workingTime track by $index" ng-bind-html="that.getTime(that.days[$index], t)"> &nbsp;</div>
-			</div>
-		</li>
-		<li class="list-group-item">
-			<div><i class="fa fa-map-marker"></i>{{ that.place.town }}, {{ that.place.address }}; <span ng-repeat="phone in that.place.phone"><a href="tel:{{phone}}"><i class="fa fa-phone"></i>{{phone}}</a>;&nbsp;</span></div>
-		</li>
-		<li class="list-group-item">
-			<div class="gmap" gmaps lang="that.lang" lat="that.place.latitude" lon="that.place.longitude" id="map{{that.place.id}}" place="that.place"></div>
-		</li>
-		<li class="list-group-item">
-			<div ng-repeat="l in that.place.links"><a href="{{l}}" target="_blank"><i class="fa fa-external-link"></i>{{that.userFriendlyUrl(l)}}</div>
-		</li>
-	</ul>
-</section>
+	<div class="swipe-arrows">
+		<div ng-click="that.swipeRight()"><i class="fa fa-chevron-left"></i></div>
+		<div ng-click="that.swipeLeft()"><i class="fa fa-chevron-right"></i></div>
+	</div>
+	<div ng-swipe-left="that.swipeLeft()" ng-swipe-right="that.swipeRight()">
+		<header>
+			<h2 class="page-header">{{ that.place.name }}</h2>
+		</header>	
+		<section class="place-container">
+			<ul class="list-group">
+				<li ng-hide="that.warning[0] === ''" class="list-group-item">
+					<div class="alert alert-warning">
+						<div>{{that.warning}}</div>
+					</div>	
+				</li>
+				<li class="list-group-item">
+					<div class="featured-img-container">
+						<img ng-src="{{that.place.imageUrl}}"/>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<span>{{that.veganRatingTxt}}</span>
+					<div star-ratings rating-value="that.rating" max="4" on-rating-selected="that.rateFunction(that.rating)">{{that.rating}}</div>
+				</li>
+				<li class="list-group-item">
+					<div>Type:</div>
+					<div ng-repeat="p in that.place.pType track by $index"><strong>{{p}}</strong>&nbsp;</div>
+				</li>
+				<li class="list-group-item clearfix">
+					<span style="margin:2px; float:left;" ng-repeat="g in that.place.tags track by $index" class="label label-info">{{g}}</span>
+				</li>
+				<li class="list-group-item">
+					<div><i class="fa fa-info-circle"></i>{{that.place.description}}</div>
+				</li>
+				<li class="list-group-item">
+					<div>
+						<i class="fa fa-clock-o"></i>
+						<div class="place-w-time" ng-repeat="t in that.place.workingTime track by $index" ng-bind-html="that.getTime(that.days[$index], t)"> &nbsp;</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div><i class="fa fa-map-marker"></i>{{ that.place.town }}, {{ that.place.address }}; <span ng-repeat="phone in that.place.phone"><a href="tel:{{phone}}"><i class="fa fa-phone"></i>{{phone}}</a>;&nbsp;</span></div>
+				</li>
+				<li class="list-group-item">
+					<div class="gmap" gmaps lang="that.lang" lat="that.place.latitude" lon="that.place.longitude" id="map{{that.place.id}}" place="that.place"></div>
+				</li>
+				<li class="list-group-item">
+					<div ng-repeat="l in that.place.links"><a href="{{l}}" target="_blank"><i class="fa fa-external-link"></i>{{that.userFriendlyUrl(l)}}</div>
+				</li>
+			</ul>
+		</section>
+	</div>
 </div>

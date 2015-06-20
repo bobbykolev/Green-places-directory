@@ -10,7 +10,7 @@
         var that = this,
             events = config.events;
             
-        that.isBusy = true;
+        that.isBusy = false;
         that.busyMessage = '';//Loading...';
 
         activate();
@@ -20,25 +20,23 @@
         }
 
         function toggleSpinner(on) {
-            that.isBusy = on;
+            //that.isBusy = on;
+            common.setLoading(on);
         }
 
         $rootScope.$on('$routeChangeStart',
             function(event, next, current) {
                 toggleSpinner(true);
-            }
-        );
+        });
 
         $rootScope.$on(events.controllerActivateSuccess,
             function(event, data) {
                 toggleSpinner(false);
-            }
-        );
+        });
 
         $rootScope.$on(events.spinnerToggle,
             function(event, data) {
                 toggleSpinner(data.show);
-            }
-        );
+        });
     }
 })();

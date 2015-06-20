@@ -102,16 +102,17 @@
         }
 
         function getNext(id) {
-            var def = $q.defer();
+            var def = $q.defer(),
+                vFilter = localStorage.getItem('currentVtype_' + config.lang);
 
             getPlaces().then(function(places){
                 for (var i = 0; i < places.length; i++) {
-                    if(places[i].id == id) {
-                        if (places[i+1]) {
-                            def.resolve(places[i+1]);
-                        } else {
-                            def.resolve(places[0]);
-                        }
+                    if(places[i].id == id) {  
+                            if (places[i+1]) {
+                                def.resolve(places[i+1]);
+                            } else {
+                                def.resolve(places[0]);
+                            }
                         break;
                     }
                 }
@@ -119,6 +120,7 @@
 
             return def.promise;
         }
+
 
         function getPrev(id) {
             var def = $q.defer();

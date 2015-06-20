@@ -42,12 +42,12 @@
         };
 
         that.swipeLeft = function(e) {
-            common.showLoading();
+            common.setLoading(true);
             getNextPlace(that.place.id);
         };
 
         that.swipeRight = function(e) {
-            common.showLoading();
+            common.setLoading(true);
             getPreviusPlace(that.place.id);
         };
         
@@ -61,14 +61,11 @@
         activate();
 
         function activate() {
-            var promises = [getInitalPlaceData()];
-            common.activateController(promises, 'place');
+            common.activateController([getInitalPlaceData()], 'place');
             common.scrollTop();
         }
 
         function getInitalPlaceData() {
-            common.hideLoading();
-
             return placesService.getPlace($routeParams.placeId).then(function(data){
                 that.place = data || {};
                 that.rating = 5 - that.place.priority;
@@ -80,14 +77,12 @@
             placesService.getNext(id).then(function(place){
                 $location.path('/places/'+ place.id);
             });
-            //todo: get next id and load its page  
         }
 
         function getPreviusPlace(id) {
             placesService.getPrev(id).then(function(place){
                 $location.path('/places/'+ place.id);
             });
-            //todo: get previous id and load its page      
         }
     }
 

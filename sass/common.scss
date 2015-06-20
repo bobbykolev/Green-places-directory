@@ -1,3 +1,18 @@
+h1, h2, h3, h4, div, span, p, li, button, i, input[type="submit"] {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 .clearfix {
     &:after {
         content: " ";
@@ -149,6 +164,7 @@ img[src*="googleapis.com/"] {
 h2 {
     font-family: 'Comfortaa', cursive;
     color: #999;
+    text-align: center;
 }
 
 #home-container.section-no-header {
@@ -172,17 +188,15 @@ h2 {
 }
 
 .page-splash {
-    &.active {
-        display: block !important;
-        position: absolute;
-        top: 0;
-        padding-top: 65%;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        z-index: 999;
-        background-color: rgba(255, 255, 255, 0.8);
-    }
+    display: block;
+    position: absolute;
+    top: 0;
+    padding-top: 50%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .list-group-item a {
@@ -267,6 +281,32 @@ h2 {
 
 .veg-icon-4 {
     background-position: -48px 0;
+}
+
+.swipe-arrows {
+    position:absolute;
+    width:100%;
+    left: 0;
+    top: 68px;
+
+    > div {
+        display:inline-block;
+        float:left;
+        width:49.9%;
+        height: 40px;
+        padding:10px;
+        text-align:left;
+
+        &:last-of-type {
+            text-align:right;   
+        }
+
+        &:hover {
+            i {
+                color: #C8E600;
+            }
+        }
+    } 
 }
 
 @media screen and (min-width: 768px) {

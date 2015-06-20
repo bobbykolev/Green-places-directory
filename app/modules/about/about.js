@@ -5,9 +5,9 @@
 
     app.controller('About', About);
     
-    About.$inject = ['common', 'config'];
+    About.$inject = ['common', 'config', '$q'];
 
-    function About(common, config) {
+    function About(common, config, $q) {
         var that = this,
             transTxts = {
                 bg: {
@@ -55,9 +55,12 @@
         activate();
 
         function activate() {
-            common.activateController([], 'about');
-            common.hideLoading();
+            common.activateController([falsePromise()], 'about');
             common.scrollTop();
+        }
+
+        function falsePromise() {
+            return $q.when(true);
         }
     }
 

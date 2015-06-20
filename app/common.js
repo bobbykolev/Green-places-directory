@@ -36,9 +36,8 @@
             scrollTop:scrollTop,
             setOpenCloseMarker:setOpenCloseMarker,
             setOpenCloseUpdater:setOpenCloseUpdater,
-            showLoading:showLoading,
-            hideLoading:hideLoading,
-            sortByProp:sortByProp
+            sortByProp:sortByProp,
+            setLoading:setLoading
         },
         timeZoneGap = config.timeZoneGap,
         markerCheck,
@@ -146,14 +145,6 @@
             }, openCloseUpdateTime);
         }
 
-        function showLoading() {
-            $('.page-splash').addClass('active');
-        }
-
-        function hideLoading() {
-            $('.page-splash').removeClass('active');
-        }
-
         function sortByProp(array, prop) {
             array.sort(function (a, b) {
                 if (a[prop] > b[prop]) {
@@ -168,4 +159,9 @@
             return array;
         }
 	}
+
+    function setLoading(on) {
+        console.log('show: ',on);
+        on ? $('.page-splash').show() : $('.page-splash').hide();
+    }
 })();
