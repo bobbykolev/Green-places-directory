@@ -13,22 +13,22 @@
                 bg: {
                     title:"Веган Заведения в България",
                     warningFiltersTxt:"* Активирани филтри, възможно е част от съдържанието да е скрито.",
-                    warningTxt2: "* забележка: не всички заведения приемат пчелния мед за 'веган'",
-                    warningTxt3: "* забележка: във всички изброени вегетариански заведения има веган ястия. Някои от заведенията са 99% веган.",
+                    warningTxt2: "* забележка: не всички заведения приемат, че пчелният мед не е 'веган'",
+                    warningTxt3: "* забележка: във всички изброени вегетариански заведения има веган ястия.",
                     allTxt:"Всички",
                     clearFiltersTxt: "изчисти филтрите",
-                    searchTxt: "Търси по дума...",
+                    searchTxt: "Търси (пример 'пица')",
                     openTxt:"Отворено",
                     closedTxt:"Затворено"
                 },
                 en: {
                     title:"Vegan Places In Bulgaria",
                     warningFiltersTxt:"* Filters applied, some of the content could be hidden.",
-                    warningTxt2: "* note: not all vegan places consider honey as 'vegan'",
-                    warningTxt3: "* note: There's vegan food in all vegetarian places, some of them are 98% vegan.",
+                    warningTxt2: "* note: not all vegan places consider honey as 'not vegan'",
+                    warningTxt3: "* note: There's vegan food in all vegetarian places.",
                     allTxt:"All",
                     clearFiltersTxt: "clear filters",
-                    searchTxt: "Search by keyword...",
+                    searchTxt: "Search (e.g. pizza)",
                     openTxt:"Open",
                     closedTxt:"Closed"
                 }
