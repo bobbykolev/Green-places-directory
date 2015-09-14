@@ -298,4 +298,54 @@
     ],
     "town": "Plovdiv",
     "address": "str. 'Opulchenska' 24"
+}, {
+    "id": 18,
+    "rating": 5,
+    "priority":"1",
+    "pType":[2,3],
+    "tags":[1,3,4],
+    "vType":"-вегански-",
+    "phone":["+359879516603"],
+    "imageUrl": "http://www.zoya.bg/custom-images/logo-new-zoya-smesen.png",
+    "links":["http://www.zoya.bg"],
+    "description": "Bio store with wide variety of vegan cakes.",
+    "latitude": "42.689809", 
+    "longitude": "23.325190",
+    "name": "Zoya ",
+    "workingTime": [
+        "09:00–22:00",
+        "09:00–22:00",
+        "09:00–22:00",
+        "09:00–22:00",
+        "09:00–22:00",
+        "10:00–22:00",
+        "12:00–21:00"
+    ],
+    "town": "Sofia",
+    "address": "str. 'Neofit Rilski' 63"
+}, {
+    "id": 19,
+    "rating": 5,
+    "priority":"1",
+    "pType":[1,3,4],
+    "tags":[1,3,4,5,8,9],
+    "vType":"-vegan-",
+    "phone":["+359888776419"],
+    "imageUrl": "http://mixofigs.bg/images/Pizza_s_mocarela.JPG",
+    "links":["http://mixofigs.bg", "https://www.facebook.com/mixofigs"],
+    "description": " „Микс ъф Фигс“ fast-food restaurant, which has unique menu with healthy and tasty food, 100% plant based. Wide variety of pizza, 'meat' (vegan) balls, appetizers, burgers and many more...",
+    "latitude": "42.690925",
+    "longitude": "23.315535",
+    "name": "Mix Of Figs",
+    "workingTime": [
+        "08:00–19:30",
+        "08:00–19:30",
+        "08:00–19:30",
+        "08:00–19:30",
+        "08:00–19:30",
+        "08:00–19:30",
+        "09:00–19:00"
+    ],
+    "town": "Sofia",
+    "address": "str. 'Neofit Rilski' 10"
 }]
