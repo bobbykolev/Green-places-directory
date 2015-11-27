@@ -14,7 +14,7 @@
         lang: locale(),
         setLang: setlocale,
         supportedLangs: ['bg','en'],
-        timeZoneGap: 3
+        timeZoneGap: 2
     };
 
     app.value('config', config);
