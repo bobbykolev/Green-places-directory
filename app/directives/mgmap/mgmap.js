@@ -17,7 +17,7 @@
                     choose: "- избери -",
                     rating: "Веган рейтинг: ",
                     openTxt:"Отворено",
-                    closedTxt:"Зарворено"
+                    closedTxt:"Затворено"
                 },
                 en: {
                     choose:"- choose -",
