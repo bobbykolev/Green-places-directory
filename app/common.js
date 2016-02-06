@@ -41,7 +41,7 @@
         },
         timeZoneGap = config.timeZoneGap,
         markerCheck,
-        openCloseUpdateTime = 600000;//10min
+        openCloseUpdateTime = 60000;//1min
 
         return service;
 

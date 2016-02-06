@@ -12,25 +12,29 @@
             transTxts = {
                 bg: {
                     title:"Веган Заведения в България",
-                    warningFiltersTxt:"* Активирани филтри, възможно е част от съдържанието да е скрито.",
+                    warningFiltersTxt:"* Активирани филтри, възможно е част от съдържанието да е скрито!",
                     warningTxt2: "* забележка: не всички заведения приемат, че пчелният мед не е 'веган'",
-                    warningTxt3: "* забележка: във всички изброени вегетариански заведения има веган ястия.",
+                    warningTxt3: "* забележка: във всички изброени вегетариански заведения има веган ястия",
+                    warningTxt4: "* забележка: всяко заведение има право да не спазва оказаното раобтно време",
                     allTxt:"Всички",
                     clearFiltersTxt: "изчисти филтрите",
                     searchTxt: "Търси (пример 'пица')",
                     openTxt:"Отворено",
-                    closedTxt:"Затворено"
+                    closedTxt:"Затворено",
+                    orders: ["Веган Рейтинг","Дата на добавяне"]
                 },
                 en: {
                     title:"Vegan Places In Bulgaria",
-                    warningFiltersTxt:"* Filters applied, some of the content could be hidden.",
+                    warningFiltersTxt:"* Filters applied, some of the content could be hidden!",
                     warningTxt2: "* note: not all vegan places consider honey as 'not vegan'",
-                    warningTxt3: "* note: There's vegan food in all vegetarian places.",
+                    warningTxt3: "* note: there's vegan food in all vegetarian places",
+                    warningTxt4: "* note: all places have the right to not comply with the provided working time",
                     allTxt:"All",
                     clearFiltersTxt: "clear filters",
                     searchTxt: "Search (e.g. pizza)",
                     openTxt:"Open",
-                    closedTxt:"Closed"
+                    closedTxt:"Closed",
+                    orders: ["Vegan Priority","Date Added"]
                 }
             };
 
@@ -38,11 +42,15 @@
         that.warningTxt = '';
         that.warningTxt2 = transTxts[config.lang].warningTxt2;
         that.warningTxt3 = transTxts[config.lang].warningTxt3;
+        that.warningTxt4 = transTxts[config.lang].warningTxt4;
         that.allTxt = transTxts[config.lang].allTxt;
         that.clearFiltersTxt = transTxts[config.lang].clearFiltersTxt;
         that.searchTxt = transTxts[config.lang].searchTxt;
         this.openTxt = transTxts[config.lang].openTxt;
         this.closedTxt = transTxts[config.lang].closedTxt;
+        that.orderOps = [{id:0,name: transTxts[config.lang].orders[0], value:'priority', asc: false},
+                        {id:1,name: transTxts[config.lang].orders[1], value:'id', asc: true}];
+        that.order = that.orderOps[0];
 
         that.places = [];
 
