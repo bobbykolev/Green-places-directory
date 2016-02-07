@@ -24,6 +24,10 @@
                         {
                             question:"Включвате ли заведения, в които се сервира месо дори и да предлагат веган храна?",
                             answer:"Не!"
+                        },
+                        {
+                            question:"Какво представлява веган рейтинга?",
+                            answer:"Kъм момента рейтингът се формира така: голям процент ястия с млечни продукти - 1; много малък процент от менюто с млечни продукти - 2; използване на мед - 3; изцяло веган - 4;"
                         }
                     ]
                 },
@@ -41,6 +45,10 @@
                         {
                             question:"Are you going to include places that offer meat even if they offer vegan meals?",
                             answer:"No!"
+                        },
+                        {
+                            question:"What is 'vegan rating'?",
+                            answer:"The rating is formed as: big percent of diary meals - 1; few diary meals on the menu - 2; using honey - 3; fully vegan - 4;"
                         }
                     ]
                 }

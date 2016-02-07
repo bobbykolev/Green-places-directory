@@ -51,7 +51,7 @@
 }, {
     "id": 5,
     "rating": 5,
-    "priority":"2",
+    "priority":"3",
     "pType":[2,4],
     "tags":[4],
     "vType":"-вегетариански-",
@@ -307,7 +307,7 @@
     "vType":"-веган-",
     "phone":["+359879516603"],
     "imageUrl": "http://www.zoya.bg/custom-images/logo-new-zoya-smesen.png",
-    "links":["http://www.zoya.bg"],
+    "links":["http://www.zoya.bg","https://www.facebook.com/www.zoya.bg"],
     "description": "Био магазин с богато разнообразие на торти.",
     "latitude": "42.689809", 
     "longitude": "23.325190",
