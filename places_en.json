@@ -281,7 +281,7 @@
     "tags":[4,6,10],
     "vType":"-vegetarian-",
     "phone":["+359885722761"],
-    "imageUrl": "https://scontent.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/11218522_1584127108532253_2809231389095565741_n.jpg?oh=ef895e8fcb882f248d8c315438d5d233&oe=5634D54A",
+    "imageUrl": "http://vegan-places.com/img/country-life.jpg",
     "links":["https://www.facebook.com/pages/Country-Life/1584102191868078"],
     "description": "Vegetarian and vegan food.",
     "latitude": "42.150320",
@@ -423,4 +423,29 @@
     ],
     "town": "Sofia",
     "address": "str. 'Lavski rid' 14, bl. 8 (entrance is on the back)"
+}, {
+    "id": 23,
+    "rating": 5,
+    "priority":"3",
+    "pType":[],
+    "tags":[3],
+    "vType":"-vegetarian-",
+    "phone":["+359899427476"],
+    "imageUrl": "http://vegan-places.com/img/veggi-fresh.jpg",
+    "links":[""],
+    "description": "Takeaway falafel.",
+    "latitude": "43.208011",
+    "longitude": "27.922546",
+    "name": "Veggi Fresh",
+    "workingTime": [
+        "10:00–20:00",
+        "10:00–20:00",
+        "10:00–20:00",
+        "10:00–20:00",
+        "10:00–20:00",
+        "11:00–19:00",
+        ""
+    ],
+    "town": "Varna",
+    "address": "str. 'Knyaz Boris I' 71"
 }]
