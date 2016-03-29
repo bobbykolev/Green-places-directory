@@ -14,7 +14,7 @@
         lang: locale(),
         setLang: setlocale,
         supportedLangs: ['bg','en'],
-        timeZoneGap: 2
+        timeZoneGap: (-1*(new Date().getTimezoneOffset()))/60
     };
 
     app.value('config', config);
