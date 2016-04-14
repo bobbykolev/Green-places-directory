@@ -448,4 +448,29 @@
     ],
     "town": "Varna",
     "address": "str. 'Knyaz Boris I' 71"
+}, {
+    "id": 24,
+    "rating": 5,
+    "priority":"4",
+    "pType":[3],
+    "tags":[1,2,12],
+    "vType":"-vegetarian-",
+    "phone":["+359882211254"],
+    "imageUrl": "http://the-vegan.org/wp-content/uploads/2016/04/12512526_217190955283880_4100107487729402349_n.jpg",
+    "links":["https://www.facebook.com/befreshbio"],
+    "description": "Be Fresh Bio - raw, vegan, vegetarian, fresh bar&food",
+    "latitude": "42.142906",
+    "longitude": "24.742609",
+    "name": "Be Fresh Bio",
+    "workingTime": [
+        "11:00–19:00",
+        "11:00–19:00",
+        "11:00–19:00",
+        "11:00–19:00",
+        "11:00–19:00",
+        "11:00–19:00",
+        ""
+    ],
+    "town": "Plovdiv",
+    "address": "str. 'Tzar Ivan Alexander' 14"
 }]
