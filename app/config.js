@@ -73,6 +73,12 @@
         //$locationProvider.hashPrefix('!');
     }
 
+    app.config(['$compileProvider', compileConfig]);
+
+    function compileConfig($compileProvider) {
+      $compileProvider.debugInfoEnabled(false);
+    }
+
     // Define the routes 
     function getRoutes() {
         return [{
