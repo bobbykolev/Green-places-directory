@@ -498,4 +498,29 @@
     ],
     "town": "Varna",
     "address": "str. 'Makedonia' 20"
+}, {
+    "id": 26,
+    "rating": 5,
+    "priority":"1",
+    "pType":[4],
+    "tags":[3,4,8,9,12],
+    "vType":"-vegan-",
+    "phone":["+359888771768"],
+    "imageUrl": "http://vegan-places.com/img/mapache.jpg",
+    "links":["http://mapachebakery.com/","https://www.facebook.com/mapachebakery"],
+    "description": "All-vegan bakery cafe. Serving up sweets, savories, juices & more! Gluten free and raw options available sometimes.",
+    "latitude": "43.205425",
+    "longitude": "27.915499",
+    "name": "Mapache Cafe & Bakery",
+    "workingTime": [
+        "",
+        "10:00–19:00",
+        "10:00–19:00",
+        "10:00–19:00",
+        "10:00–19:00",
+        "10:00–20:30",
+        "10:00–20:30"
+    ],
+    "town": "Varna",
+    "address": "str. 'Ilarion Makriopolski' 2"
 }]
