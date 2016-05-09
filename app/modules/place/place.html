@@ -24,7 +24,7 @@
 					<div star-ratings rating-value="that.rating" max="4" on-rating-selected="that.rateFunction(that.rating)">{{that.rating}}</div>
 				</li>
 				<li class="list-group-item">
-					<div>Type:</div>
+					<div>{{that.typeTxt}}</div>
 					<div ng-repeat="p in that.place.pType track by $index"><strong>{{p}}</strong>&nbsp;</div>
 				</li>
 				<li class="list-group-item clearfix">

@@ -14,16 +14,19 @@
                     days:["Понеделник", "Вторник", "Сряда", "Четвъртък", "Петък", "Събота", "Неделя"],
                     rest: "Почивен ден;",
                     rating: "Веган рейтинг: ",
+                    type: "Тип"
                 },
                 en: {
                     days:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
                     rest: "Rest day;",
                     rating: "Vegan rating: ",
+                    type: "Type"
                 }
             };
 
         that.days = transTxts[config.lang].days;
         that.veganRatingTxt = transTxts[config.lang].rating;
+        that.typeTxt = transTxts[config.lang].type;
         that.lang = config.lang;
         that.place = {};
         that.rating = 4;
