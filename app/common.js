@@ -113,22 +113,26 @@
 
             for (var i = 0; i < data.length; i++) {
                 //the dash: (– 8211  2013 &ndash; EN DASH)
-               startEndTimeArr = data[i].workingTime[currentDay-1].split('–');
+                if (data[i].open) {
+                    startEndTimeArr = data[i].workingTime[currentDay-1].split('–');
 
-                if (startEndTimeArr[0]) {
-                    startTime = startEndTimeArr[0].split(':');
-                    endTime = startEndTimeArr[1].split(':');
+                    if (startEndTimeArr[0]) {
+                        startTime = startEndTimeArr[0].split(':');
+                        endTime = startEndTimeArr[1].split(':');
 
-                    //hours '-2': data is with GMT -2 (Sofia...)
-                    if ((currentHour > parseInt(startTime[0]) - timeZoneGap) && (currentHour < parseInt(endTime[0]) - timeZoneGap)) {
-                        data[i].isOpen = true;
-                    } else if ((currentHour == parseInt(startTime[0]) - timeZoneGap)  && (currentMinutes > parseInt(startTime[1]))) {
-                        data[i].isOpen = true;
-                    }  else if ((currentHour == parseInt(endTime[0]) - timeZoneGap)  && (currentMinutes < parseInt(endTime[1]))) {
-                        data[i].isOpen = true;
+                        //hours '-2': data is with GMT -2 (Sofia...)
+                        if ((currentHour > parseInt(startTime[0]) - timeZoneGap) && (currentHour < parseInt(endTime[0]) - timeZoneGap)) {
+                            data[i].isOpen = true;
+                        } else if ((currentHour == parseInt(startTime[0]) - timeZoneGap)  && (currentMinutes > parseInt(startTime[1]))) {
+                            data[i].isOpen = true;
+                        }  else if ((currentHour == parseInt(endTime[0]) - timeZoneGap)  && (currentMinutes < parseInt(endTime[1]))) {
+                            data[i].isOpen = true;
+                        } else {
+                            data[i].isOpen = false;
+                        }
                     } else {
                         data[i].isOpen = false;
-                    }
+                    }    
                 } else {
                     data[i].isOpen = false;
                 }

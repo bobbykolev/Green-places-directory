@@ -9,7 +9,7 @@
 		</header>	
 		<section class="place-container">
 			<ul class="list-group">
-				<li ng-hide="that.warning[0] === ''" class="list-group-item">
+				<li ng-hide="!that.warning" class="list-group-item">
 					<div class="alert alert-warning">
 						<div>{{that.warning}}</div>
 					</div>	

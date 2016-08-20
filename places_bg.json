@@ -12,6 +12,8 @@
     "latitude": "42.701085",
     "longitude": "23.324769",
     "name": "Кринг",
+    "warning":"В лятна ваканция (затворено) до 29.08.2016",
+    "open":false,
     "workingTime": [
         "11:00–21:00",
         "11:00–21:00",
@@ -37,6 +39,8 @@
     "latitude": "42.144353", 
     "longitude": "24.745681",
     "name": "Веджик",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "09:00–21:00",
         "09:00–21:00",
@@ -62,6 +66,8 @@
     "latitude": "43.203788",
     "longitude": "27.913765",
     "name": "Хатори",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "10:00–19:00",
         "10:00–19:00",
@@ -87,6 +93,8 @@
     "latitude": "42.689611", 
     "longitude": "23.325422",
     "name": "Слънце Луна 2",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "08:30–22:00",
         "08:30–22:00",
@@ -112,6 +120,8 @@
     "latitude": "42.691899", 
     "longitude": "23.317209",
     "name": "Слънце Луна",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "08:30–22:00",
         "08:30–22:00",
@@ -137,6 +147,8 @@
     "latitude": "42.684362",
     "longitude": "23.327338",
     "name": "Соул Китчън",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "10:00–24:00",
         "10:00–24:00",
@@ -162,6 +174,8 @@
     "latitude": "42.694763",
     "longitude": "23.321235",
     "name": "Дрийм Хаус",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "11:00–22:00",
         "11:00–22:00",
@@ -187,6 +201,8 @@
     "latitude": "42.704137", 
     "longitude": "23.323973",
     "name": "Сома Витал (Мандала)",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "09:00–21:30",
         "09:00–21:30",
@@ -212,6 +228,8 @@
     "latitude": "42.692310",
     "longitude": "23.314970",
     "name": "Веда Хаус",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "10:30–23:00",
         "10:30–23:00",
@@ -237,6 +255,8 @@
     "latitude": "42.697967",
     "longitude": "23.330039",
     "name": "Ловинг Хът",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "08:00–20:00",
         "08:00–20:00",
@@ -262,6 +282,8 @@
     "latitude": "43.220076",
     "longitude": "27.889558",
     "name": "Веганска & Вегетарианска Кулинария",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "10:00–21:00",
         "10:00–21:00",
@@ -287,6 +309,8 @@
     "latitude": "42.150320",
     "longitude": "24.744450",
     "name": "Country Life",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "08:00–20:00",
         "08:00–20:00",
@@ -312,6 +336,8 @@
     "latitude": "42.689809", 
     "longitude": "23.325190",
     "name": "Зоя",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "09:00–22:00",
         "09:00–22:00",
@@ -337,6 +363,8 @@
     "latitude": "42.690925",
     "longitude": "23.315535",
     "name": "Микс Ъф Фигс",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "09:00–20:30",
         "09:00–20:30",
@@ -362,6 +390,8 @@
     "latitude": "42.681747",
     "longitude": "23.322375",
     "name": "Роули",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "08:00–20:00",
         "08:00–20:00",
@@ -373,31 +403,6 @@
     ],
     "town": "София",
     "address": "кв. Лозенец, ул. 'Бисер' 16"
-}, {
-    "id": 21,
-    "rating": 5,
-    "priority":"4",
-    "pType":[5,3],
-    "tags":[1,3,4,6,11],
-    "vType":"-вегетариански-",
-    "phone":["+359879368774"],
-    "imageUrl": "http://vegan-places.com/img/vegetoria.jpg",
-    "links":["http://zelenbio.com","https://www.facebook.com/ShopZelenbio"],
-    "description": "Био магазин в който може да намерите вкусни веган банички, сандвичи, сладкиши, торти (Вегетория) и фрешове.",
-    "latitude": "42.696579",
-    "longitude": "23.319363",
-    "name": "Зелен Био",
-    "workingTime": [
-        "08:00–20:00",
-        "08:00–20:00",
-        "08:00–20:00",
-        "08:00–20:00",
-        "08:00–20:00",
-        "10:00–18:00",
-        "11:00–17:00"
-    ],
-    "town": "София",
-    "address": "ул. 'Лавеле' 20-22"
 }, {
     "id": 23,
     "rating": 5,
@@ -412,6 +417,8 @@
     "latitude": "43.208011",
     "longitude": "27.922546",
     "name": "Веджи Фреш",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "10:00–20:00",
         "10:00–20:00",
@@ -437,6 +444,8 @@
     "latitude": "42.142906",
     "longitude": "24.742609",
     "name": "Би Фреш Био",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "11:00–19:00",
         "11:00–19:00",
@@ -462,6 +471,8 @@
     "latitude": "43.205425",
     "longitude": "27.915499",
     "name": "Мапаче Кафе & Пекарна",
+    "warning":"",
+    "open":true,
     "workingTime": [
         "",
         "10:00–19:00",
@@ -487,7 +498,9 @@
     "latitude": "43.204234", 
     "longitude": "27.922163",
     "name": "My Cafe by Ani Boland",
-    "workingTime": [
+    "warning":"",    
+    "open":true,
+    "workingTime": [
         "09:00–20:00",
         "09:00–20:00",
         "09:00–20:00",
@@ -512,7 +525,9 @@
     "latitude": "42.687081",
     "longitude": "23.303562",
     "name": "Ананда",
-    "workingTime": [
+    "warning":"",    
+    "open":true,
+    "workingTime": [
         "09:00–19:00",
         "09:00–19:00",
         "09:00–19:00",

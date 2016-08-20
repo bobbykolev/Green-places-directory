@@ -30,7 +30,7 @@
         that.lang = config.lang;
         that.place = {};
         that.rating = 4;
-        that.warning = [''];
+        that.warning = '';
 
         $scope.rateFunction = function(rating) {
             alert("Rating selected - " + rating);
@@ -80,7 +80,7 @@
             return placesService.getPlace($routeParams.placeId).then(function(data){
                 that.place = data || {};
                 that.rating = 5 - that.place.priority;
-                that.warning = data.warning || [''];
+                that.warning = data.warning || '';
             });
         }
 
