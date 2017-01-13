@@ -147,8 +147,8 @@
     "latitude": "42.684362",
     "longitude": "23.327338",
     "name": "Soul Kitchen",
-    "warning":"",
-    "open":true,
+    "warning":"Closed for renovation till 11.02.2017!",
+    "open":false,
     "workingTime": [
         "10:00–24:00",
         "10:00–24:00",
@@ -511,4 +511,31 @@
     ],
     "town": "Sofia",
     "address": "str. 'Feliks Kanits' 14-16"
+}, {
+    "id": 29,
+    "rating": 5,
+    "priority":"4",
+    "pType":[1,5],
+    "tags":[1,2,4,6,12],
+    "vType":"-vegetarian-",
+    "phone":["+359877883208"],
+    "imageUrl": "http://vegan-places.com/img/angels.jpg",
+    "links":["http://bistroangels.com","https://www.facebook.com/AngelsFoodVarna/"],
+    "description": "Healthy and fresh vegan and vegetarian food. Also, there's a hall for yoga and seminars.",
+    "latitude": "43.210090",
+    "longitude": "27.924485",
+    "name": "Angel's",
+    "warning":"",    
+    "open":true,
+    "workingTime": [
+        "10:30–20:00",
+        "10:30–20:00",
+        "10:30–20:00",
+        "10:30–20:00",
+        "10:30–20:00",
+        "10:30–20:00",
+        ""
+    ],
+    "town": "Varna",
+    "address": "str. Liuben Karavelov 26"
 }]
