@@ -538,4 +538,29 @@
     ],
     "town": "Varna",
     "address": "str. Liuben Karavelov 26"
+}, {
+    "id": 30,
+    "rating": 5,
+    "priority":"1",
+    "pType":[1,3,5],
+    "tags":[2,3,4,6,9,10],
+    "vType":"-vegan-",
+    "phone":["+359879655777"],
+    "links":["https://www.facebook.com/thegreenlemon.bg/"],
+    "latitude": "42.155858",
+    "longitude": "24.743964",
+    "name": "The Green Lemon",
+    "warning":"",    
+    "open":true,
+    "workingTime": [
+        "08:00–20:00",
+        "08:00–20:00",
+        "08:00–20:00",
+        "08:00–20:00",
+        "08:00–20:00",
+        "08:00–20:00",
+        ""
+    ],
+    "town": "Plovdiv",
+    "address": "str. Neofit Rilski 11"
 }]
