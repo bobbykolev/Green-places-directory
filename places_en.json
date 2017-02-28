@@ -194,9 +194,9 @@
     "pType":[1],
     "tags":[1,4,7],
     "vType":"-vegetarian-",
-    "phone":["+359894488809"],
+    "phone":["+359899988593"],
     "imageUrl": "http://vegan-places.com/img/soma_vital.jpg",
-    "links":["https://www.facebook.com/YogaMandala"],
+    "links":["http://somavital.bg/", "https://www.facebook.com/SomaVital"],
     "description": "Soma Vital is a yoga philosophy inspired restaurant located in yoga center Mandala. The wooden furnishings and the colorful pillows make the place nice and cosy and the kids have their own corner to play. The meals are mostly vegetarian, prepared with fresh unrefined ingredients. The menu offers everything from coffee through smoothies, salads and soups to cheesecakes and cakes and the names of the dishes will definitely make you smile. No shoes!",
     "latitude": "42.704137", 
     "longitude": "23.323973",
@@ -204,13 +204,13 @@
     "warning":"",
     "open":true,
     "workingTime": [
-        "09:00–21:30",
-        "09:00–21:30",
-        "09:00–21:30",
-        "09:00–21:30",
-        "09:00–21:30",
-        "09:00–21:30",
-        "09:00–21:30"
+        "09:00–21:00",
+        "11:00–21:00",
+        "11:00–21:00",
+        "11:00–21:00",
+        "11:00–21:00",
+        "11:00–21:00",
+        "11:00–20:30"
     ],
     "town": "Sofia",
     "address": "str. 'Knyaginya Maria Louisa' 58"
