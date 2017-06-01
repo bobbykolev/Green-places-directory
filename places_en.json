@@ -263,8 +263,8 @@
         "08:00–20:00",
         "08:00–20:00",
         "08:00–20:00",
-        "11:00–19:00",
-        "11:00–19:00"
+        "11:00–17:00",
+        "11:00–17:00"
     ],
     "town": "Sofia",
     "address": "str. 'G. Rakovski' 113"
@@ -298,14 +298,14 @@
 }, {
     "id": 17,
     "rating": 5,
-    "priority":"4",
+    "priority":"1",
     "pType":[1],
     "tags":[4,6,10],
-    "vType":"-vegetarian-",
+    "vType":"-vegan-",
     "phone":["+359885722761"],
     "imageUrl": "http://vegan-places.com/img/country-life.jpg",
     "links":["https://www.facebook.com/Country-Life-1584102191868078/"],
-    "description": "Vegetarian and vegan food.",
+    "description": "Vegan food.",
     "latitude": "42.150320",
     "longitude": "24.744450",
     "name": "Country Life",
