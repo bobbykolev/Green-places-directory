@@ -404,6 +404,31 @@
     "town": "Sofia",
     "address": "str. 'Biser' 16"
 }, {
+    "id": 23,
+    "rating": 5,
+    "priority":"1",
+    "pType":[],
+    "tags":[3],
+    "vType":"-vegan-",
+    "phone":["+359899427476"],
+    "imageUrl": "http://vegan-places.com/img/veggi-fresh.jpg",
+    "links":[""],
+    "description": "Takeaway falafel.",
+    "latitude": "43.208011",
+    "longitude": "27.922546",
+    "name": "Veggi Fresh",
+    "workingTime": [
+        "10:00–20:00",
+        "10:00–20:00",
+        "10:00–20:00",
+        "10:00–20:00",
+        "10:00–20:00",
+        "11:00–19:00",
+        ""
+    ],
+    "town": "Varna",
+    "address": "str. 'Knyaz Boris I' 71"
+}, {
     "id": 26,
     "rating": 5,
     "priority":"1",
@@ -420,13 +445,13 @@
     "warning":"",
     "open":true,
     "workingTime": [
-        "",
-        "10:00–19:00",
-        "10:00–19:00",
-        "10:00–19:00",
-        "10:00–19:00",
-        "10:00–20:30",
-        "10:00–20:30"
+        "10:00–18:00",
+        "10:00–18:00",
+        "10:00–18:00",
+        "10:00–18:00",
+        "10:00–18:00",
+        "10:00–16:00",
+        ""
     ],
     "town": "Varna",
     "address": "str. 'Ilarion Makriopolski' 2"
