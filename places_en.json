@@ -457,33 +457,6 @@
     "town": "Varna",
     "address": "str. 'Ilarion Makriopolski' 2"
 }, {
-    "id": 27,
-    "rating": 5,
-    "priority":"4",
-    "pType":[2],
-    "tags":[1,2,4],
-    "vType":"-vegetarian-",
-    "phone":["+359878193589"],
-    "imageUrl": "http://vegan-places.com/img/ani-boland.jpg",
-    "links":["http://www.mycafe.bg","https://www.facebook.com/MyCafeByAniBoland"],
-    "description": "High quality desserts. Fresh juices, coffee and coffee specialties with vegan options (soy milk).",
-    "latitude": "43.204234", 
-    "longitude": "27.922163",
-    "name": "My Cafe by Ani Boland",
-    "warning":"",
-    "open":true,    
-    "workingTime": [
-        "09:00–20:00",
-        "09:00–20:00",
-        "09:00–20:00",
-        "09:00–20:00",
-        "09:00–20:00",
-        "09:00–20:00",
-        "09:00–20:00"
-    ],
-    "town": "Varna",
-    "address": "str. 'Slivnitsa' 2"
-}, {
     "id": 28,
     "rating": 5,
     "priority":"4",

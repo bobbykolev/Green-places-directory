@@ -457,33 +457,6 @@
     "town": "Варна",
     "address": "ул. 'Иларион Макариополски' 2"
 }, {
-    "id": 27,
-    "rating": 5,
-    "priority":"4",
-    "pType":[2],
-    "tags":[1,2,4],
-    "vType":"-вегетариански-",
-    "phone":["+359878193589"],
-    "imageUrl": "http://vegan-places.com/img/ani-boland.jpg",
-    "links":["http://www.mycafe.bg","https://www.facebook.com/MyCafeByAniBoland"],
-    "description": "Десерти с много високо качество. Прясно изцедени сокове, кафе и кафе вариации с веган опция (соево мляко).",
-    "latitude": "43.204234", 
-    "longitude": "27.922163",
-    "name": "My Cafe by Ani Boland",
-    "warning":"",    
-    "open":true,
-    "workingTime": [
-        "09:00–20:00",
-        "09:00–20:00",
-        "09:00–20:00",
-        "09:00–20:00",
-        "09:00–20:00",
-        "09:00–20:00",
-        "09:00–20:00"
-    ],
-    "town": "Варна",
-    "address": "бул. 'Сливница' 2"
-}, {
     "id": 28,
     "rating": 5,
     "priority":"4",
