@@ -12,8 +12,8 @@
     "latitude": "42.701085",
     "longitude": "23.324769",
     "name": "Kring",
-    "warning":"",
-    "open":true,
+    "warning":"Closed until 04.09.2017",
+    "open":false,
     "workingTime": [
         "11:00–21:00",
         "11:00–21:00",
@@ -429,33 +429,6 @@
     ],
     "town": "Varna",
     "address": "str. 'Knyaz Boris I' 71"
-}, {
-    "id": 26,
-    "rating": 5,
-    "priority":"1",
-    "pType":[4],
-    "tags":[3,4,8,9,12],
-    "vType":"-vegan-",
-    "phone":["+359888771768"],
-    "imageUrl": "http://vegan-places.com/img/mapache.jpg",
-    "links":["http://mapachebakery.com/","https://www.facebook.com/mapachebakery"],
-    "description": "All-vegan bakery cafe. Serving up sweets, savories, juices & more! Gluten free and raw options available sometimes.",
-    "latitude": "43.205425",
-    "longitude": "27.915499",
-    "name": "Mapache Cafe & Bakery",
-    "warning":"Permanently closed!",
-    "open":false,
-    "workingTime": [
-        "10:00–18:00",
-        "10:00–18:00",
-        "10:00–18:00",
-        "10:00–18:00",
-        "10:00–18:00",
-        "10:00–16:00",
-        ""
-    ],
-    "town": "Varna",
-    "address": "str. 'Ilarion Makriopolski' 2"
 }, {
     "id": 28,
     "rating": 5,
