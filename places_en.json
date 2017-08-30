@@ -93,8 +93,8 @@
     "latitude": "42.689611", 
     "longitude": "23.325422",
     "name": "Sunmoon 2",
-    "warning":"",
-    "open":true,
+    "warning":"Closed for renovation till the end of August.",
+    "open":false,
     "workingTime": [
         "08:30–22:00",
         "08:30–22:00",
@@ -201,8 +201,8 @@
     "latitude": "42.704137", 
     "longitude": "23.323973",
     "name": "Soma Vital (Mandala)",
-    "warning":"",
-    "open":true,
+    "warning":"Permanently closed!",
+    "open":false,
     "workingTime": [
         "09:00–21:00",
         "11:00–21:00",
@@ -550,16 +550,16 @@
     "latitude": "43.205975",
     "longitude": "27.917497",
     "name": "Vege Joy",
-    "warning":"Closed until 22.08.2017",  
-    "open":false,
+    "warning":"",  
+    "open":true,
     "workingTime": [
         "",
-        "12:00–23:00",
-        "12:00–23:00",
-        "12:00–23:00",
-        "12:00–23:00",
-        "12:00–23:00",
-        "12:00–23:00"
+        "12:00–22:30",
+        "12:00–22:30",
+        "12:00–22:30",
+        "12:00–22:30",
+        "12:00–22:30",
+        "12:00–22:30"
     ],
     "town": "Varna",
     "address": "str. Marko Balabanov 25"
