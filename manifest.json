@@ -1,0 +1,16 @@
+{
+  "short_name": "VP",
+  "name": "Vegan Places",
+  "icons": [
+    {
+      "src": "/images/pwa-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": "",
+  "theme_color": "#286090"
+}

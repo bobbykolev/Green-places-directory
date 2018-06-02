@@ -49,3 +49,10 @@ gulp.task('minifyTypesBg', function(){
         .pipe(gp_rename('places_types_min_bg.json'))
         .pipe(gulp.dest('./data'));
 });
+
+gulp.task('moveManifest', function(){
+    return gulp.src('manifest.json')
+        .pipe(jsonminify())
+        .pipe(gp_rename('manifest.json'))
+        .pipe(gulp.dest(paths.output));
+});
