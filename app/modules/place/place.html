@@ -43,6 +43,7 @@
 					<div class="allow-select"><i class="fa fa-map-marker"></i>{{ that.place.town }}, {{ that.place.address }}; <span ng-repeat="phone in that.place.phone"><a href="tel:{{phone}}" class="allow-select"><i class="fa fa-phone"></i>{{phone}}</a>;&nbsp;</span></div>
 				</li>
 				<li class="list-group-item">
+					<div style="font-size: 6px;line-height: 6px;">&nbsp;</div>
 					<div class="gmap" gmaps lang="that.lang" lat="that.place.latitude" lon="that.place.longitude" id="map{{that.place.id}}" place="that.place"></div>
 				</li>
 				<li class="list-group-item">
