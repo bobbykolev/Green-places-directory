@@ -14,23 +14,27 @@
                     days:["Понеделник", "Вторник", "Сряда", "Четвъртък", "Петък", "Събота", "Неделя"],
                     rest: "Почивен ден;",
                     rating: "Веган рейтинг: ",
-                    type: "Тип"
+                    type: "Тип",
+                    dirTxt: "Напътствия"
                 },
                 en: {
                     days:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
                     rest: "Rest day;",
                     rating: "Vegan rating: ",
-                    type: "Type"
+                    type: "Type",
+                    dirTxt: "Diections"
                 }
             };
 
         that.days = transTxts[config.lang].days;
         that.veganRatingTxt = transTxts[config.lang].rating;
         that.typeTxt = transTxts[config.lang].type;
+        that.dirTxt = transTxts[config.lang].dirTxt;
         that.lang = config.lang;
         that.place = {};
         that.rating = 4;
         that.warning = '';
+        that.directionsLink = 'https://www.google.com/maps/dir/?api=1&destination=';
 
         $scope.rateFunction = function(rating) {
             alert("Rating selected - " + rating);
@@ -94,6 +98,16 @@
             placesService.getPrev(id).then(function(place){
                 $location.path('/places/'+ place.id);
             });
+        }
+
+        function getDirectionLink() {
+            if ((navigator.platform.indexOf("iPhone") != -1) || 
+             (navigator.platform.indexOf("iPad") != -1) || 
+             (navigator.platform.indexOf("iPod") != -1)) {
+                return'maps://google.com/maps/dir/?api=1&destination=';
+            }
+
+            return 'https://www.google.com/maps/dir/?api=1&destination=';
         }
     }
 
