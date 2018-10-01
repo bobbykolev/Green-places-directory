@@ -499,13 +499,13 @@
     "warning":"",  
     "open":true,
     "workingTime": [
-        "",
         "12:00–22:30",
         "12:00–22:30",
         "12:00–22:30",
         "12:00–22:30",
         "12:00–22:30",
-        "12:00–22:30"
+        "12:00–22:30",
+        ""
     ],
     "town": "Varna",
     "address": "str. Marko Balabanov 25"
@@ -561,4 +561,30 @@
     ],
     "town": "Varna",
     "address": "str. Shipka 25"
+}, {
+    "id": 35,
+    "priority":"1",
+    "pType":[3],
+    "tags":[2,3,11],
+    "vType":"-vegan-",
+    "phone":["+359877333397"],
+    "imageUrl": "http://vegan-places.com/img/edgy-veggy.jpg",
+    "links":["https://www.facebook.com/pg/edgyveggy.sofia/about"],
+    "description": "All the options in the menu are home made and with high nutrition value.",
+    "latitude": "42.699199",
+    "longitude": "23.319519",
+    "name": "Edgy Veggy",
+    "warning":"",    
+    "open":true,
+    "workingTime": [
+        "",
+        "11:00–20:00",
+        "11:00–20:00",
+        "11:00–20:00",
+        "11:00–20:00",
+        "12:00–18:30",
+        "12:00–18:30"
+    ],
+    "town": "Sofia",
+    "address": "str. Knyaz Boris I, 129"
 }]
