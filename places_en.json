@@ -113,26 +113,26 @@
     "pType":[1,4],
     "tags":[4,5,6,9,10],
     "vType":"-vegetarian-",
-    "phone":["+359 897 094139"],
+    "phone":["+359897094139"],
     "imageUrl": "http://vegan-places.com/img/sunmoon2.jpg",
     "links":["http://sunmoon.bg/restaurant", "https://www.facebook.com/SMGladston"],
     "description": "At SunMoon you can try traditioanal dishes from the Arabian, Indian, Moroccan and Bulgarian cuisine  prepared only with high quality local, organic and bio products. This is the place where you will find a great variety of breads - all fresh baked and delicious. The food is healthy, balanced and tasty, the atmosphere is very friendly and the place is always full in the peak hours so it is better to call for a reservation.",
-    "latitude": "42.691899", 
-    "longitude": "23.317209",
-    "name": "Sunmoon",
+    "latitude": "42.694785",
+    "longitude": "23.317411",
+    "name": "Sunmoon - Alabin",
     "warning":"",
     "open":true,
     "workingTime": [
-        "08:30–22:00",
-        "08:30–22:00",
-        "08:30–22:00",
-        "08:30–22:00",
-        "08:30–22:00",
-        "08:30–22:00",
-        "08:30–21:00"
+        "08:00–22:00",
+        "08:00–22:00",
+        "08:00–22:00",
+        "08:00–22:00",
+        "08:00–22:00",
+        "08:00–22:00",
+        "08:00–21:00"
     ],
     "town": "Sofia",
-    "address": "str. 'W Gladston' 18B"
+    "address": "str. 'Alabin' 22"
 }, {
     "id": 8,
     "rating": 5,
@@ -150,13 +150,13 @@
     "warning":"",
     "open": true,
     "workingTime": [
-        "11:00–24:00",
-        "11:00–24:00",
-        "11:00–24:00",
-        "11:00–24:00",
-        "11:00–24:00",
-        "11:00–24:00",
-        "11:00–24:00"
+        "12:00–22:30",
+        "12:00–22:30",
+        "12:00–22:30",
+        "12:00–22:30",
+        "12:00–22:30",
+        "12:00–22:30",
+        "12:00–22:30"
     ],
     "town": "Sofia",
     "address": "str. 'Kokiche' 13"
@@ -457,33 +457,6 @@
     "town": "Plovdiv",
     "address": "str. Neofit Rilski 11"
 }, {
-    "id": 31,
-    "rating": 5,
-    "priority":"4",
-    "pType":[1,4],
-    "tags":[4,5,6,9,10],
-    "vType":"-vegetarian-",
-    "phone":["+359887851854"],
-    "imageUrl": "http://vegan-places.com/img/sun-moon-iztok.jpg",
-    "links":["http://sunmoon.bg/restaurant", "https://www.facebook.com/sunmooniztok/"],
-    "description": "Vegetarian and vegan restaurant - bakery.",
-    "latitude": "42.669185",
-    "longitude": "23.353317",
-    "name": "Sunmoon - Iztok",
-    "warning":"",
-    "open":true,
-    "workingTime": [
-        "08:30–19:30",
-        "08:30–19:30",
-        "08:30–19:30",
-        "08:30–19:30",
-        "08:30–19:30",
-        "09:00–18:00",
-        ""
-    ],
-    "town": "Sofia",
-    "address": "Iztok, str. Samokov 28B"
-}, {
     "id": 32,
     "priority":"4",
     "pType":[1],
@@ -493,8 +466,8 @@
     "imageUrl": "http://vegan-places.com/img/vege-joy.jpg",
     "links":["https://www.facebook.com/vegejoy/"],
     "description": "A cosy, family-run restaurant where you can have a bite only 150 meters away from the city's main shopping street. Fresh salads, appetizers, main courses, daily meals (soups, grill sandwiches, vegan cakes and sweets, etc.), a choice of tea and cold drinks including home-made ginger lemonade. Most of the dishes are vegan but for part of them you may choose whether to have the vegetarian or vegan version e.g. choose a salad with parmigiano or vegan cheese.",
-    "latitude": "43.205975",
-    "longitude": "27.917497",
+    "latitude": "43.202778",
+    "longitude": "27.912464",
     "name": "Vege Joy",
     "warning":"",  
     "open":true,
@@ -508,7 +481,7 @@
         ""
     ],
     "town": "Varna",
-    "address": "str. Marko Balabanov 25"
+    "address": "str. Doctor Lyudvig Zamenhof 10"
 }, {
     "id": 33,
     "priority":"1",
@@ -587,4 +560,56 @@
     ],
     "town": "Sofia",
     "address": "str. Knyaz Boris I, 129"
+}, {
+    "id": 36,
+    "priority":"4",
+    "pType":[2,3],
+    "tags":[2,4,6,10,11],
+    "vType":"-vegetarian-",
+    "phone":["+35928811212"],
+    "imageUrl": "http://vegan-places.com/img/parallel43.jpg",
+    "links":["http://cafeparallel43.com", "https://www.facebook.com/pg/cafeparallel43/"],
+    "description": "Delicious and delightful presented cakes, muffins, brownies, soups, smoothies, hummus, salted pancakes and more.",
+    "latitude": "42.675641",
+    "longitude": "23.309010",
+    "name": "Café Parallel 43",
+    "warning":"",    
+    "open":true,
+    "workingTime": [
+        "10:00–22:00",
+        "10:00–22:00",
+        "10:00–22:00",
+        "10:00–22:00",
+        "10:00–22:00",
+        "10:00–22:00",
+        "10:00–22:00"
+    ],
+    "town": "Sofia",
+    "address": "str. Vitosha, 192"
+}, {
+    "id": 37,
+    "priority":"1",
+    "pType":[2],
+    "tags":[2,4,12],
+    "vType":"-vegan-",
+    "phone":["+359892953495"],
+    "imageUrl": "http://vegan-places.com/img/livingfood.jpg",
+    "links":["https://www.facebook.com/livingfood.bg"],
+    "description": "Raw, vegan, gluten free, preservatives free, no added colors, soy free, dairy free, no tofu, no seitan.",
+    "latitude": "43.205272",
+    "longitude": "27.916358",
+    "name": "'Living Food'",
+    "warning":"",    
+    "open":true,
+    "workingTime": [
+        "08:30–19:00",
+        "08:30–19:00",
+        "08:30–19:00",
+        "08:30–19:00",
+        "08:30–19:00",
+        "10:00–17:00",
+        ""
+    ],
+    "town": "Varna",
+    "address": "str. Ivan Vazov 28"
 }]
