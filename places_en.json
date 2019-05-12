@@ -462,7 +462,7 @@
     "pType":[1],
     "tags":[2,3,4,6,10,11],
     "vType":"-vegetarian-",
-    "phone":["+359883777156"],
+    "phone":["+359876327223"],
     "imageUrl": "http://vegan-places.com/img/vege-joy.jpg",
     "links":["https://www.facebook.com/vegejoy/"],
     "description": "A cosy, family-run restaurant where you can have a bite only 150 meters away from the city's main shopping street. Fresh salads, appetizers, main courses, daily meals (soups, grill sandwiches, vegan cakes and sweets, etc.), a choice of tea and cold drinks including home-made ginger lemonade. Most of the dishes are vegan but for part of them you may choose whether to have the vegetarian or vegan version e.g. choose a salad with parmigiano or vegan cheese.",
@@ -544,22 +544,22 @@
     "imageUrl": "http://vegan-places.com/img/edgy-veggy.jpg",
     "links":["https://www.facebook.com/pg/edgyveggy.sofia/about"],
     "description": "All the options in the menu are home made and with high nutrition value.",
-    "latitude": "42.699199",
-    "longitude": "23.319519",
+    "latitude": "42.691896",
+    "longitude": "23.317194",
     "name": "Edgy Veggy",
     "warning":"",    
     "open":true,
     "workingTime": [
-        "",
-        "11:00–20:00",
-        "11:00–20:00",
-        "11:00–20:00",
-        "11:00–20:00",
-        "12:00–18:30",
-        "12:00–18:30"
+        "11:00–19:30",
+        "11:00–19:30",
+        "11:00–19:30",
+        "11:00–19:30",
+        "11:00–19:30",
+        "11:00–19:30",
+        ""
     ],
     "town": "Sofia",
-    "address": "str. Knyaz Boris I, 129"
+    "address": "str. Gladston, 18"
 }, {
     "id": 36,
     "priority":"4",
