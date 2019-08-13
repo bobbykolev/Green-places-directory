@@ -53,33 +53,6 @@
     "town": "Plovdiv",
     "address": "str. 'Grozdov Pazar' 1A"
 }, {
-    "id": 5,
-    "rating": 5,
-    "priority":"4",
-    "pType":[2,4],
-    "tags":[4],
-    "vType":"-vegetarian-",
-    "phone":["+35952636131"],
-    "imageUrl": "http://vegan-places.com/img/hatori.jpg",
-    "links":["https://www.facebook.com/TheHatoriPlace"],
-    "description": "Hatori is not the typical restaurant - it's a place where you will find a special atmosphere of homemade sweets, delicious bread, bio cosmetics, interesting books and even handmade amulets.",
-    "latitude": "43.203788",
-    "longitude": "27.913765",
-    "name": "Hatori",
-    "warning":"",
-    "open":true,
-    "workingTime": [
-        "10:00–19:00",
-        "10:00–19:00",
-        "10:00–19:00",
-        "10:00–19:00",
-        "10:00–19:00",
-        "10:00–19:00",
-        ""
-    ],
-    "town": "Varna",
-    "address": "str. 'Dragoman ' 9"
-}, {
     "id": 6,
     "rating": 5,
     "priority":"4",
