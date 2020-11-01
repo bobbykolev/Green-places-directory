@@ -523,12 +523,12 @@
     "warning":"",    
     "open":true,
     "workingTime": [
-        "11:00–19:30",
-        "11:00–19:30",
-        "11:00–19:30",
-        "11:00–19:30",
-        "11:00–19:30",
-        "11:00–19:30",
+        "11:00–20:00",
+        "11:00–20:00",
+        "11:00–20:00",
+        "11:00–20:00",
+        "11:00–20:00",
+        "11:00–20:00",
         ""
     ],
     "town": "Sofia",
@@ -585,4 +585,30 @@
     ],
     "town": "Варна",
     "address": "ул. Иван Вазов 28"
+}, {
+    "id": 38,
+    "priority":"1",
+    "pType":[3],
+    "tags":[3,4,12],
+    "vType":"-веган-",
+    "phone":["+359878910474"],
+    "imageUrl": "http://vegan-places.com/img/new-wave-burgers.jpg",
+    "links":["https://www.facebook.com/New-Wave-Burgers-105375344696108/"],
+    "description": "Delicious plant-based burgers (natural ingredients) and sweets.",
+    "latitude": "42.693379",
+    "longitude": "23.317891",
+    "name": "New Wave Burgers",
+    "warning":"",    
+    "open": true,
+    "workingTime": [
+        "11:00–22:00",
+        "11:00–22:00",
+        "11:00–22:00",
+        "11:00–22:00",
+        "11:00–22:00",
+        "11:00–22:00",
+        ""
+    ],
+    "town": "София",
+    "address": "ул. Княз Борис 94"
 }]
